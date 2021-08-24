@@ -1,0 +1,153 @@
+.nav-item{
+    padding-right: 10px;
+}
+
+.nav-link{
+    padding: 5px 20px !important;
+    color: rgb(0, 0, 0) !important;
+    font-family: Monaco;
+    font-size: large;
+    font-family: Gill Sans MT;
+    font-weight: bold;
+}
+.nav-link:hover{
+    background-color: #0000FF;
+    border-radius: 15px;
+    color: white !important;
+}
+.basicInfo{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.basicInfo h2{
+    font-size: 70px;
+    color: #0000FF;
+    margin-bottom: 20px;
+}
+
+.basicInfo h4{
+    font-size: 28px;
+    line-height: 28px;
+}
+
+/* .basicInfo a{
+    background: tomato;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline-block;
+    margin: 50px 0;
+    border-radius: 5px;
+    margin-bottom: 60%;
+} */
+
+.img-box{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.img-box:hover .styleImage{
+    bottom: 40px;
+}
+
+.img-box:hover .profileImage{
+    left: 54%;
+}
+
+#education{
+    margin-top: 65%;
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+}
+
+.eduCard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.eduCard .eduTitle{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.eduCard:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: 300ms;
+}
+
+.eduCard:hover .eduTitle{
+    color: black;
+}
+
+.card-body{
+    font-size: large;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#tech{
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+}
+
+.techHead{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #0000FF;
+    color: white;
+}
+
+.techHead:hover{
+    color: #0000FF;
+    transition: 300ms;
+}
+
+.techLang{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#project{
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+}
+
+#contact{
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+}
+
+.img-fluid{
+    height: 100px;
+}
+
+body{
+    padding-bottom: 50px;
+}
