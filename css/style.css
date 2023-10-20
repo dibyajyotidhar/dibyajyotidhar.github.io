@@ -67,6 +67,35 @@
     left: 54%;
 }
 
+@media screen and (max-width: 800px){
+
+    .img-box{
+        height: 50%;
+        width: 75%;
+        align-content: center;
+    }
+    #education{
+        padding-top: 100px;
+        margin-top: 60% !important;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .img-box{
+        height: 40%;
+        width: 50%;
+        align-content: center;
+    }
+    #education{
+        padding-top: 100px;
+        margin-top: 80% ;
+    }
+
+    
+}
+
 #education{
     margin-top: 40%;
     padding-top: 50px;
