@@ -9,6 +9,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script>
+const mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+function applyTheme(e) {
+    document.documentElement.classList.toggle("dark-mode", e.matches);
+}
+
+applyTheme(mq);
+mq.addEventListener("change", applyTheme);
+</script>
     </head>
 <body id="home">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
