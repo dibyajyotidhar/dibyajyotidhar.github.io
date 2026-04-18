@@ -49,12 +49,6 @@
     font-weight: bold;
 }
 
-.nav-link:hover {
-    background: var(--primary-color);
-    border-radius: 8px;
-    color: vwhite !important;
-}
-
 /* Glass hover effect */
 .nav-link::after {
     content: "";
