@@ -2,6 +2,14 @@
     --primary-color: #168ef0;
     --primary-hover: #0f6fc2;
     --fixed-color: #0000FF;
+
+    /* LIGHT MODE (default) */
+    --bg-color: #ffffff;
+    --card-bg: #f8fafc;
+    --text-color: #0f172a;
+    --muted-text: #475569;
+    --border-color: rgba(0,0,0,0.1);
+    --glass-bg: rgba(255,255,255,0.6);
 }
 
 .nav-item{
@@ -10,43 +18,58 @@
 
 .nav-link{
     padding: 5px 20px !important;
-    color: rgb(0, 0, 0) !important;
+    color: var(--text-color) !important;
     font-family: Monaco;
     font-size: large;
     font-family: Gill Sans MT;
-    font-weight: bold;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
 }
 .nav-link:hover{
+    background: var(--primary-hover);
     background-color: var(--primary-hover);
     border-radius: 15px;
-    color: white !important;
+    color: white !important;;
 }
 
 .glass-navbar {
-    background: rgba(255, 255, 255, 0.2); /* transparent white */
-    backdrop-filter: blur(10px); /* blur effect */
-    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    background: var(--glass-bg); /* ✅ dynamic for light/dark */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-color); /* ✅ dynamic */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* slightly stronger for dark */
     
     z-index: 1000;
 }
 
-.nav-link {
-    color: black !important;
-    font-weight: 600;
-}
-
 .navbar-brand {
-    color: black !important;
+    color: var(--text-color) !important;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--primary-color);
     border-radius: 8px;
-    color: var(--primary-color) !important;
+    color: vwhite !important;
+}
+
+/* Glass hover effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: var(--primary-color);
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .basicInfo{
@@ -61,6 +84,7 @@
 }
 
 .basicInfo h4{
+    color: var(--muted-text);
     font-size: 28px;
     line-height: 28px;
 }
@@ -147,6 +171,9 @@
 }
 
 .eduCard{
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
@@ -221,5 +248,77 @@
 }
 
 body{
+    background: var(--bg-color);
+    color: var(--text-color);
     padding-bottom: 50px;
+}
+
+body.dark-mode{
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #e2e8f0;
+    --muted-text: #94a3b8;
+    --border-color: rgba(255,255,255,0.1);
+    --glass-bg: rgba(255,255,255,0.05);
+}
+
+.list-group-item{
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.theme-toggle {
+    position: relative;
+}
+
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background: var(--card-bg);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.toggle-label .icon {
+    font-size: 14px;
+    z-index: 1;
+}
+
+.toggle-label .sun {
+    margin-left: 5px;
+}
+
+.toggle-label .moon {
+    margin-right: 5px;
+}
+
+.toggle-label .ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.4s ease;
+}
+
+/* Move ball when checked */
+#themeToggle:checked + .toggle-label .ball {
+    transform: translateX(30px);
+}
+
+body, .eduCard, .list-group-item, .glass-navbar {
+    transition: all 0.3s ease;
+}
+
+#themeToggle {
+    display: none;
 }

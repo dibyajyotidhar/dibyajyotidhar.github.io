@@ -35,6 +35,16 @@
               <li class="nav-item">
               <a class="nav-link" href="#contacts">Contacts</a>
             </li>
+            <li class="nav-item d-flex align-items-center ml-3">
+              <div class="theme-toggle">
+                <input type="checkbox" id="themeToggle">
+                <label for="themeToggle" class="toggle-label">
+                  <span class="icon sun">☀️</span>
+                  <span class="icon moon">🌙</span>
+                  <span class="ball"></span>
+                </label>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
@@ -332,6 +342,27 @@
 <h6 class="text-center mt-5">All Rights Reserved By &copy <span class="footer">Dibya Jyoti Dhar</span></h6>
 
   </div>
+
+  <script>
+const toggle = document.getElementById("themeToggle");
+
+// Load saved theme
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+}
+
+// Toggle theme
+toggle.addEventListener("change", function(){
+    if(this.checked){
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "light");
+    }
+});
+</script>
 </body>
 </html>
 
