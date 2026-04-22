@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selenium Automation Practice – QA Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap (same as Card 1) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Your existing CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+  <!-- Back button -->
+  <div class="mb-4">
+    <a href="index.html#QATestingProject" class="btn btn-outline-primary btn-sm">
+      ← Back to QA Section
+    </a>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- MAIN DETAILS CARD -->
+  <!-- ================================================= -->
+  <div class="card eduCard mb-4">
+    <div class="card-body">
+
+      <h3 class="mb-3">Selenium Automation Practice</h3>
+
+      <p>
+        <strong>Project Type:</strong> UI Automation<br>
+        <strong>Technology:</strong> Selenium WebDriver (Java)<br>
+        <strong>Total Scenarios:</strong> 24<br>
+        <strong>Execution Result:</strong>
+        <span class="badge badge-success">18 Passed</span>
+        <span class="badge badge-danger">6 Failed</span>
+      </p>
+
+      <hr>
+
+      <!-- ================================================= -->
+      <!-- 1. PROJECT OVERVIEW -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>1. Project Overview</h5>
+          <p>
+            This is a practice automation project developed using Selenium WebDriver with Java.
+            The objective of this project was to understand UI automation workflows,
+            element handling, synchronization, and basic validation using assertions.
+          </p>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- 2. TEST SCENARIOS -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>2. Test Scenarios Covered</h5>
+          <ul class="mb-0">
+            <li>Login functionality (positive and negative cases)</li>
+            <li>Form input handling and submission</li>
+            <li>Page navigation validation</li>
+            <li>Input field validation</li>
+            <li>Button interactions and UI behavior</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- 3. CURRENT STRUCTURE -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>3. Current Structure (Learning Phase)</h5>
+          <ul class="mb-0">
+            <li>Java-based Selenium test scripts</li>
+            <li>Direct WebDriver usage</li>
+            <li>No framework pattern implemented yet</li>
+            <li>Basic assertions for validation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- 4. SAMPLE CODE (DARK MODE FRIENDLY) -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+
+          <h5>4. Sample Code Implementation</h5>
+          <p class="text-muted mb-2">
+            Example Selenium login automation snippet:
+          </p>
+
+          <!-- CODE PILL -->
+          <div class="card eduCard">
+            <div class="card-body">
+              <pre class="mb-0" style="background: transparent;">
+                <code style="color: inherit;">
+                // Login test example
+                driver.findElement(By.id("username"))
+                    .sendKeys("testuser");
+
+                driver.findElement(By.id("password"))
+                    .sendKeys("password");
+
+                driver.findElement(By.id("login"))
+                    .click();
+
+                // Basic validation
+                Assert.assertTrue(
+                    driver.getCurrentUrl()
+                        .contains("dashboard")
+                );
+              </code></pre>
+            </div>
+          </div>
+
+          <p class="text-muted mt-2 mb-0">
+            Full implementation is available in the GitHub repository.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- 5. LIMITATIONS -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>5. Limitations</h5>
+          <ul class="mb-0">
+            <li>Page Object Model (POM) not implemented</li>
+            <li>Assertion coverage is limited in some scenarios</li>
+            <li>No reporting integration (Extent / Allure)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- 6. FUTURE IMPROVEMENTS -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>6. Future Improvements</h5>
+          <ul class="mb-0">
+            <li>Implement Page Object Model (POM)</li>
+            <li>Add strong TestNG assertions</li>
+            <li>Integrate Extent Reports / Allure</li>
+            <li>Enable cross-browser execution</li>
+            <li>Run automation via CI (GitHub Actions)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- AUTOMATION TOOLS -->
+      <!-- ================================================= -->
+      <div class="card eduCard mb-3">
+        <div class="card-body">
+          <h5>Automation Tools</h5>
+
+          <h6 class="mt-3">🟢 Selenium (Current)</h6>
+          <ul>
+            <li>Java-based UI automation</li>
+            <li>Basic workflow automation</li>
+          </ul>
+
+          <h6 class="mt-3">⚪ Cypress (Planned)</h6>
+          <ul>
+            <li>UI + API testing</li>
+          </ul>
+
+          <h6 class="mt-3">⚪ Playwright (Planned)</h6>
+          <ul>
+            <li>Cross-browser automation</li>
+          </ul>
+
+          <h6 class="mt-3">⚪ Katalon Studio (Planned)</h6>
+          <ul class="mb-0">
+            <li>Codeless + scripting hybrid testing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- FOOTER ACTION -->
+      <!-- ================================================= -->
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <a href="https://github.com/dibya888?tab=repositories" class="btn btn-outline-secondary btn-sm">
+          View GitHub Repository
+        </a>
+        <span class="text-muted">Practice Automation Project</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS (same as Card 1) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Dark mode sync (identical to Card 1) -->
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+</script>
+
+</body>
+</html>

@@ -387,3 +387,28 @@ body,
 .modal-body hr {
     border-top: 1px solid var(--border-color);
 }
+
+/* ================= CODE BLOCK DARK MODE FIX ================= */
+
+/* Preformatted blocks */
+pre {
+    background: transparent;
+    color: var(--text-color);
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    /* wrap long lines */
+    word-break: break-word;
+}
+
+/* Inline and block code */
+code {
+    color: var(--text-color);
+    font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+/* Optional: subtle container feel inside cards */
+.eduCard pre {
+    margin-bottom: 0;
+}

@@ -315,28 +315,31 @@
       </div>
     </div>
 
-    <!-- CARD 2 -->
+    <!-- CARD 2 (Automation) -->
     <div class="col-md-6 mb-4">
       <div class="card eduCard h-100 qa-card">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <button class="btn eduTitle">Under Development</button>
-          <span class="badge badge-dark">API</span>
+          <button class="btn eduTitle">Selenium Automation Practice</button>
+          <span class="badge badge-info">Automation QA</span>
         </div>
 
         <div class="card-body">
           <p>
-            Coming Soon
+            24 Test Scenarios Automated<br>
+            <strong>18 Passed / 6 Failed</strong><br>
+            Covers login, form handling, navigation, and UI interaction using Selenium WebDriver with Java.
           </p>
 
           <div class="d-flex justify-content-between">
             <button
               class="btn btn-sm btn-outline-primary"
-              disabled>
+              data-toggle="modal"
+              data-target="#automationPreviewModal">
               Preview
             </button>
 
             <a
-              href="RuBIMS-Test-Cases.html"
+              href="selenium-automation-practice.html"
               class="btn btn-sm btn-outline-secondary">
               Details
             </a>
@@ -344,6 +347,7 @@
         </div>
       </div>
     </div>
+
 
   </div>
 </div>
@@ -520,6 +524,80 @@ toggle.addEventListener("change", function(){
         <!-- <span class="badge badge-secondary">Selenium</span> -->
         <span class="badge badge-dark">JIRA</span>
       </div>
+    </div>
+  </div>
+</div>
+<!-- ================= AUTOMATION PREVIEW MODAL ================= -->
+<div class="modal fade" id="automationPreviewModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Selenium Automation Practice — Preview</h5>
+        <button class="close" data-dismiss="modal">×</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="mb-2">
+          <strong>Project:</strong> Selenium Automation Practice
+        </p>
+
+        <p class="mb-2"><strong>Tools:</strong></p>
+        <span class="badge badge-info">Selenium WebDriver</span>
+        <span class="badge badge-dark">Java</span>
+        <span class="badge badge-secondary">TestNG</span>
+        <span class="badge badge-secondary">Maven</span>
+
+        <hr>
+
+        <h6>Key Features</h6>
+        <ul>
+          <li>Automated login workflow (positive + negative)</li>
+          <li>Form input + submission validation</li>
+          <li>Navigation and UI element interactions (click, type, dropdown)</li>
+          <li>Basic assertions for expected UI behavior</li>
+        </ul>
+
+        <hr>
+
+        <h6>Sample Code</h6>
+        <div class="card eduCard mb-3">
+          <div class="card-body">
+            <pre class="mb-0">
+              <code>
+                // Example snippet
+                driver.findElement(By.id("username")).sendKeys("testuser");
+                driver.findElement(By.id("password")).sendKeys("password");
+                driver.findElement(By.id("login")).click();
+
+                // Basic validation
+                Assert.assertTrue(
+                    driver.getCurrentUrl().contains("dashboard")
+                );
+              </code>
+            </pre>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <h6>Execution Result</h6>
+        <ul class="mb-3">
+          <li>✔ Scripts executed successfully</li>
+          <li>✔ Results tracked (Pass/Fail)</li>
+          <li>✔ Basic validation performed via assertions</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="text-muted">GitHub:</span>
+          <a class="btn btn-sm btn-outline-dark" href="https://github.com/dibya888/SeleniumPracticeCode" target="_blank">
+            View Repository
+          </a>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
