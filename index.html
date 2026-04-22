@@ -273,6 +273,85 @@
     </div>
 
     <br>
+    <!-- ================= QA TESTING SECTION ================= -->
+<span id="QATestingProject"></span>
+
+<div class="container p-6 mt-5">
+  <h4 class="text-center mt-5" id="qaTesting">Software QA Work</h4>
+  <br>
+
+  <div class="row">
+
+    <!-- CARD 1 -->
+    <div class="col-md-6 mb-4">
+      <div class="card eduCard h-100 qa-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <button class="btn eduTitle">RUBIMS Website & App</button>
+          <span class="badge badge-info">Manual QA</span>
+        </div>
+
+        <div class="card-body">
+          <p>
+            136 Test Cases Executed<br>
+            <strong>109 Passed / 27 Failed</strong><br>
+            Covers authentication, structure inspection, validation, inventory, and mobile app scenarios.
+          </p>
+
+          <div class="d-flex justify-content-between">
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-toggle="modal"
+              data-target="#qaPreviewModal">
+              Preview
+            </button>
+
+            <a
+              href="RuBIMS-Test-Cases.html"
+              class="btn btn-sm btn-outline-secondary">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-md-6 mb-4">
+      <div class="card eduCard h-100 qa-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <button class="btn eduTitle">Under Development</button>
+          <span class="badge badge-dark">API</span>
+        </div>
+
+        <div class="card-body">
+          <p>
+            Coming Soon
+          </p>
+
+          <div class="d-flex justify-content-between">
+            <button
+              class="btn btn-sm btn-outline-primary"
+              disabled>
+              Preview
+            </button>
+
+            <a
+              href="RuBIMS-Test-Cases.html"
+              class="btn btn-sm btn-outline-secondary">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <br>
     <span id="proJects"></span>
     <h4 class="text-center mt-5" id="project">Projects</h4>
     <br>
@@ -372,6 +451,78 @@ toggle.addEventListener("change", function(){
     }
 });
 </script>
+
+<!-- ================= QA PREVIEW MODAL ================= -->
+<div class="modal fade" id="qaPreviewModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Login System – QA Preview</h5>
+        <button class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <h6>Key Test Cases Preview</h6>
+        
+        <ul>
+          <li>
+            <strong>Structure Edit Data Not Persisting</strong><br>
+            <em>Issue:</em> Edited structure fields do not reliably save or persist after reload.
+          </li>
+          <li>
+            <strong>Validation Rules Inconsistently Enforced</strong><br>
+            <em>Issue:</em> Invalid inputs (text in numeric fields, future year, blank mandatory fields) are sometimes saved.
+          </li>
+          <li>
+            <strong>Google Maps Showing Device Location (Mobile App)</strong><br>
+            <em>Issue:</em> Map centers on user’s current location instead of structure coordinates.
+          </li>
+        </ul>
+
+
+        <hr>
+
+        
+        <h6>Key Bug Reports</h6>
+        <ul>
+          <li class="mb-2">
+            <strong>Data Persistence Issue on Structure Edit</strong>
+            <span class="badge badge-danger ml-2">Priority: P1</span>
+            <span class="badge badge-secondary ml-1">Unresolved</span><br>
+            <em>Expected:</em> Edited values persist reliably after Save and page reload.<br>
+            <em>Actual:</em> Values revert or do not persist consistently after reload.
+          </li>
+
+          <li class="mb-2">
+            <strong>Validation Rules Not Enforced Consistently</strong>
+            <span class="badge badge-warning ml-2">Priority: P2</span>
+            <span class="badge badge-secondary ml-1">Unresolved</span><br>
+            <em>Expected:</em> Invalid inputs must always be blocked with clear validation messages.<br>
+            <em>Actual:</em> Some invalid inputs are saved or validation behaves inconsistently.
+          </li>
+
+          <li class="mb-2">
+            <strong>Google Maps Location Incorrect in Mobile App</strong>
+            <span class="badge badge-warning ml-2">Priority: P2</span>
+            <span class="badge badge-secondary ml-1">Unresolved</span><br>
+            <em>Expected:</em> Map displays structure-specific location from search result.<br>
+            <em>Actual:</em> Map centers on the device’s current location.
+          </li>
+        </ul>
+
+
+
+        <hr>
+
+        <h6>Tools Used</h6>
+        <span class="badge badge-info">Postman</span>
+        <!-- <span class="badge badge-secondary">Selenium</span> -->
+        <span class="badge badge-dark">JIRA</span>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 

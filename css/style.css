@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: #168ef0;
     --primary-hover: #0f6fc2;
     --fixed-color: #0000FF;
@@ -8,15 +8,15 @@
     --card-bg: #f8fafc;
     --text-color: #0f172a;
     --muted-text: #475569;
-    --border-color: rgba(0,0,0,0.1);
-    --glass-bg: rgba(255,255,255,0.6);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.6);
 }
 
-.nav-item{
+.nav-item {
     padding-right: 10px;
 }
 
-.nav-link{
+.nav-link {
     padding: 5px 20px !important;
     color: var(--text-color) !important;
     font-family: Monaco;
@@ -26,21 +26,26 @@
     position: relative;
     transition: all 0.3s ease;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     background: var(--primary-hover);
     background-color: var(--primary-hover);
     border-radius: 15px;
-    color: white !important;;
+    color: white !important;
+    ;
 }
 
 .glass-navbar {
-    background: var(--glass-bg); /* ✅ dynamic for light/dark */
+    background: var(--glass-bg);
+    /* ✅ dynamic for light/dark */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    
-    border-bottom: 1px solid var(--border-color); /* ✅ dynamic */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* slightly stronger for dark */
-    
+
+    border-bottom: 1px solid var(--border-color);
+    /* ✅ dynamic */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* slightly stronger for dark */
+
     z-index: 1000;
 }
 
@@ -66,18 +71,18 @@
     width: 100%;
 }
 
-.basicInfo{
+.basicInfo {
     margin-left: 8%;
     margin-top: 15%;
 }
 
-.basicInfo h2{
+.basicInfo h2 {
     font-size: 70px;
     color: var(--fixed-color);
     margin-bottom: 20px;
 }
 
-.basicInfo h4{
+.basicInfo h4 {
     color: var(--muted-text);
     font-size: 28px;
     line-height: 28px;
@@ -94,7 +99,7 @@
     margin-bottom: 60%;
 } */
 
-.img-box{
+.img-box {
     width: 45%;
     height: 80%;
     position: absolute;
@@ -102,7 +107,7 @@
     right: 100px;
 }
 
-.img-box img{
+.img-box img {
     height: 100%;
     position: absolute;
     left: 50%;
@@ -111,44 +116,46 @@
     transition: bottom 1s, left 1s;
 }
 
-.img-box:hover .styleImage{
+.img-box:hover .styleImage {
     bottom: 40px;
 }
 
-.img-box:hover .profileImage{
+.img-box:hover .profileImage {
     left: 54%;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 
-    .img-box{
+    .img-box {
         height: 50%;
         width: 75%;
         align-content: center;
     }
-    #education{
+
+    #education {
         padding-top: 100px;
         margin-top: 60% !important;
     }
-    
+
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .img-box{
+    .img-box {
         height: 40%;
         width: 50%;
         align-content: center;
     }
-    #education{
+
+    #education {
         padding-top: 100px;
-        margin-top: 80% ;
+        margin-top: 80%;
     }
 
-    
+
 }
 
-#experience{
+#experience {
     margin-top: 40%;
     padding-top: 65px;
     font-size: 30px;
@@ -156,7 +163,7 @@
     font-family: 'Gill Sans MT';
 }
 
-#education{
+#education {
     margin-top: 5%;
     padding-top: 65px;
     font-size: 30px;
@@ -164,7 +171,7 @@
     font-family: 'Gill Sans MT';
 }
 
-.eduCard{
+.eduCard {
     background: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
@@ -172,7 +179,7 @@
     text-align: center;
 }
 
-.eduCard .eduTitle{
+.eduCard .eduTitle {
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -186,24 +193,42 @@
     transition: 300ms;
 }
 
-.eduCard:hover .eduTitle{
-    color: black;
+/* ✅ FIX: Make Experience, Education & QA headers consistent with TechSkill */
+
+.eduCard .card-header {
+    /* background-color: var(--primary-color); */
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
 }
 
-.card-body{
+.eduCard .eduTitle {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.eduCard:hover .card-header {
+    background-color: var(--primary-color);
+}
+
+.eduCard:hover .eduTitle {
+    color: #ffffff !important;
+    transition: 300ms;
+}
+
+.card-body {
     font-size: large;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#tech{
+#tech {
     padding-top: 50px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans MT';
 }
 
-.techHead{
+.techHead {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: bold;
@@ -212,51 +237,51 @@
     text-align: center;
 }
 
-.techHead:hover{
+.techHead:hover {
     color: var(--primary-color);
     transition: 300ms;
 }
 
-.techLang{
+.techLang {
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
 
-#project{
+#project {
     padding-top: 50px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans MT';
 }
 
-#contact{
+#contact {
     padding-top: 50px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans MT';
 }
 
-.img-fluid{
+.img-fluid {
     height: 100px;
 }
 
-body{
+body {
     background: var(--bg-color);
     color: var(--text-color);
     padding-bottom: 50px;
 }
 
-body.dark-mode{
+body.dark-mode {
     --bg-color: #0f172a;
     --card-bg: #1e293b;
     --text-color: #e2e8f0;
     --muted-text: #94a3b8;
-    --border-color: rgba(255,255,255,0.1);
-    --glass-bg: rgba(255,255,255,0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
 }
 
-.list-group-item{
+.list-group-item {
     background: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
@@ -305,14 +330,60 @@ body.dark-mode{
 }
 
 /* Move ball when checked */
-#themeToggle:checked + .toggle-label .ball {
+#themeToggle:checked+.toggle-label .ball {
     transform: translateX(30px);
 }
 
-body, .eduCard, .list-group-item, .glass-navbar {
+body,
+.eduCard,
+.list-group-item,
+.glass-navbar {
     transition: all 0.3s ease;
 }
 
 #themeToggle {
     display: none;
+}
+
+/* QA Testing section styling (matches other sections) */
+#qaTesting {
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+}
+
+/* QA card hover enhancement */
+.qa-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= DARK MODE FIX FOR MODALS ================= */
+
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--border-color);
+}
+
+.modal-title {
+    color: var(--text-color);
+}
+
+.modal-body h6 {
+    color: var(--text-color);
+}
+
+.modal-body hr {
+    border-top: 1px solid var(--border-color);
 }

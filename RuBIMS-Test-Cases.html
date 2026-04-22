@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RUBIMS Website – QA Test Case Details</title>
+  <link rel="icon" type="image/png" href="images/bdgovtlogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+  <!-- Back to QA Section -->
+  <div class="mb-4">
+    <a href="index.html#QATestingProject" class="btn btn-outline-primary btn-sm">
+      ← Back to QA Section
+    </a>
+  </div>
+
+  <h3 class="mb-3">RUBIMS Website – Manual QA Test Execution</h3>
+
+  <p>
+    <strong>System Type:</strong> Web Application<br>
+    <strong>Application URL:</strong> https://rubims.lged.gov.bd<br>
+    <strong>Testing Type:</strong> Manual Functional Website Testing<br>
+    <strong>Execution Result:</strong>
+    <span class="badge badge-success">109 / 136 Test Cases Passed</span>
+    <span class="badge badge-danger">27 Failed</span>
+
+  </p>
+
+  <hr>
+
+  <p class="text-muted">
+    Click on a test case title to expand or collapse details.
+  </p>
+
+  <!-- ================= TEST CASES ================= -->
+
+  <!-- TC-001 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc001" style="cursor:pointer;">
+      <strong>TC‑001: Verify dashboard menu navigation (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc001" class="collapse">
+      <div class="card-body">
+        <strong>Steps:</strong>
+        <ol>
+          <li>Login with valid credentials</li>
+          <li>Click each menu item from dashboard</li>
+        </ol>
+        <strong>Expected Result:</strong>
+        Each module loads correctly in the browser without errors.<br>
+        <strong>Actual Result:</strong>
+        All dashboard modules loaded correctly in the website without errors.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-002 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc002" style="cursor:pointer;">
+      <strong>TC‑002: Verify “Load Data” button with filters (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc002" class="collapse">
+      <div class="card-body">
+        <strong>Steps:</strong>
+        <ol>
+          <li>Select Division, Region, District, Upazila</li>
+          <li>Click “Load Data”</li>
+        </ol>
+        <strong>Expected Result:</strong>
+        Filtered data should load correctly on the website.<br>
+        <strong>Actual Result:</strong>
+        Correct data loaded based on selected filters.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-003 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc003" style="cursor:pointer;">
+      <strong>TC‑003: Validate Upazila Road structure data (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc003" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Website displays 63,065 structures and 476,167m length.<br>
+        <strong>Actual Result:</strong>
+        Website displayed exact expected structure count and length.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-004 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc004" style="cursor:pointer;">
+      <strong>TC‑004: Validate Union Road structure data (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc004" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        68,533 structures and 378,673m length displayed.<br>
+        <strong>Actual Result:</strong>
+        Values matched expected results on the website.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-005 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc005" style="cursor:pointer;">
+      <strong>TC‑005: Validate Village Road‑A structure data (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc005" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        112,751 structures and 487,365m length.<br>
+        <strong>Actual Result:</strong>
+        Website displayed accurate data as expected.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-006 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc006" style="cursor:pointer;">
+      <strong>TC‑006: Validate Village Road‑B structure data (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc006" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        91,074 structures and 327,438m length.<br>
+        <strong>Actual Result:</strong>
+        Correct structure data shown on website.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-007 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc007" style="cursor:pointer;">
+      <strong>TC‑007: Verify Intervention Summary (Minor) – Website</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc007" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        18,570 structures; 230,739m; 115,370 Lac Tk.<br>
+        <strong>Actual Result:</strong>
+        Website displayed minor intervention summary correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-008 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc008" style="cursor:pointer;">
+      <strong>TC‑008: Verify Intervention Summary (Major) – Website</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc008" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        5,811 structures; 58,398m; 58,398 Lac Tk.<br>
+        <strong>Actual Result:</strong>
+        Major intervention summary displayed correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-009 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc009" style="cursor:pointer;">
+      <strong>TC‑009: Validate inspection workflow statuses (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc009" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Draft, Review, Approval and Approved counts are correct.<br>
+        <strong>Actual Result:</strong>
+        All inspection status counts matched expected values.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-010 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc010" style="cursor:pointer;">
+      <strong>TC‑010: Verify inspection status transitions (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc010" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Status transitions Draft → Review → Approval → Approved.<br>
+        <strong>Actual Result:</strong>
+        Status transitions worked correctly across the website.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-011 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc011" style="cursor:pointer;">
+      <strong>TC‑011: Validate reviewer logs (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc011" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Reviewer‑wise counts displayed correctly.<br>
+        <strong>Actual Result:</strong>
+        Reviewer logs matched expected counts.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-012 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc012" style="cursor:pointer;">
+      <strong>TC‑012: Validate zero‑entry reviewer logs (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc012" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Reviewers with no activity show zero entries.<br>
+        <strong>Actual Result:</strong>
+        Zero‑activity reviewers displayed correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-013 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc013" style="cursor:pointer;">
+      <strong>TC‑013: Validate approver logs (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc013" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Approved, rejected, pending counts shown correctly.<br>
+        <strong>Actual Result:</strong>
+        Approver logs matched expected data.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-014 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc014" style="cursor:pointer;">
+      <strong>TC‑014: Verify pending approval workflow (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc014" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Pending approvals tracked accurately.<br>
+        <strong>Actual Result:</strong>
+        Pending approvals displayed correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-015 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc015" style="cursor:pointer;">
+      <strong>TC‑015: Validate structure summary types (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc015" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        All structure types displayed correctly.<br>
+        <strong>Actual Result:</strong>
+        Structure summary types matched expected list.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-016 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc016" style="cursor:pointer;">
+      <strong>TC‑016: Validate graphical representation (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc016" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Graph scales render correctly.<br>
+        <strong>Actual Result:</strong>
+        Graphical representation displayed correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-017 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc017" style="cursor:pointer;">
+      <strong>TC‑017: Verify user management (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc017" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Users can be added, edited, and deleted successfully.<br>
+        <strong>Actual Result:</strong>
+        User management module worked as expected.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-018 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc018" style="cursor:pointer;">
+      <strong>TC‑018: Validate role‑based access control (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc018" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Access permissions enforced based on user role.<br>
+        <strong>Actual Result:</strong>
+        Role‑based permissions enforced correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-019 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc019" style="cursor:pointer;">
+      <strong>TC‑019: Verify login and logout functionality (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc019" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Login and logout should work successfully.<br>
+        <strong>Actual Result:</strong>
+        Login and logout worked correctly on the website.
+      </div>
+    </div>
+  </div>
+  <!-- TC-020 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc020" style="cursor:pointer;">
+      <strong>TC‑020: Verify Structure Info module loads (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc020" class="collapse">
+      <div class="card-body">
+        <strong>Steps:</strong>
+        <ol>
+          <li>Login</li>
+          <li>Click “Structure Info”</li>
+        </ol>
+        <strong>Expected Result:</strong>
+        Structure Info page loads with data grid.<br>
+        <strong>Actual Result:</strong>
+        Structure Info page loaded successfully with complete data grid.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-021 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc021" style="cursor:pointer;">
+      <strong>TC‑021: Search structure by valid ID (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc021" class="collapse">
+      <div class="card-body">
+        <strong>Steps:</strong>
+        <ol>
+          <li>Enter valid Structure ID</li>
+          <li>Click Search</li>
+        </ol>
+        <strong>Expected Result:</strong>
+        Correct structure details are displayed.<br>
+        <strong>Actual Result:</strong>
+        Structure details matched the entered valid Structure ID.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-022 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc022" style="cursor:pointer;">
+      <strong>TC‑022: Search structure with invalid ID (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc022" class="collapse">
+      <div class="card-body">
+        <strong>Steps:</strong>
+        <ol>
+          <li>Enter invalid Structure ID</li>
+          <li>Click Search</li>
+        </ol>
+        <strong>Expected Result:</strong>
+        “No records found” message displayed.<br>
+        <strong>Actual Result:</strong>
+        System displayed “No records found” message correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-023 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc023" style="cursor:pointer;">
+      <strong>TC‑023: Verify Road List (Draft) loads (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc023" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Draft road list loads correctly based on selected filters.<br>
+        <strong>Actual Result:</strong>
+        Draft road list loaded correctly with accurate data.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-024 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc024" style="cursor:pointer;">
+      <strong>TC‑024: Add new road entry (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc024" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        New road entry is saved and visible in the list.<br>
+        <strong>Actual Result:</strong>
+        New road entry was saved successfully and appeared in the road list.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-025 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc025" style="cursor:pointer;">
+      <strong>TC‑025: Validate road data fields (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc025" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        All road data fields are populated correctly.<br>
+        <strong>Actual Result:</strong>
+        All road data fields were populated accurately without missing values.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-026 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc026" style="cursor:pointer;">
+      <strong>TC‑026: Verify Upazila Road entry (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc026" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Road data matches the specified Upazila Road values.<br>
+        <strong>Actual Result:</strong>
+        Upazila Road entry values matched expected specifications.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-027 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc027" style="cursor:pointer;">
+      <strong>TC‑027: Verify Union Road entry (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc027" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Union Road data displayed correctly.<br>
+        <strong>Actual Result:</strong>
+        Union Road entry matched expected records.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-028 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc028" style="cursor:pointer;">
+      <strong>TC‑028: Verify Village Road‑A entry (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc028" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Village Road‑A details displayed correctly.<br>
+        <strong>Actual Result:</strong>
+        Village Road‑A values matched expected data.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-029 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc029" style="cursor:pointer;">
+      <strong>TC‑029: Validate multiple road entries count (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc029" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        339 road items are displayed.<br>
+        <strong>Actual Result:</strong>
+        System displayed exactly 339 road entries.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-030 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc030" style="cursor:pointer;">
+      <strong>TC‑030: Verify “Structures List” button (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc030" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Structure details load correctly for the selected road.<br>
+        <strong>Actual Result:</strong>
+        Structure details loaded successfully.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-031 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc031" style="cursor:pointer;">
+      <strong>TC‑031: Validate road vs structure data consistency (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc031" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Road and structure data values match.<br>
+        <strong>Actual Result:</strong>
+        Data was consistent between Road List and Structures List.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-032 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc032" style="cursor:pointer;">
+      <strong>TC‑032: Check dashboard responsiveness (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc032" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Layout adjusts correctly on resize.<br>
+        <strong>Actual Result:</strong>
+        Dashboard layout adjusted correctly without UI breakage.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-033 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc033" style="cursor:pointer;">
+      <strong>TC‑033: Verify copyright footer (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc033" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Correct copyright text is displayed.<br>
+        <strong>Actual Result:</strong>
+        Footer displayed correct copyright message.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-034 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc034" style="cursor:pointer;">
+      <strong>TC‑034: Verify “User Manual” link (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc034" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        User Manual opens successfully.<br>
+        <strong>Actual Result:</strong>
+        User Manual opened correctly.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-035 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc035" style="cursor:pointer;">
+      <strong>TC‑035: Verify “Mobile App” link (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc035" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Mobile App page or download opens.<br>
+        <strong>Actual Result:</strong>
+        Mobile App page opened successfully.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-036 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc036" style="cursor:pointer;">
+      <strong>TC‑036: Validate search performance (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc036" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Results returned within acceptable time.<br>
+        <strong>Actual Result:</strong>
+        System responded within acceptable performance limits.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-037 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc037" style="cursor:pointer;">
+      <strong>TC‑037: Negative test – blank search (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc037" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Error message shown or no action taken.<br>
+        <strong>Actual Result:</strong>
+        System handled blank search correctly without issues.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-038 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc038" style="cursor:pointer;">
+      <strong>TC‑038: Verify data export feature (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc038" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        Data exported in correct format.<br>
+        <strong>Actual Result:</strong>
+        Data exported successfully in the expected format.
+      </div>
+    </div>
+  </div>
+
+  <!-- TC-039 -->
+  <div class="card eduCard mb-3">
+    <div class="card-header" data-toggle="collapse" data-target="#tc039" style="cursor:pointer;">
+      <strong>TC‑039: Validate login required for dashboard access (Website)</strong>
+      <span class="badge badge-success float-right">Pass</span>
+    </div>
+    <div id="tc039" class="collapse">
+      <div class="card-body">
+        <strong>Expected Result:</strong>
+        User is redirected to login page when not authenticated.<br>
+        <strong>Actual Result:</strong>
+        System correctly redirected unauthenticated users to login page.
+      </div>
+    </div>
+  </div>
+  <!-- TC-040 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc040" style="cursor:pointer;">
+    <strong>TC‑040: Verify Structure Edit page loads (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc040" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure Edit page opens successfully with all relevant fields populated for the selected structure.<br>
+
+      <strong>Actual Result:</strong>
+      Structure Edit page opened successfully with all fields populated.
+    </div>
+  </div>
+</div>
+
+<!-- TC-041 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc041" style="cursor:pointer;">
+    <strong>TC‑041: Validate Structure ID field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc041" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure ID displays the correct ID and remains non-editable (read-only).<br>
+
+      <strong>Actual Result:</strong>
+      Structure ID displayed correctly and remained non‑editable.
+    </div>
+  </div>
+</div>
+
+<!-- TC-042 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc042" style="cursor:pointer;">
+    <strong>TC‑042: Edit Structure Name (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc042" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure Name updates successfully after Save and persists correctly after page reload.<br>
+
+      <strong>Actual Result:</strong>
+      Updated structure name did not match the saved value after reload.<br>
+      <strong>Fail Reason:</strong> Doesn’t match.
+    </div>
+  </div>
+</div>
+
+<!-- TC-043 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc043" style="cursor:pointer;">
+    <strong>TC‑043: Edit Structure Type (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc043" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure Type updates successfully via dropdown selection and persists after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Structure type updated successfully and reflected correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-044 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc044" style="cursor:pointer;">
+    <strong>TC‑044: Validate Length field accepts numeric input (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc044" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Length field accepts valid numeric input and saves the value correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Numeric length value saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-045 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc045" style="cursor:pointer;">
+    <strong>TC‑045: Negative test – Length field with text (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc045" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      System shows a validation error for non-numeric Length input and prevents saving invalid data.<br>
+
+      <strong>Actual Result:</strong>
+      System prevented save and displayed validation error.
+    </div>
+  </div>
+</div>
+
+<!-- TC-046 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc046" style="cursor:pointer;">
+    <strong>TC‑046: Edit Width field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc046" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Width field accepts valid numeric input and updates successfully after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Width value updated and saved successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-047 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc047" style="cursor:pointer;">
+    <strong>TC‑047: Negative test – Width field blank (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc047" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      System prompts validation when Width is blank and prevents saving until required input is provided.<br>
+
+      <strong>Actual Result:</strong>
+      Validation message shown; record not saved.
+    </div>
+  </div>
+</div>
+
+<!-- TC-048 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc048" style="cursor:pointer;">
+    <strong>TC‑048: Edit Condition field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc048" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Condition field updates successfully from dropdown selection and saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Condition updated correctly from dropdown selection.
+    </div>
+  </div>
+</div>
+
+<!-- TC-049 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc049" style="cursor:pointer;">
+    <strong>TC‑049: Validate Location fields (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc049" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Updated Division/Region/District/Upazila location values save correctly and display accurately afterward.<br>
+
+      <strong>Actual Result:</strong>
+      Location fields updated and saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-050 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc050" style="cursor:pointer;">
+    <strong>TC‑050: Verify Save button functionality (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc050" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Cancel discards unsaved changes and returns user to the Structure List without updating data.<br>
+
+      <strong>Actual Result:</strong>
+      Changes saved and confirmation message displayed.
+    </div>
+  </div>
+</div>
+
+<!-- TC-051 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc051" style="cursor:pointer;">
+    <strong>TC‑051: Verify Cancel button functionality (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc051" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Cancel discards unsaved changes and returns user to the Structure List without updating data.<br>
+
+      <strong>Actual Result:</strong>
+      Changes discarded and user returned to Structure List.
+    </div>
+  </div>
+</div>
+
+<!-- TC-052 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc052" style="cursor:pointer;">
+    <strong>TC‑052: Validate mandatory fields (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc052" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      If mandatory fields are left blank, system shows an error/validation message and does not allow Save.<br>
+
+      <strong>Actual Result:</strong>
+      Record was saved even when mandatory fields were blank.<br>
+      <strong>Fail Reason:</strong> Doesn’t save.
+    </div>
+  </div>
+</div>
+
+<!-- TC-053 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc053" style="cursor:pointer;">
+    <strong>TC‑053: Validate optional fields (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc053" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Optional fields may be left blank and the record still saves successfully without errors.<br>
+
+      <strong>Actual Result:</strong>
+      Record saved successfully with optional fields left blank.
+    </div>
+  </div>
+</div>
+
+<!-- TC-054 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc054" style="cursor:pointer;">
+    <strong>TC‑054: Verify data consistency after edit (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc054" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      After editing, the Structure List displays updated values correctly for the edited structure.<br>
+
+      <strong>Actual Result:</strong>
+      Updated values displayed correctly in Structure List.
+    </div>
+  </div>
+</div>
+
+<!-- TC-055 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc055" style="cursor:pointer;">
+    <strong>TC‑055: Check audit trail / logs (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc055" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Audit trail/log records the edit action with correct user and timestamp details.<br>
+
+      <strong>Actual Result:</strong>
+      Edit action logged with correct timestamp and user.
+    </div>
+  </div>
+</div>
+
+<!-- TC-056 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc056" style="cursor:pointer;">
+    <strong>TC‑056: Verify error handling for invalid data (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc056" class="collapse">
+    <div class="card-body">
+      
+<!-- TC-056 -->
+      <strong>Expected Result:</strong>
+      For invalid values (e.g., negative length), system shows an error and blocks saving invalid data.<br>
+
+      <strong>Actual Result:</strong>
+      System displayed error messages and blocked invalid save.
+    </div>
+  </div>
+</div>
+
+<!-- TC-057 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc057" style="cursor:pointer;">
+    <strong>TC‑057: Validate performance of Save action (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc057" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Save action completes within acceptable response time and confirms success to the user.<br>
+
+      <strong>Actual Result:</strong>
+      Save completed within acceptable response time.
+    </div>
+  </div>
+</div>
+
+<!-- TC-058 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc058" style="cursor:pointer;">
+    <strong>TC‑058: Verify Edit page UI responsiveness (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc058" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Edit page layout remains responsive on different screen sizes without UI breaking or overlapping elements.<br>
+
+      <strong>Actual Result:</strong>
+      Edit page layout adjusted correctly on resize.
+    </div>
+  </div>
+</div>
+
+<!-- TC-059 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc059" style="cursor:pointer;">
+    <strong>TC‑059: Verify accessibility on Edit page (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc059" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      All fields are accessible via keyboard navigation and labels/controls are properly associated for accessibility.<br>
+
+      <strong>Actual Result:</strong>
+      All fields were accessible via keyboard and labeled correctly.
+    </div>
+  </div>
+</div>
+<!-- TC-060 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc060" style="cursor:pointer;">
+    <strong>TC‑060: Verify Load Capacity field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc060" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Load Capacity accepts valid numeric input and saves the value correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Entered load capacity value did not persist correctly even after multiple save attempts.<br>
+      <strong>Fail Reason:</strong>
+      Changes did not persist as expected after repeated retries.
+    </div>
+  </div>
+</div>
+
+<!-- TC-061 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc061" style="cursor:pointer;">
+    <strong>TC‑061: Negative test – Load Capacity with text (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc061" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      System shows an error message for non-numeric Load Capacity input and prevents saving.<br>
+
+      <strong>Actual Result:</strong>
+      System behavior was inconsistent and did not reliably enforce numeric‑only validation.<br>
+      <strong>Fail Reason:</strong>
+      Validation result did not consistently match the expected behavior.
+    </div>
+  </div>
+</div>
+
+<!-- TC-062 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc062" style="cursor:pointer;">
+    <strong>TC‑062: Validate Year of Construction field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc062" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Year of Construction accepts a valid year (e.g., 2015) and saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Valid construction year was not saved consistently after multiple save actions.<br>
+      <strong>Fail Reason:</strong>
+      Entered value did not reliably persist as expected.
+    </div>
+  </div>
+</div>
+
+<!-- TC-063 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc063" style="cursor:pointer;">
+    <strong>TC‑063: Negative test – Year of Construction invalid (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc063" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Future year input is rejected with an error/validation message and is not saved.<br>
+
+      <strong>Actual Result:</strong>
+      Future year input was not consistently blocked by validation rules.<br>
+      <strong>Fail Reason:</strong>
+      Validation logic did not fully enforce expected constraints.
+    </div>
+  </div>
+</div>
+
+<!-- TC-064 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc064" style="cursor:pointer;">
+    <strong>TC‑064: Verify Last Inspection Date field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc064" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Last Inspection Date accepts a valid date input and saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Valid inspection date was intermittently not saved correctly.<br>
+      <strong>Fail Reason:</strong>
+      Save operation did not consistently reflect the entered date.
+    </div>
+  </div>
+</div>
+
+<!-- TC-065 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc065" style="cursor:pointer;">
+    <strong>TC‑065: Negative test – Invalid date format (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc065" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Invalid date format is rejected with an error/validation message and is not saved.<br>
+
+      <strong>Actual Result:</strong>
+      Invalid date formats were not consistently rejected across save attempts.<br>
+      <strong>Fail Reason:</strong>
+      Error handling did not behave as expected.
+    </div>
+  </div>
+</div>
+
+<!-- TC-066 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc066" style="cursor:pointer;">
+    <strong>TC‑066: Validate Condition Rating dropdown (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc066" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Condition Rating updates successfully (Good/Fair/Poor) and saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Selected condition rating was not reliably retained after saving.<br>
+      <strong>Fail Reason:</strong>
+      Updated value did not consistently match expected result.
+    </div>
+  </div>
+</div>
+
+<!-- TC-067 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc067" style="cursor:pointer;">
+    <strong>TC‑067: Verify Remarks field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc067" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Remarks text saves correctly and persists after refresh/reopen.<br>
+
+      <strong>Actual Result:</strong>
+      Entered remarks were partially saved or lost after retries.<br>
+      <strong>Fail Reason:</strong>
+      Persisted data did not consistently match input.
+    </div>
+  </div>
+</div>
+
+<!-- TC-068 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc068" style="cursor:pointer;">
+    <strong>TC‑068: Negative test – Remarks field length (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc068" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      For very long remarks (>500 chars), system either shows an error or safely truncates according to specification without breaking save flow.<br>
+
+      <strong>Actual Result:</strong>
+      Long text input caused inconsistent save behavior instead of proper validation.<br>
+      <strong>Fail Reason:</strong>
+      Input handling did not strictly follow expected validation rules.
+    </div>
+  </div>
+</div>
+
+<!-- TC-069 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc069" style="cursor:pointer;">
+    <strong>TC‑069: Verify Attachment upload (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc069" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid attachment uploads successfully and is associated with the record after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Uploaded attachment was not consistently retained after save.<br>
+      <strong>Fail Reason:</strong>
+      Upload result did not persist as expected.
+    </div>
+  </div>
+</div>
+
+<!-- TC-070 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc070" style="cursor:pointer;">
+    <strong>TC‑070: Negative test – Invalid attachment type (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc070" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Unsupported attachment types are blocked with an error message and are not uploaded.<br>
+
+      <strong>Actual Result:</strong>
+      Unsupported file types were not consistently blocked.<br>
+      <strong>Fail Reason:</strong>
+      Validation behavior did not fully match expected rules.
+    </div>
+  </div>
+</div>
+
+<!-- TC-071 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc071" style="cursor:pointer;">
+    <strong>TC‑071: Verify Attachment download (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc071" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Uploaded attachment downloads successfully and file integrity is preserved.<br>
+
+      <strong>Actual Result:</strong>
+      Downloaded file was occasionally inaccessible after upload.<br>
+      <strong>Fail Reason:</strong>
+      Download behavior did not consistently align with expected result.
+    </div>
+  </div>
+</div>
+
+<!-- TC-072 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc072" style="cursor:pointer;">
+    <strong>TC‑072: Verify Attachment delete (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc072" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Attachment deletes successfully and is no longer available after refresh/reload.<br>
+
+      <strong>Actual Result:</strong>
+      Deleted attachments reappeared after page refresh in some cases.<br>
+      <strong>Fail Reason:</strong>
+      Deletion did not persist consistently.
+    </div>
+  </div>
+</div>
+
+<!-- TC-073 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc073" style="cursor:pointer;">
+    <strong>TC‑073: Validate Inspector Name field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc073" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Inspector Name saves correctly when valid input is provided.<br>
+
+      <strong>Actual Result:</strong>
+      Inspector name was not consistently saved across retries.<br>
+      <strong>Fail Reason:</strong>
+      Saved value did not reliably match input.
+    </div>
+  </div>
+</div>
+
+<!-- TC-074 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc074" style="cursor:pointer;">
+    <strong>TC‑074: Negative test – Inspector Name blank (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc074" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Blank Inspector Name triggers validation error and prevents saving if the field is mandatory.<br>
+
+      <strong>Actual Result:</strong>
+      Blank inspector name was not consistently prevented from being saved.<br>
+      <strong>Fail Reason:</strong>
+      Mandatory field validation did not behave as expected.
+    </div>
+  </div>
+</div>
+
+<!-- TC-075 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc075" style="cursor:pointer;">
+    <strong>TC‑075: Verify Inspection Status field (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc075" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Inspection Status updates correctly (Draft/Review/Approved) and persists after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Selected inspection status was not reliably retained after save.<br>
+      <strong>Fail Reason:</strong>
+      Updated status did not persist consistently.
+    </div>
+  </div>
+</div>
+
+<!-- TC-076 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc076" style="cursor:pointer;">
+    <strong>TC‑076: Validate multiple field edits together (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc076" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Multiple edited fields (Load Capacity, Condition, Remarks) save together correctly in a single Save operation.<br>
+
+      <strong>Actual Result:</strong>
+      Multiple field updates were partially saved or reverted after retrying.<br>
+      <strong>Fail Reason:</strong>
+      Combined save operation did not match expected behavior.
+    </div>
+  </div>
+</div>
+
+<!-- TC-077 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc077" style="cursor:pointer;">
+    <strong>TC‑077: Verify Save confirmation message (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc077" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      After Save, a confirmation/success message is displayed to the user.<br>
+
+      <strong>Actual Result:</strong>
+      Confirmation message was inconsistent or missing after save retries.<br>
+      <strong>Fail Reason:</strong>
+      User feedback did not consistently confirm save result.
+    </div>
+  </div>
+</div>
+
+<!-- TC-078 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc078" style="cursor:pointer;">
+    <strong>TC‑078: Verify Cancel button discards changes (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc078" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Cancel discards changes and returns to Structure List without saving updates.<br>
+
+      <strong>Actual Result:</strong>
+      Some changes persisted even after using Cancel option.<br>
+      <strong>Fail Reason:</strong>
+      Cancel operation did not consistently discard changes.
+    </div>
+  </div>
+</div>
+
+<!-- TC-079 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc079" style="cursor:pointer;">
+    <strong>TC‑079: Validate audit trail for edits (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc079" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Audit trail/log records the edit action with correct user and timestamp.<br>
+
+      <strong>Actual Result:</strong>
+      Audit logs were incomplete or delayed after repeated save attempts.<br>
+      <strong>Fail Reason:</strong>
+      Logged data did not fully reflect performed actions.
+    </div>
+  </div>
+</div>
+<!-- TC-080 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc080" style="cursor:pointer;">
+    <strong>TC‑080: Verify Structure Edit page loads (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc080" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Edit page opens with all fields populated for the selected structure.<br>
+
+      <strong>Actual Result:</strong>
+      Edit page opened successfully with all structure fields populated.
+    </div>
+  </div>
+</div>
+
+<!-- TC-081 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc081" style="cursor:pointer;">
+    <strong>TC‑081: Validate Structure ID field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc081" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure ID is correct and non-editable (read-only).<br>
+
+      <strong>Actual Result:</strong>
+      Structure ID displayed correctly and remained non‑editable.
+    </div>
+  </div>
+</div>
+
+<!-- TC-082 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc082" style="cursor:pointer;">
+    <strong>TC‑082: Edit Structure Name (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc082" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure Name updates successfully and remains updated after reload.<br>
+
+      <strong>Actual Result:</strong>
+      Structure name updated and reflected correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-083 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc083" style="cursor:pointer;">
+    <strong>TC‑083: Edit Structure Type (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc083" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Structure Type updates successfully and persists after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Structure type updated successfully via dropdown.
+    </div>
+  </div>
+</div>
+
+<!-- TC-084 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc084" style="cursor:pointer;">
+    <strong>TC‑084: Validate Length field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc084" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid numeric Length saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Numeric length value saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-085 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc085" style="cursor:pointer;">
+    <strong>TC‑085: Negative test – Length with text (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc085" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Non-numeric Length input triggers validation error and prevents Save.<br>
+
+      <strong>Actual Result:</strong>
+      System displayed validation error and prevented save.
+    </div>
+  </div>
+</div>
+
+<!-- TC-086 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc086" style="cursor:pointer;">
+    <strong>TC‑086: Edit Width field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc086" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid numeric Width saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Width value saved and displayed correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-087 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc087" style="cursor:pointer;">
+    <strong>TC‑087: Negative test – Width blank (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc087" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Blank Width triggers validation error and prevents Save if required.<br>
+
+      <strong>Actual Result:</strong>
+      Validation message shown; record not saved.
+    </div>
+  </div>
+</div>
+
+<!-- TC-088 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc088" style="cursor:pointer;">
+    <strong>TC‑088: Edit Condition field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc088" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Condition updates successfully and is saved correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Condition updated successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-089 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc089" style="cursor:pointer;">
+    <strong>TC‑089: Validate Location fields (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc089" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Location fields update successfully and save correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Location changes saved and displayed correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-090 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc090" style="cursor:pointer;">
+    <strong>TC‑090: Verify Save button functionality (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc090" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Save persists changes and displays confirmation message.<br>
+
+      <strong>Actual Result:</strong>
+      Changes saved and confirmation shown.
+    </div>
+  </div>
+</div>
+
+<!-- TC-091 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc091" style="cursor:pointer;">
+    <strong>TC‑091: Verify Cancel button functionality (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc091" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Cancel discards changes and returns to Structure List without saving.<br>
+
+      <strong>Actual Result:</strong>
+      Changes discarded and user returned to Structure List.
+    </div>
+  </div>
+</div>
+
+<!-- TC-092 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc092" style="cursor:pointer;">
+    <strong>TC‑092: Validate mandatory fields (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc092" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Leaving mandatory fields blank shows error message and blocks Save.<br>
+
+      <strong>Actual Result:</strong>
+      Validation enforced; save prevented when mandatory fields missing.
+    </div>
+  </div>
+</div>
+
+<!-- TC-093 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc093" style="cursor:pointer;">
+    <strong>TC‑093: Validate optional fields (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc093" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Optional fields can remain blank and record saves successfully.<br>
+
+      <strong>Actual Result:</strong>
+      Record saved successfully with optional fields blank.
+    </div>
+  </div>
+</div>
+
+<!-- TC-094 (FAIL) -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc094" style="cursor:pointer;">
+    <strong>TC‑094: Verify data consistency after edit (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc094" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      After edit, Structure List reflects updated values correctly and consistently.<br>
+
+      <strong>Actual Result:</strong>
+      Updated values in Structure List did not fully match edited values.<br>
+      <strong>Fail Reason:</strong>
+      Data inconsistency observed after save and reload.
+    </div>
+  </div>
+</div>
+
+<!-- TC-095 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc095" style="cursor:pointer;">
+    <strong>TC‑095: Check audit trail/logs (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc095" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Audit trail/log records edit action with accurate timestamp/user.<br>
+
+      <strong>Actual Result:</strong>
+      Edit actions logged correctly with timestamp and user.
+    </div>
+  </div>
+</div>
+
+<!-- TC-096 (FAIL) -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc096" style="cursor:pointer;">
+    <strong>TC‑096: Verify error handling for invalid data (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc096" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Invalid values (e.g., negative length) are rejected with an error message and are not saved.<br>
+
+      <strong>Actual Result:</strong>
+      Invalid inputs were intermittently saved instead of being blocked.<br>
+      <strong>Fail Reason:</strong>
+      Validation did not consistently enforce constraints.
+    </div>
+  </div>
+</div>
+
+<!-- TC-097 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc097" style="cursor:pointer;">
+    <strong>TC‑097: Validate performance of Save action (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc097" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Save completes within acceptable time and confirms success.<br>
+
+      <strong>Actual Result:</strong>
+      Save completed within acceptable response time.
+    </div>
+  </div>
+</div>
+
+<!-- TC-098 (FAIL) -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc098" style="cursor:pointer;">
+    <strong>TC‑098: Verify UI responsiveness (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc098" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      UI remains responsive and aligned across screen sizes without layout breaking.<br>
+
+      <strong>Actual Result:</strong>
+      Layout misalignment observed on smaller screen widths.<br>
+      <strong>Fail Reason:</strong>
+      UI did not adapt correctly under all resolutions.
+    </div>
+  </div>
+</div>
+
+<!-- TC-099 (FAIL) -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc099" style="cursor:pointer;">
+    <strong>TC‑099: Verify accessibility (Website)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc099" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      All form elements are accessible via keyboard and properly labeled for accessibility standards.<br>
+
+      <strong>Actual Result:</strong>
+      Some fields were not reachable using keyboard navigation.<br>
+      <strong>Fail Reason:</strong>
+      Accessibility requirements not fully met.
+    </div>
+  </div>
+</div>
+
+<!-- TC-100 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc100" style="cursor:pointer;">
+    <strong>TC‑100: Verify Load Capacity field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc100" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid numeric Load Capacity saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Load capacity value saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-101 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc101" style="cursor:pointer;">
+    <strong>TC‑101: Negative test – Load Capacity with text (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc101" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Non-numeric Load Capacity triggers validation error and blocks Save.<br>
+
+      <strong>Actual Result:</strong>
+      Validation error displayed; save blocked.
+    </div>
+  </div>
+</div>
+
+<!-- TC-102 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc102" style="cursor:pointer;">
+    <strong>TC‑102: Validate Year of Construction field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc102" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid Year of Construction saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Valid year saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-103 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc103" style="cursor:pointer;">
+    <strong>TC‑103: Negative test – Year in future (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc103" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Future year is rejected with error message and not saved.<br>
+
+      <strong>Actual Result:</strong>
+      System blocked future year input.
+    </div>
+  </div>
+</div>
+
+<!-- TC-104 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc104" style="cursor:pointer;">
+    <strong>TC‑104: Verify Last Inspection Date field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc104" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid Last Inspection Date saves correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Inspection date saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-105 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc105" style="cursor:pointer;">
+    <strong>TC‑105: Negative test – Invalid date format (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc105" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Invalid date format is rejected with error message and not saved.<br>
+
+      <strong>Actual Result:</strong>
+      Validation error shown for invalid date.
+    </div>
+  </div>
+</div>
+
+<!-- TC-106 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc106" style="cursor:pointer;">
+    <strong>TC‑106: Validate Condition Rating dropdown (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc106" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Condition Rating selection saves successfully.<br>
+
+      <strong>Actual Result:</strong>
+      Condition rating updated successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-107 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc107" style="cursor:pointer;">
+    <strong>TC‑107: Verify Remarks field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc107" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Remarks save correctly and persist after reload.<br>
+
+      <strong>Actual Result:</strong>
+      Remarks saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-108 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc108" style="cursor:pointer;">
+    <strong>TC‑108: Negative test – Remarks too long (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc108" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Remarks over allowed length trigger error or are handled per specification without corrupting data.<br>
+
+      <strong>Actual Result:</strong>
+      System prevented save and showed validation message.
+    </div>
+  </div>
+</div>
+
+<!-- TC-109 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc109" style="cursor:pointer;">
+    <strong>TC‑109: Verify Attachment upload (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc109" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Valid attachment uploads successfully.<br>
+
+      <strong>Actual Result:</strong>
+      Attachment uploaded successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-110 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc110" style="cursor:pointer;">
+    <strong>TC‑110: Negative test – Invalid attachment type (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc110" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Invalid attachment type is blocked with an error message.<br>
+
+      <strong>Actual Result:</strong>
+      Invalid attachment type blocked with error message.
+    </div>
+  </div>
+</div>
+
+<!-- TC-111 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc111" style="cursor:pointer;">
+    <strong>TC‑111: Verify Attachment download (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc111" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Attachment downloads successfully.<br>
+
+      <strong>Actual Result:</strong>
+      Attachment downloaded successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-112 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc112" style="cursor:pointer;">
+    <strong>TC‑112: Verify Attachment delete (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc112" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Attachment deletes successfully and remains deleted after refresh.<br>
+
+      <strong>Actual Result:</strong>
+      Attachment deleted successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-113 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc113" style="cursor:pointer;">
+    <strong>TC‑113: Validate Inspector Name field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc113" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Inspector Name saves correctly when provided.<br>
+
+      <strong>Actual Result:</strong>
+      Inspector name saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-114 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc114" style="cursor:pointer;">
+    <strong>TC‑114: Negative test – Inspector Name blank (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc114" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Blank Inspector Name triggers validation error and prevents Save if required.<br>
+
+      <strong>Actual Result:</strong>
+      Validation message displayed and save prevented.
+    </div>
+  </div>
+</div>
+
+<!-- TC-115 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc115" style="cursor:pointer;">
+    <strong>TC‑115: Verify Inspection Status field (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc115" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Inspection Status updates correctly and persists after Save.<br>
+
+      <strong>Actual Result:</strong>
+      Inspection status updated correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-116 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc116" style="cursor:pointer;">
+    <strong>TC‑116: Validate multiple field edits together (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc116" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Multiple edited fields save together correctly in one Save operation.<br>
+
+      <strong>Actual Result:</strong>
+      All edited fields saved correctly in a single operation.
+    </div>
+  </div>
+</div>
+
+<!-- TC-117 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc117" style="cursor:pointer;">
+    <strong>TC‑117: Verify Save confirmation message (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc117" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Save confirmation message is displayed after successful update.<br>
+
+      <strong>Actual Result:</strong>
+      Confirmation message displayed after save.
+    </div>
+  </div>
+</div>
+
+<!-- TC-118 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc118" style="cursor:pointer;">
+    <strong>TC‑118: Verify Cancel button discards changes (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc118" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Cancel discards edits and returns without saving changes.<br>
+
+      <strong>Actual Result:</strong>
+      Changes discarded and edit page closed correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-119 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc119" style="cursor:pointer;">
+    <strong>TC‑119: Validate audit trail for edits (Website)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc119" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Audit trail records the edit action with correct timestamp/user details.<br>
+
+      <strong>Actual Result:</strong>
+      Audit trail recorded edit action with timestamp and user.
+    </div>
+  </div>
+</div>
+<!-- TC-120 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc120" style="cursor:pointer;">
+    <strong>TC‑120: Login with valid credentials (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc120" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      User logs in successfully and the dashboard/welcome screen is displayed in the mobile app.<br>
+
+      <strong>Actual Result:</strong>
+      User logged in successfully and dashboard screen was displayed.
+    </div>
+  </div>
+</div>
+
+<!-- TC-121 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc121" style="cursor:pointer;">
+    <strong>TC‑121: Login with “Remember Me” enabled (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc121" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      With “Remember Me” enabled, user remains logged in after closing and reopening the app (session persists).<br>
+
+      <strong>Actual Result:</strong>
+      Login session persisted after reopening the application.
+    </div>
+  </div>
+</div>
+
+<!-- TC-122 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc122" style="cursor:pointer;">
+    <strong>TC‑122: Login with invalid credentials (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc122" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Invalid login shows an error message (e.g., “Invalid credentials”) and user remains on login screen.<br>
+
+      <strong>Actual Result:</strong>
+      Error message displayed indicating invalid credentials.
+    </div>
+  </div>
+</div>
+
+<!-- TC-123 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc123" style="cursor:pointer;">
+    <strong>TC‑123: Navigate to Draft Inspection (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc123" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Tapping Draft Inspection navigates to Draft Inspection screen with Structure Information and New/Saved tabs.<br>
+
+      <strong>Actual Result:</strong>
+      Draft Inspection page opened showing Structure Information and New/Saved tabs.
+    </div>
+  </div>
+</div>
+
+<!-- TC-124 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc124" style="cursor:pointer;">
+    <strong>TC‑124: Switch between New and Saved drafts (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc124" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      New tab shows a blank form; Saved tab shows list of previously saved inspection drafts.<br>
+
+      <strong>Actual Result:</strong>
+      New tab showed blank form; Saved tab listed previously saved drafts.
+    </div>
+  </div>
+</div>
+
+<!-- TC-125 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc125" style="cursor:pointer;">
+    <strong>TC‑125: Search using valid Structure ID (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc125" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Searching with valid Structure ID displays structure details (Road Name, Code, Type, Chainage, Length).<br>
+
+      <strong>Actual Result:</strong>
+      Structure details were displayed correctly after search.
+    </div>
+  </div>
+</div>
+
+<!-- TC-126 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc126" style="cursor:pointer;">
+    <strong>TC‑126: Search without Structure ID using filters (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc126" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Searching without Structure ID using location + road filters displays matching structures in results list.<br>
+
+      <strong>Actual Result:</strong>
+      Matching structures were displayed based on selected filters.
+    </div>
+  </div>
+</div>
+
+<!-- TC-127 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc127" style="cursor:pointer;">
+    <strong>TC‑127: Download road data (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc127" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Download Road exports/starts download of road data in a supported format (e.g., Excel/CSV/PDF).<br>
+
+      <strong>Actual Result:</strong>
+      Road data was downloaded successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-128 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc128" style="cursor:pointer;">
+    <strong>TC‑128: Open Inspection from search result (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc128" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Tapping Inspect opens inspection screen with tabs: Super Structure, Sub Structure, Non Structure, Bearing Pad.<br>
+
+      <strong>Actual Result:</strong>
+      Inspection page opened with all inspection tabs visible.
+    </div>
+  </div>
+</div>
+
+<!-- TC-129 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc129" style="cursor:pointer;">
+    <strong>TC‑129: Open Inventory from search result (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc129" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Tapping Inventory opens inventory screen with tabs: Physical Characteristics, Traffic & Loading Info, Channel/River Information, Identification & Location.<br>
+
+      <strong>Actual Result:</strong>
+      Inventory page opened with all inventory tabs displayed.
+    </div>
+  </div>
+</div>
+
+<!-- TC-130 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc130" style="cursor:pointer;">
+    <strong>TC‑130: Select all Super Structure components (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc130" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      All individual component checkboxes under Super Structure can be selected successfully.<br>
+
+      <strong>Actual Result:</strong>
+      All component checkboxes were selected successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-131 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc131" style="cursor:pointer;">
+    <strong>TC‑131: Unselect all Super Structure components (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc131" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      All previously selected component checkboxes can be deselected successfully.<br>
+
+      <strong>Actual Result:</strong>
+      All previously selected checkboxes were unselected successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-132 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc132" style="cursor:pointer;">
+    <strong>TC‑132: Navigate between inspection tabs (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc132" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Navigating across inspection tabs loads respective content without errors or crashes in the mobile app.<br>
+
+      <strong>Actual Result:</strong>
+      Each inspection tab loaded its respective content without error.
+    </div>
+  </div>
+</div>
+
+<!-- TC-133 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc133" style="cursor:pointer;">
+    <strong>TC‑133: Update Construction Year in Inventory (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc133" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Updating Construction Year in Inventory saves successfully and persists after navigating away/back.<br>
+
+      <strong>Actual Result:</strong>
+      Construction year was updated and saved successfully.
+    </div>
+  </div>
+</div>
+
+<!-- TC-134 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc134" style="cursor:pointer;">
+    <strong>TC‑134: Update Latitude and Longitude (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc134" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Updating Latitude/Longitude saves successfully and persists correctly.<br>
+
+      <strong>Actual Result:</strong>
+      Latitude and Longitude values were saved correctly.
+    </div>
+  </div>
+</div>
+
+<!-- TC-135 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc135" style="cursor:pointer;">
+    <strong>TC‑135: Verify Inventory tabs visibility (Mobile App)</strong>
+    <span class="badge badge-success float-right">Pass</span>
+  </div>
+  <div id="tc135" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      All four Inventory tabs are visible and clickable (Physical Characteristics, Traffic & Loading Info, Channel/River Information, Identification & Location).<br>
+
+      <strong>Actual Result:</strong>
+      All Inventory tabs were visible and functional.
+    </div>
+  </div>
+</div>
+
+<!-- TC-136 (FAIL) -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#tc136" style="cursor:pointer;">
+    <strong>TC‑136: Verify Google Maps integration in search result (Mobile App)</strong>
+    <span class="badge badge-danger float-right">Fail</span>
+  </div>
+  <div id="tc136" class="collapse">
+    <div class="card-body">
+      
+      <strong>Expected Result:</strong>
+      Map view displays the searched structure’s location (structure-specific coordinates), not the tester/device’s current location.<br>
+
+      <strong>Actual Result:</strong>
+      Map displayed the tester’s current device location instead of the selected structure’s location.<br>
+      <strong>Fail Reason:</strong>
+      Map rendering did not align with expected structure‑specific coordinates.
+    </div>
+  </div>
+</div>
+
+
+
+  <hr>
+
+  <h4>📝 Bug Reports</h4>
+<p class="text-muted">Click a bug title to expand/collapse details.</p>
+<!-- Bug 1 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug01" style="cursor:pointer;">
+    <strong>Bug 1: UI problem of the menu in Inspection details (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug01" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Login to RuBIMS web portal.</li>
+        <li>Navigate to <em>Inspection → Details</em>.</li>
+        <li>Observe the left-side menu and dropdowns.</li>
+      </ol>
+      <strong>Expected Result:</strong> Menu should render properly, aligned, and accessible.<br>
+      <strong>Actual Result:</strong> Menu overlaps with content, misaligned, or not clickable.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 2 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug02" style="cursor:pointer;">
+    <strong>Bug 2: Searching Road in Inspection List (Gallery problem)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug02" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Login to RuBIMS web portal.</li>
+        <li>Navigate to <em>Inspection → List</em>.</li>
+        <li>Enter a valid Road ID in search.</li>
+      </ol>
+      <strong>Expected Result:</strong> Road inspection records should appear in gallery view.<br>
+      <strong>Actual Result:</strong> Gallery view does not display results, blank screen.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 3 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug03" style="cursor:pointer;">
+    <strong>Bug 3: Non-Structure info not showing correctly after Approval</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug03" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Submit inspection with non-structure info (e.g., culverts, weep holes).</li>
+        <li>Approve the inspection.</li>
+        <li>View approved inspection details.</li>
+      </ol>
+      <strong>Expected Result:</strong> Non-structure info should display correctly.<br>
+      <strong>Actual Result:</strong> Non-structure info missing or corrupted.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 4 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug04" style="cursor:pointer;">
+    <strong>Bug 4: Damage Data (DD) = 0 even though input was given</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug04" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Enter damage data during inspection.</li>
+        <li>Save and submit inspection.</li>
+        <li>View inspection details.</li>
+      </ol>
+      <strong>Expected Result:</strong> DD field should reflect entered damage value.<br>
+      <strong>Actual Result:</strong> DD shows as 0.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 5 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug05" style="cursor:pointer;">
+    <strong>Bug 5: Can’t delete extra structure</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug05" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Navigate to <em>Structure Info → Draft</em>.</li>
+        <li>Select a structure marked as extra.</li>
+        <li>Attempt to delete.</li>
+      </ol>
+      <strong>Expected Result:</strong> Structure should be deleted.<br>
+      <strong>Actual Result:</strong> Delete action fails, structure remains.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 6 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug06" style="cursor:pointer;">
+    <strong>Bug 6: Types of Waterway data not showing in inspection view</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug06" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Add waterway type data during inspection.</li>
+        <li>Save and approve inspection.</li>
+        <li>View inspection details.</li>
+      </ol>
+      <strong>Expected Result:</strong> Waterway type data should display.<br>
+      <strong>Actual Result:</strong> Field is blank.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 7 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug07" style="cursor:pointer;">
+    <strong>Bug 7: Wrong Structure ID format problem in editing</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug07" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Navigate to <em>Structure List → Edit</em>.</li>
+        <li>Check Structure ID format.</li>
+      </ol>
+      <strong>Expected Result:</strong> Structure ID should follow standard format.<br>
+      <strong>Actual Result:</strong> ID format inconsistent or invalid.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 8 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug08" style="cursor:pointer;">
+    <strong>Bug 8: Data not showing in “fallen out” category</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug08" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Submit inspection with “fallen out” status.</li>
+        <li>Navigate to <em>Inspection → Fallen Out</em>.</li>
+      </ol>
+      <strong>Expected Result:</strong> Data should appear in category.<br>
+      <strong>Actual Result:</strong> No records displayed.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 9 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug09" style="cursor:pointer;">
+    <strong>Bug 9: Sub-Structure element (Weep Hole) missing</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug09" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Add sub-structure element “Weep Hole” during inspection.</li>
+        <li>Save and approve inspection.</li>
+      </ol>
+      <strong>Expected Result:</strong> Weep Hole should appear in inspection details.<br>
+      <strong>Actual Result:</strong> Element missing.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 10 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug10" style="cursor:pointer;">
+    <strong>Bug 10: Delamination rating not displaying after approval</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug10" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Enter delamination rating during inspection.</li>
+        <li>Approve inspection.</li>
+      </ol>
+      <strong>Expected Result:</strong> Rating should display in approved inspection.<br>
+      <strong>Actual Result:</strong> Rating missing.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 11 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug11" style="cursor:pointer;">
+    <strong>Bug 11: Some rejected inspections don’t go to archive after re-inspection</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug11" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Reject inspection.</li>
+        <li>Perform re-inspection.</li>
+        <li>Check archive.</li>
+      </ol>
+      <strong>Expected Result:</strong> Rejected inspections should move to archive.<br>
+      <strong>Actual Result:</strong> Some remain in active list.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 12 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug12" style="cursor:pointer;">
+    <strong>Bug 12: Duplicate inspection in Approved list</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug12" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Approve inspection.</li>
+        <li>Navigate to <em>Inspection → Approved</em>.</li>
+      </ol>
+      <strong>Expected Result:</strong> Single record per inspection.<br>
+      <strong>Actual Result:</strong> Duplicate entries appear.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 13 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug13" style="cursor:pointer;">
+    <strong>Bug 13: Site can’t be reached using Google Chrome</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug13" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open Google Chrome browser.</li>
+        <li>Navigate to <code>https://rubims.lged.gov.bd</code>.</li>
+      </ol>
+      <strong>Expected Result:</strong> Site loads successfully.<br>
+      <strong>Actual Result:</strong> “Site can’t be reached” error.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 14 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug14" style="cursor:pointer;">
+    <strong>Bug 14: Display counter error</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug14" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Navigate to dashboard counters.</li>
+        <li>Observe displayed totals.</li>
+      </ol>
+      <strong>Expected Result:</strong> Counters should match actual data.<br>
+      <strong>Actual Result:</strong> Counters show incorrect values.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 15 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug15" style="cursor:pointer;">
+    <strong>Bug 15: Can’t update header info of a structure</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug15" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Navigate to <em>Structure List → Edit</em>.</li>
+        <li>Attempt to update header info.</li>
+      </ol>
+      <strong>Expected Result:</strong> Header info updated successfully.<br>
+      <strong>Actual Result:</strong> Update fails.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 16 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug16" style="cursor:pointer;">
+    <strong>Bug 16: Painting railing/rail post/wheel guard shows wrong info</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug16" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Enter painting info during inspection.</li>
+        <li>Save and approve.</li>
+      </ol>
+      <strong>Expected Result:</strong> Correct painting info displayed.<br>
+      <strong>Actual Result:</strong> Wrong info shown.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 17 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug17" style="cursor:pointer;">
+    <strong>Bug 17: No. of pile known can’t be given from app</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug17" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open mobile app.</li>
+        <li>Add pile count during inspection.</li>
+      </ol>
+      <strong>Expected Result:</strong> Pile count saved.<br>
+      <strong>Actual Result:</strong> Field not editable.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 18 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug18" style="cursor:pointer;">
+    <strong>Bug 18: Some inspections don’t have defect photo</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug18" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Perform inspection with defect photo.</li>
+        <li>Save and approve.</li>
+        <li>Open inspection details.</li>
+      </ol>
+      <strong>Expected Result:</strong> Photo should display in inspection details.<br>
+      <strong>Actual Result:</strong> Photo missing.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 19 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug19" style="cursor:pointer;">
+    <strong>Bug 19: Inspection vanishes unexpectedly</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug19" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Submit inspection.</li>
+        <li>Navigate to inspection list.</li>
+      </ol>
+      <strong>Expected Result:</strong> Inspection remains visible.<br>
+      <strong>Actual Result:</strong> Inspection disappears.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 20 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug20" style="cursor:pointer;">
+    <strong>Bug 20: App crash during inspection</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug20" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open mobile app.</li>
+        <li>Perform inspection with multiple inputs.</li>
+      </ol>
+      <strong>Expected Result:</strong> App runs smoothly.<br>
+      <strong>Actual Result:</strong> App crashes.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 21 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug21" style="cursor:pointer;">
+    <strong>Bug 21: Same Structure ID with different chainage</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug21" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Add inspection with Structure ID.</li>
+        <li>Add another inspection with same ID but different chainage.</li>
+      </ol>
+      <strong>Expected Result:</strong> System should validate uniqueness.<br>
+      <strong>Actual Result:</strong> Duplicate IDs allowed.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 22 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug22" style="cursor:pointer;">
+    <strong>Bug 22: Edit/Save does not persist field values reliably (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug22" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Go to <em>Structure List → Edit</em>.</li>
+        <li>Update one or more fields (e.g., Name, Year, Date, Rating, Remarks).</li>
+        <li>Tap/click <strong>Save</strong>.</li>
+        <li>Refresh page or reopen the same structure.</li>
+      </ol>
+      <strong>Expected Result:</strong> Updated field values persist consistently after Save and reload.<br>
+      <strong>Actual Result:</strong> Some values revert, partially save, or mismatch after reload.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 23 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug23" style="cursor:pointer;">
+    <strong>Bug 23: Mandatory/validation rules not enforced consistently (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug23" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open an edit form.</li>
+        <li>Enter invalid values (text in numeric fields / future year / invalid date / blank mandatory).</li>
+        <li>Click <strong>Save</strong>.</li>
+      </ol>
+      <strong>Expected Result:</strong> System blocks save and shows clear validation errors every time.<br>
+      <strong>Actual Result:</strong> Validation is inconsistent; some invalid data is saved or not properly rejected.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 24 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug24" style="cursor:pointer;">
+    <strong>Bug 24: Attachment upload/download/delete is unstable (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug24" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open structure edit page.</li>
+        <li>Upload a valid attachment and save.</li>
+        <li>Try downloading the same attachment.</li>
+        <li>Delete attachment and refresh.</li>
+      </ol>
+      <strong>Expected Result:</strong> Attachment reliably uploads, downloads, and remains deleted after refresh.<br>
+      <strong>Actual Result:</strong> Attachment may disappear, fail to download, or reappear after deletion.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 25 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug25" style="cursor:pointer;">
+    <strong>Bug 25: Audit/logging does not consistently reflect actions (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug25" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Edit structure fields and save.</li>
+        <li>Navigate to logs/audit trail.</li>
+        <li>Verify latest entry exists with correct timestamp/user.</li>
+      </ol>
+      <strong>Expected Result:</strong> Each edit action is logged correctly and immediately.<br>
+      <strong>Actual Result:</strong> Logs are incomplete, delayed, or missing expected entries.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 26 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug26" style="cursor:pointer;">
+    <strong>Bug 26: Post-edit list shows inconsistent data (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug26" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Edit a structure and save.</li>
+        <li>Return to Structure List.</li>
+        <li>Compare list values with edited values.</li>
+      </ol>
+      <strong>Expected Result:</strong> List shows the updated values for the edited record.<br>
+      <strong>Actual Result:</strong> List values do not fully match the saved edits.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 27 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug27" style="cursor:pointer;">
+    <strong>Bug 27: UI responsiveness and accessibility issues on edit page (Website)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug27" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Open edit page.</li>
+        <li>Resize browser to smaller widths or use mobile view.</li>
+        <li>Try navigating form using keyboard only.</li>
+      </ol>
+      <strong>Expected Result:</strong> Layout remains usable and keyboard navigation reaches all fields.<br>
+      <strong>Actual Result:</strong> Layout misaligns and some fields are not keyboard accessible.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+<!-- Bug 28 -->
+<div class="card eduCard mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bug28" style="cursor:pointer;">
+    <strong>Bug 28: Map shows device location instead of structure location (Mobile App)</strong>
+    <span class="badge badge-danger float-right">Unresolved</span>
+  </div>
+  <div id="bug28" class="collapse">
+    <div class="card-body">
+      <strong>Steps to Reproduce:</strong>
+      <ol>
+        <li>Search structure from the mobile app.</li>
+        <li>Open map view from search result.</li>
+      </ol>
+      <strong>Expected Result:</strong> Map centers on the searched structure coordinates.<br>
+      <strong>Actual Result:</strong> Map centers on tester’s current device location.<br>
+      <strong>Current Status:</strong> Unresolved
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+</script>
+
+</body>
+</html>
