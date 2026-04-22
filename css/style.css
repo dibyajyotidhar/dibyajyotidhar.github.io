@@ -202,9 +202,24 @@
 }
 
 .eduCard .eduTitle {
-    color: #ffffff !important;
+    color: var(--text-color);
     font-weight: bold;
+    background: transparent;
+    transition: color 0.3s ease;
+
 }
+
+/* Optional hover effect (keeps your previous intent) */
+.eduCard:hover .eduTitle {
+    color: var(--primary-color);
+}
+
+
+/* Dark mode hover override */
+body.dark-mode .eduCard:hover .eduTitle {
+    color: #ffffff;
+}
+
 
 .eduCard:hover .card-header {
     background-color: var(--primary-color);
