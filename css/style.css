@@ -427,3 +427,34 @@ code {
 .eduCard pre {
     margin-bottom: 0;
 }
+
+.cv-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 22px;
+    border-radius: 14px;
+
+    background: var(--fixed-color);
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Gill Sans MT";
+    font-weight: 700;
+    letter-spacing: 0.2px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cv-btn:hover {
+    background: var(--primary-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.cv-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(22, 142, 240, 0.25), 0 10px 22px rgba(0, 0, 0, 0.12);
+}
