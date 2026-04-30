@@ -243,25 +243,25 @@ body.dark-mode .eduCard:hover .eduTitle {
     font-family: 'Gill Sans MT';
 }
 
-.techHead {
+/* .techHead {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: bold;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-}
+} */
 
-.techHead:hover {
+/* .techHead:hover {
     color: var(--primary-color);
     transition: 300ms;
-}
+} */
 
-.techLang {
+/* .techLang {
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-}
+} */
 
 #project {
     padding-top: 50px;
@@ -457,4 +457,38 @@ code {
 .cv-btn:focus {
     outline: none;
     box-shadow: 0 0 0 4px rgba(22, 142, 240, 0.25), 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= SKILLS CARD GRID ================= */
+
+.skill-card {
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* IMPORTANT: don't use .img-fluid for skill icons because you set img-fluid height: 100px globally */
+.skill-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.skill-name {
+    font-family: "Gill Sans MT";
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.skill-meta {
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted-text);
 }
