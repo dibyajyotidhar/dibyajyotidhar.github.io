@@ -124,37 +124,6 @@
     left: 54%;
 }
 
-@media screen and (max-width: 800px) {
-
-    .img-box {
-        height: 50%;
-        width: 75%;
-        align-content: center;
-    }
-
-    #education {
-        padding-top: 100px;
-        margin-top: 60% !important;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .img-box {
-        height: 40%;
-        width: 50%;
-        align-content: center;
-    }
-
-    #education {
-        padding-top: 100px;
-        margin-top: 80%;
-    }
-
-
-}
-
 #experience {
     margin-top: 40%;
     padding-top: 65px;
@@ -242,26 +211,6 @@ body.dark-mode .eduCard:hover .eduTitle {
     font-weight: bold;
     font-family: 'Gill Sans MT';
 }
-
-/* .techHead {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-} */
-
-/* .techHead:hover {
-    color: var(--primary-color);
-    transition: 300ms;
-} */
-
-/* .techLang {
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-} */
 
 #project {
     padding-top: 50px;
@@ -491,4 +440,64 @@ code {
     font-size: 13px;
     font-weight: 600;
     color: var(--muted-text);
+}
+
+/* ================= HERO RESPONSIVE VISIBILITY ================= */
+
+/* Desktop hero: visible by default */
+.hero-desktop {
+    display: block;
+}
+
+/* Mobile hero: hidden by default */
+.hero-mobile {
+    display: none;
+}
+
+/* MOBILE OVERRIDE */
+@media (max-width: 767px) {
+
+    /* Hide animated desktop hero */
+    .hero-desktop {
+        display: none;
+    }
+
+    /* Show mobile hero */
+    .hero-mobile {
+        display: block;
+    }
+}
+
+/* Mobile hero image */
+.mobile-profile-pic {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    #experience {
+        margin-top: 32px;
+        /* or 24px, tune to taste */
+        padding-top: 40px;
+    }
+
+    #education {
+        margin-top: 32px;
+        padding-top: 40px;
+    }
+
+    .cv-btn {
+        background: #168ef0;
+        /* example: lighter blue */
+    }
+
+    .cv-btn:hover {
+        background: #0f6fc2;
+        /* optional hover color for mobile */
+    }
+
+
 }
