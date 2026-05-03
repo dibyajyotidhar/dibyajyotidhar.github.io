@@ -499,5 +499,22 @@ code {
         /* optional hover color for mobile */
     }
 
+}
 
+/* ✅ DEFAULT (LIGHT MODE) */
+.light-logo {
+    display: inline-block;
+}
+
+.dark-logo {
+    display: none;
+}
+
+/* ✅ DARK MODE */
+.dark-mode .light-logo {
+    display: none;
+}
+
+.dark-mode .dark-logo {
+    display: inline-block;
 }
