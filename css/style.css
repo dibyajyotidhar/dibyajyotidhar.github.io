@@ -478,6 +478,7 @@ code {
 }
 
 @media (max-width: 767px) {
+
     #experience {
         margin-top: 32px;
         /* or 24px, tune to taste */
