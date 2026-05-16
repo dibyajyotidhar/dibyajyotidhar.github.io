@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>House Rent Management System | Dibya Jyoti Dhar</title>
+
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery / Popper / Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Mermaid for ER and Usage diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <!-- Main Portfolio CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Page-specific safety overrides -->
+    <style>
+      .project-page {
+        padding-top: 95px;
+      }
+
+      .project-hero {
+        border-radius: 24px;
+        padding: 42px;
+        background:
+          radial-gradient(circle at top left, rgba(22, 142, 240, 0.28), transparent 36%),
+          linear-gradient(135deg, var(--card-bg), rgba(22, 142, 240, 0.06));
+        border: 1px solid var(--border-color);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      }
+
+      .project-hero h1 {
+        font-size: 42px;
+        font-weight: 900;
+        color: var(--text-color);
+      }
+
+      .project-hero p {
+        color: var(--muted-text);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .project-hero-logo {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        padding: 18px;
+        border-radius: 28px;
+        background: rgba(22, 142, 240, 0.12);
+        border: 1px solid var(--border-color);
+      }
+
+      .project-page-card {
+        border-radius: 18px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        height: 100%;
+      }
+
+      .project-page-card .card-body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .project-page-card h5,
+      .project-page-card h4 {
+        font-weight: 800;
+      }
+
+      .project-tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .project-tech-list span {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 11px;
+        border-radius: 999px;
+        background: rgba(22, 142, 240, 0.1);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .project-back-link {
+        color: var(--primary-color);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .project-back-link:hover {
+        color: var(--primary-hover);
+        text-decoration: none;
+      }
+
+      /* Screenshot Gallery */
+      #screenshots .screenshot-box {
+        width: 100%;
+        height: 100%;
+        padding: 14px;
+        border-radius: 18px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+        text-align: center;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      #screenshots .screenshot-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+      }
+
+      #screenshots .screenshot-img {
+        display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 14px;
+        cursor: pointer;
+        border: 1px solid var(--border-color);
+        background: rgba(15, 23, 42, 0.04);
+        transition: transform 0.25s ease, filter 0.25s ease;
+      }
+
+      #screenshots .screenshot-img:hover {
+        transform: scale(1.015);
+        filter: brightness(1.05);
+      }
+
+      #screenshots .screenshot-caption {
+        margin: 12px 0 0;
+        color: var(--muted-text);
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      body.dark-mode #screenshots .screenshot-box {
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      body.dark-mode #screenshots .screenshot-img {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      /* Diagram */
+      .diagram-box {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 18px;
+        overflow-x: auto;
+      }
+
+      body.dark-mode .diagram-box {
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      /* Image Viewer Modal */
+      .image-modal {
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        inset: 0;
+        padding: 32px;
+        background: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .image-modal-content {
+        max-width: 92%;
+        max-height: 82vh;
+        object-fit: contain;
+        border-radius: 14px;
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
+        background: #111827;
+      }
+
+      .image-modal-caption {
+        color: #e5e7eb;
+        margin-top: 14px;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .image-modal-close {
+        position: fixed;
+        top: 22px;
+        right: 34px;
+        color: #ffffff;
+        font-size: 38px;
+        font-weight: 700;
+        cursor: pointer;
+        z-index: 100000;
+        line-height: 1;
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .image-modal-close:hover {
+        color: #60a5fa;
+        transform: scale(1.08);
+      }
+
+      @media (max-width: 767px) {
+        .project-hero {
+          padding: 26px;
+        }
+
+        .project-hero h1 {
+          font-size: 30px;
+        }
+
+        .project-hero-logo {
+          width: 90px;
+          height: 90px;
+          margin-bottom: 18px;
+        }
+
+        #screenshots .screenshot-img {
+          height: 210px;
+        }
+
+        .image-modal {
+          padding: 18px;
+        }
+
+        .image-modal-content {
+          max-width: 96%;
+          max-height: 78vh;
+        }
+
+        .image-modal-close {
+          top: 14px;
+          right: 20px;
+          font-size: 34px;
+        }
+      }
+    </style>
+
+    <script>
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applyTheme(e) {
+        document.body.classList.toggle("dark-mode", e.matches);
+      }
+
+      applyTheme(mq);
+      mq.addEventListener("change", applyTheme);
+    </script>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
+      <a class="navbar-brand project-back-link" href="index.html#personalProjects">
+        ⬅ Back to Portfolio
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#screenshots">Screenshots</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#diagrams">Diagrams</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#techStack">Tech Stack</a>
+          </li>
+
+          <li class="nav-item d-flex align-items-center ml-3">
+            <div class="theme-toggle">
+              <input type="checkbox" id="themeToggle" />
+              <label for="themeToggle" class="toggle-label">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+                <span class="ball"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="project-page">
+      <div class="container">
+        <!-- ================= HERO ================= -->
+        <section class="project-hero" id="overview">
+          <div class="row align-items-center">
+            <div class="col-md-2 text-center text-md-left">
+              <img
+                src="images/app-icon.png"
+                class="project-hero-logo"
+                alt="House Rent Management System Logo"
+              />
+            </div>
+
+            <div class="col-md-10">
+              <span class="badge badge-primary mb-3">Personal Project</span>
+
+              <h1>House Rent Management System</h1>
+
+              <p>
+                A complete offline desktop application for managing flats, tenants,
+                monthly rent generation, payment records, receipts, repairs, reports,
+                backups, audit logs, and tenant move-out settlements.
+              </p>
+
+              <div class="project-tech-list justify-content-md-start">
+                <span>JavaFX</span>
+                <span>SQLite</span>
+                <span>Maven</span>
+                <span>Apache PDFBox</span>
+                <span>Apache POI</span>
+                <span>jpackage Installer</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= FEATURES ================= -->
+        <section class="mt-5" id="features">
+          <h4 class="text-center mb-4">Core Modules</h4>
+
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Tenant & Flat Management</h5>
+                  <p>
+                    Manage active tenants, past tenants, flat occupancy, meter numbers,
+                    move-in details, move-out lifecycle, and optional security deposits.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Rent & Receipt Workflow</h5>
+                  <p>
+                    Generate monthly rent, track due/partial/late/paid status, archive
+                    paid records, and print PDF receipts with consistent receipt numbers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Reports & Accounting Logic</h5>
+                  <p>
+                    Separate rent income, discounts, utilities, security deposits, and
+                    owner-paid repairs for cleaner income, due, repair, and net-profit
+                    reporting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Repair Tracking</h5>
+                  <p>
+                    Track repair category, cost, paid-by status, completion status,
+                    vendor name, vendor phone, invoice number, and repair notes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Security & Recovery</h5>
+                  <p>
+                    Includes login, optional save login, logout cleanup, password change,
+                    recovery PIN, emergency recovery keys, backup, restore, and factory reset.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card project-page-card">
+                <div class="card-body">
+                  <h5>Audit Logs</h5>
+                  <p>
+                    Important actions such as login, logout, payment, backup, restore,
+                    reset, tenant changes, repair updates, and receipt actions are recorded.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SCREENSHOTS ================= -->
+        <section class="mt-5" id="screenshots">
+          <h4 class="text-center mb-4">Screenshots</h4>
+
+          <div class="row">
+            <!-- Screenshot 1 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-dashboard.png"
+                  alt="Dashboard Overview"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Dashboard Overview</p>
+              </div>
+            </div>
+
+            <!-- Screenshot 2 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-tenant.png"
+                  alt="Tenant Management"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Tenant Management</p>
+              </div>
+            </div>
+
+            <!-- Screenshot 3 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-payment.png"
+                  alt="Rent Payment and Receipt Workflow"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Rent Payment & Receipt Workflow</p>
+              </div>
+            </div>
+
+            <!-- Screenshot 4 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-report.png"
+                  alt="Reports and Analytics"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Reports & Analytics</p>
+              </div>
+            </div>
+
+            <!-- Screenshot 5 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-repair.png"
+                  alt="Repair Vendor and Contact Tracking"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Repair Vendor & Contact Tracking</p>
+              </div>
+            </div>
+
+            <!-- Screenshot 6 -->
+            <div class="col-md-6 mb-4">
+              <div class="screenshot-box">
+                <img
+                  src="images/rent-project/rent-settlement.png"
+                  alt="Past Tenant Settlement"
+                  class="screenshot-img"
+                  onclick="openImage(this)"
+                  loading="lazy"
+                />
+                <p class="screenshot-caption">Past Tenant Settlement</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= DIAGRAMS ================= -->
+        <section class="mt-5" id="diagrams">
+          <h4 class="text-center mb-4">ER Diagram</h4>
+
+          <div class="diagram-box mb-5">
+            <pre class="mermaid">
+erDiagram
+    USERS ||--o{ AUDIT_LOGS : creates
+    PROPERTIES ||--o{ FLATS : owns
+    FLATS ||--o{ TENANTS : assigned_to
+    TENANTS ||--o{ RENT_CURRENT : has_due
+    TENANTS ||--o{ RENT_ARCHIVE : has_paid_history
+    FLATS ||--o{ RENT_CURRENT : billed_for
+    FLATS ||--o{ RENT_ARCHIVE : archived_for
+    FLATS ||--o{ REPAIRS : has_repairs
+    TENANTS ||--o{ MOVE_OUT_SETTLEMENTS : has_settlement
+
+    USERS {
+      INTEGER id PK
+      TEXT username
+      TEXT password_hash
+      TEXT password_salt
+      TEXT recovery_pin_hash
+      TEXT recovery_pin_salt
+    }
+
+    PROPERTIES {
+      INTEGER id PK
+      TEXT name
+      TEXT address
+      TEXT phone
+      TEXT logo_path
+    }
+
+    FLATS {
+      INTEGER id PK
+      TEXT flat_no UK
+      TEXT meter_no
+      REAL rent
+      TEXT status
+      INTEGER property_id FK
+    }
+
+    TENANTS {
+      INTEGER id PK
+      TEXT name
+      TEXT phone
+      TEXT email
+      TEXT nid
+      TEXT flat_no FK
+      TEXT status
+      REAL security_deposit
+    }
+
+    RENT_CURRENT {
+      INTEGER id PK
+      INTEGER tenant_id FK
+      TEXT flat_no FK
+      TEXT bill_month
+      REAL house_rent
+      REAL discount
+      REAL total
+      REAL paid_amount
+      TEXT status
+    }
+
+    RENT_ARCHIVE {
+      INTEGER id PK
+      INTEGER tenant_id FK
+      TEXT flat_no FK
+      TEXT bill_month
+      REAL house_rent
+      REAL discount
+      REAL paid_amount
+      TEXT receipt_no
+    }
+
+    REPAIRS {
+      INTEGER id PK
+      TEXT flat_no FK
+      TEXT repair_date
+      TEXT category
+      REAL cost
+      TEXT paid_by
+      TEXT vendor_name
+      TEXT vendor_phone
+      TEXT invoice_no
+    }
+
+    MOVE_OUT_SETTLEMENTS {
+      INTEGER id PK
+      INTEGER tenant_id FK
+      TEXT move_out_date
+      REAL unpaid_due
+      REAL security_deposit
+      REAL refund_amount
+      REAL payable_amount
+      TEXT result
+    }
+            </pre>
+          </div>
+
+          <h4 class="text-center mb-4">Usage Diagram</h4>
+
+          <div class="diagram-box">
+            <pre class="mermaid">
+flowchart TD
+    A[Launch App] --> B[Login]
+    B --> C[Dashboard]
+    C --> D[Manage Flats]
+    C --> E[Manage Tenants]
+    C --> F[Generate Monthly Rent]
+    F --> G[Collect Payment]
+    G --> H[Archive Paid Rent]
+    H --> I[Print Receipt PDF]
+    C --> J[Track Repairs]
+    J --> K[Owner/Tenant Paid Repair Reports]
+    C --> L[Reports]
+    L --> M[PDF / Excel / Print]
+    E --> N[Move Out Tenant]
+    N --> O[Save Settlement Snapshot]
+    O --> P[Past Tenants]
+    P --> Q[Print Settlement PDF]
+    C --> R[Backup / Restore / Factory Reset]
+    C --> S[Audit Logs]
+            </pre>
+          </div>
+        </section>
+
+        <!-- ================= TECH STACK ================= -->
+        <section class="mt-5" id="techStack">
+          <h4 class="text-center mb-4">Technical Highlights</h4>
+
+          <div class="card project-page-card mb-5">
+            <div class="card-body">
+              <div class="project-tech-list justify-content-start">
+                <span>Java</span>
+                <span>JavaFX UI</span>
+                <span>SQLite Local Database</span>
+                <span>Maven Build</span>
+                <span>PDFBox PDF Export</span>
+                <span>Apache POI Excel Export</span>
+                <span>Windows EXE Installer</span>
+                <span>AppData Database Storage</span>
+                <span>Dark Mode Friendly Portfolio Page</span>
+              </div>
+
+              <hr />
+
+              <p class="mb-0">
+                The project demonstrates end-to-end desktop software development:
+                database design, UI workflow, validation, reporting, backup/recovery,
+                auditability, installer packaging, and practical business-rule
+                implementation for rental property operations.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ================= IMAGE VIEWER MODAL ================= -->
+    <div id="imageModal" class="image-modal" onclick="closeImageFromBackdrop(event)">
+      <span class="image-modal-close" onclick="closeImage()">&times;</span>
+
+      <img
+        class="image-modal-content"
+        id="modalImage"
+        alt="Expanded project screenshot"
+      />
+
+      <div id="modalCaption" class="image-modal-caption"></div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+      const toggle = document.getElementById("themeToggle");
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggle.checked = true;
+      }
+
+      toggle.addEventListener("change", function () {
+        if (this.checked) {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+
+        location.reload();
+      });
+
+      function openImage(img) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const caption = document.getElementById("modalCaption");
+
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        caption.innerText = img.alt;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeImage() {
+        const modal = document.getElementById("imageModal");
+
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+
+      function closeImageFromBackdrop(event) {
+        if (event.target.id === "imageModal") {
+          closeImage();
+        }
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeImage();
+        }
+      });
+
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: document.body.classList.contains("dark-mode") ? "dark" : "default",
+        securityLevel: "loose"
+      });
+    </script>
+  </body>
+</html>

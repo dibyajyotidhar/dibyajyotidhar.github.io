@@ -390,7 +390,7 @@
     <!-- ================= SKILLS SECTION ================= -->
     <div class="container p-6">
       <span id="techSkills"></span>
-      <h4 class="text-center mt-5" id="tech">Technological Skills</h4>
+      <h4 class="text-center mt-5" id="tech">Technical Skills</h4>
       <br />
 
       <div class="row mt-4">
@@ -650,64 +650,100 @@
 
     <br />
 
-    <!-- ================= CONTACT SECTION ================= -->
-    <div class="container p-6">
-      <span id="contacts"></span>
-      <h4 class="text-center mt-5" id="contact">Contacts</h4>
+    <!-- ================= PERSONAL PROJECT SECTION ================= -->
+    <div class="container p-6 mt-4" id="personalProjects">
+      <h4 class="text-center mt-5" id="personalProjectHeading">Personal Project</h4>
+      <p class="text-center project-section-subtitle">
+        Full desktop software project built from requirement analysis to Windows installer packaging.
+      </p>
       <br />
 
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card eduCard">
-            <a href="mailto:dibya.dhar8+portfolio@gmail.com" target="_blank" rel="noopener">
-              <div class="card-body">
-                <div class="text-center">
-                  <img class="img-fluid" src="images/gmail.png" alt="Gmail" />
-                </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-7 mb-4">
+          <div class="card eduCard h-100 personal-project-card">
+            <div class="card-body text-center">
+              <div class="project-logo-wrap mx-auto mb-3">
+                <img
+                  src="images/app-logo.png"
+                  alt="House Rent Management System Logo"
+                  class="project-logo"
+                />
               </div>
-            </a>
-          </div>
-        </div>
 
-        <div class="col-sm-4">
-          <div class="card eduCard">
-            <a
-              href="https://www.linkedin.com/in/dibya888/"
-              target="_blank"
-              rel="noopener"
-            >
-              <div class="card-body">
-                <div class="text-center">
-                  <img class="img-fluid" src="images/linkedin.png" alt="LinkedIn" />
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+              <span class="badge badge-primary mb-3">JavaFX Desktop App</span>
 
-        <div class="col-sm-4">
-          <div class="card eduCard">
-            <a href="https://github.com/Dibya888" target="_blank" rel="noopener">
-              <div class="card-body">
-                <div class="text-center">
-                  <img
-                    class="img-fluid light-logo"
-                    src="images/github.png"
-                    alt="GitHub"
-                  />
-                  <img
-                    class="img-fluid dark-logo"
-                    src="images/github-dark.png"
-                    alt="GitHub"
-                  />
-                </div>
+              <h5 class="project-card-title">House Rent Management System</h5>
+
+              <p class="project-card-summary">
+                An offline rental property management desktop application for flats,
+                tenants, rent collection, receipts, repairs, reports, backups, audit logs,
+                and move-out settlements.
+              </p>
+
+              <div class="project-tech-list mb-3">
+                <span>JavaFX</span>
+                <span>SQLite</span>
+                <span>Maven</span>
+                <span>PDFBox</span>
+                <span>Apache POI</span>
               </div>
-            </a>
+
+              <a href="house-rent-management.html" class="btn btn-sm btn-outline-primary project-details-btn">
+                Details
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <br>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <div class="container p-6">
+      <span id="contacts"></span>
+
+      <h4 class="text-center mt-5" id="contact">Contact</h4>
+      <p class="text-center text-muted mb-4">Feel free to connect with me</p>
+
+      <div class="row justify-content-center">
+
+        <!-- EMAIL -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard contact-card">
+            <a href="mailto:dibya.dhar8+portfolio@gmail.com" target="_blank" rel="noopener">
+              <div class="card-body text-center">
+                <img src="images/gmail.png" class="contact-icon" alt="Gmail">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard contact-card">
+            <a href="https://www.linkedin.com/in/dibya888/" target="_blank" rel="noopener">
+              <div class="card-body text-center">
+                <img src="images/linkedin.png" class="contact-icon" alt="LinkedIn">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- GITHUB -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard contact-card">
+            <a href="https://github.com/Dibya888" target="_blank" rel="noopener">
+              <div class="card-body text-center">
+                <img src="images/github.png" class="contact-icon light-logo" alt="GitHub">
+                <img src="images/github-dark.png" class="contact-icon dark-logo" alt="GitHub">
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <h6 class="text-center mt-5">
       All Rights Reserved By &copy;
       <span class="footer">Dibya Jyoti Dhar</span>
