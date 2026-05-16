@@ -1,135 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Dibya Jyoti Dhar</title>
-        <link rel="icon" type="image/png" href="images/My_logo.png">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <script>
-          const mq = window.matchMedia('(prefers-color-scheme: dark)');
-          function applyTheme(e) {
-            document.body.classList.toggle("dark-mode", e.matches);
-          }
-          applyTheme(mq);
-          mq.addEventListener("change", applyTheme);
-        </script>
-    </head>
-<body id="home">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#techSkills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#QATestingProject">QA Work</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#proJects">Projects</a>
-            </li> -->
-              <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contacts</a>
-            </li>
-            <li class="nav-item d-flex align-items-center ml-3">
-              <div class="theme-toggle">
-                <input type="checkbox" id="themeToggle">
-                <label for="themeToggle" class="toggle-label">
-                  <span class="icon sun">☀️</span>
-                  <span class="icon moon">🌙</span>
-                  <span class="ball"></span>
-                </label>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section class="hero-desktop">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="basicInfo">
-              <h2>Dibya Jyoti Dhar</h2>
-              <h4>Software Quality Assurance Engineer</h4>
-              <a class="cv-btn" href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener">Download Latest CV</a>
-            </div>
-          </div>
-          <div class="col-md-6 img-box clearfix">
-            <img class="img-fluid styleImage" src="images/pattern.png">
-            <img class="img-fluid profileImage" src="images/dibya.png" alt="Dibya Jyoti Dhar">
-          </div>
-        </div>
-      </section>
+  <head>
+    <title>Dibya Jyoti Dhar</title>
+    <link rel="icon" type="image/png" href="images/My_logo.png" />
 
-      <!-- MOBILE HERO (simple, static) -->
-      <section class="hero-mobile">
-        <div class="container text-center mt-5">
-          
-          <img 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery (required by Bootstrap 4) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper.js (required by Bootstrap tooltips/popovers) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      // Auto-apply dark mode based on the user's OS/theme preference
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function applyTheme(e) {
+        document.body.classList.toggle("dark-mode", e.matches);
+      }
+
+      applyTheme(mq);
+      mq.addEventListener("change", applyTheme);
+    </script>
+  </head>
+
+  <body id="home">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#techSkills">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#QATestingProject">QA Work</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Contacts</a>
+          </li>
+
+          <!-- Theme toggle UI -->
+          <li class="nav-item d-flex align-items-center ml-3">
+            <div class="theme-toggle">
+              <input type="checkbox" id="themeToggle" />
+              <label for="themeToggle" class="toggle-label">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+                <span class="ball"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ================= HERO (DESKTOP) ================= -->
+    <section class="hero-desktop">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="basicInfo">
+            <h2>Dibya Jyoti Dhar</h2>
+            <h4>Software Quality Assurance Engineer</h4>
+            <a
+              class="cv-btn"
+              href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta"
+              target="_blank"
+              rel="noopener"
+            >
+              Download Latest CV
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 img-box clearfix">
+          <img class="img-fluid styleImage" src="images/pattern.png" alt="" />
+          <img
+            class="img-fluid profileImage"
             src="images/dibya.png"
             alt="Dibya Jyoti Dhar"
-            class="mobile-profile-pic"
-          >
-
-          <h2 class="mt-3">Dibya Jyoti Dhar</h2>
-
-          <h5 class="text-muted mt-1">
-            Software Quality Assurance Engineer
-          </h5>
-
-          <a 
-            class="cv-btn mt-3"
-            href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta"
-            target="_blank"
-            rel="noopener"
-          >
-            Download Latest CV
-          </a>
-
+          />
         </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- ================= HERO (MOBILE) ================= -->
+    <section class="hero-mobile">
+      <div class="container text-center mt-5">
+        <img
+          src="images/dibya.png"
+          alt="Dibya Jyoti Dhar"
+          class="mobile-profile-pic"
+        />
+
+        <h2 class="mt-3">Dibya Jyoti Dhar</h2>
+
+        <h5 class="text-muted mt-1">Software Quality Assurance Engineer</h5>
+
+        <a
+          class="cv-btn mt-3"
+          href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta"
+          target="_blank"
+          rel="noopener"
+        >
+          Download Latest CV
+        </a>
+      </div>
+    </section>
 
     <!-- ================= EXPERIENCE SECTION ================= -->
     <div class="container p-6">
       <h4 class="text-center edu" id="experience">Professional Experience</h4>
 
       <div class="row" id="accordionExperience">
-
         <!-- Eclectic Limited (Newest) -->
         <div class="col-md-6 order-1 order-md-1">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseExpOne"
-              aria-expanded="true"
-              aria-controls="collapseExpOne">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseExpOne"
+            aria-expanded="true"
+            aria-controls="collapseExpOne"
+          >
             <div class="card-header" id="headingExpOne">
               <h5 class="mb-0">
                 <button class="btn eduTitle">Eclectic Limited</button>
               </h5>
             </div>
 
-            <div id="collapseExpOne"
-                class="collapse"
-                aria-labelledby="headingExpOne"
-                data-parent="#accordionExperience">
-
+            <div
+              id="collapseExpOne"
+              class="collapse"
+              aria-labelledby="headingExpOne"
+              data-parent="#accordionExperience"
+            >
               <div class="card-body">
                 <p><strong>Jr. SQA Engineer</strong></p>
                 <p>September 2024 to February 2026</p>
@@ -141,7 +185,9 @@
 
                 <p><strong>Projects:</strong></p>
                 <ul>
-                  <li>Rural Bridge Information Management System <strong>(LGED)</strong></li>
+                  <li>
+                    Rural Bridge Information Management System <strong>(LGED)</strong>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -150,24 +196,27 @@
 
         <!-- Dream71 Bangladesh Limited (2nd newest) -->
         <div class="col-md-6 order-2 order-md-2">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseExpTwo"
-              aria-expanded="true"
-              aria-controls="collapseExpTwo">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseExpTwo"
+            aria-expanded="true"
+            aria-controls="collapseExpTwo"
+          >
             <div class="card-header" id="headingExpTwo">
               <h5 class="mb-0">
                 <button class="btn eduTitle">Dream71 Bangladesh Limited</button>
               </h5>
             </div>
 
-            <div id="collapseExpTwo"
-                class="collapse"
-                aria-labelledby="headingExpTwo"
-                data-parent="#accordionExperience">
-
+            <div
+              id="collapseExpTwo"
+              class="collapse"
+              aria-labelledby="headingExpTwo"
+              data-parent="#accordionExperience"
+            >
               <div class="card-body">
                 <p><strong>Jr. SQA Engineer</strong></p>
                 <p>April 2024 to September 2024</p>
@@ -192,24 +241,27 @@
 
         <!-- George Design and Construction (Oldest) -->
         <div class="col-md-6 order-3 order-md-3">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseExpThree"
-              aria-expanded="true"
-              aria-controls="collapseExpThree">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseExpThree"
+            aria-expanded="true"
+            aria-controls="collapseExpThree"
+          >
             <div class="card-header" id="headingExpThree">
               <h5 class="mb-0">
                 <button class="btn eduTitle">George Design and Construction</button>
               </h5>
             </div>
 
-            <div id="collapseExpThree"
-                class="collapse"
-                aria-labelledby="headingExpThree"
-                data-parent="#accordionExperience">
-
+            <div
+              id="collapseExpThree"
+              class="collapse"
+              aria-labelledby="headingExpThree"
+              data-parent="#accordionExperience"
+            >
               <div class="card-body">
                 <p><strong>IT Support</strong></p>
                 <p>February 2021 to June 2023</p>
@@ -223,7 +275,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -232,29 +283,29 @@
       <h4 class="text-center edu" id="education">Education</h4>
 
       <div class="row" id="accordionEducation">
-
         <!-- North South University (Newest) -->
         <div class="col-md-6 order-1 order-md-1">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseEduOne"
-              aria-expanded="true"
-              aria-controls="collapseEduOne">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseEduOne"
+            aria-expanded="true"
+            aria-controls="collapseEduOne"
+          >
             <div class="card-header" id="headingEduOne">
               <h5 class="mb-0">
-                <button class="btn eduTitle">
-                  North South University, Dhaka
-                </button>
+                <button class="btn eduTitle">North South University, Dhaka</button>
               </h5>
             </div>
 
-            <div id="collapseEduOne"
-                class="collapse"
-                aria-labelledby="headingEduOne"
-                data-parent="#accordionEducation">
-
+            <div
+              id="collapseEduOne"
+              class="collapse"
+              aria-labelledby="headingEduOne"
+              data-parent="#accordionEducation"
+            >
               <div class="card-body">
                 <p>Bachelor of Science in Computer Science and Engineering</p>
                 <p>Department of Electrical and Computer Engineering</p>
@@ -266,13 +317,15 @@
 
         <!-- Major General Mahmudul Hasan Adarsha College -->
         <div class="col-md-6 order-2 order-md-2">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseEduTwo"
-              aria-expanded="true"
-              aria-controls="collapseEduTwo">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseEduTwo"
+            aria-expanded="true"
+            aria-controls="collapseEduTwo"
+          >
             <div class="card-header" id="headingEduTwo">
               <h5 class="mb-0">
                 <button class="btn eduTitle">
@@ -281,11 +334,12 @@
               </h5>
             </div>
 
-            <div id="collapseEduTwo"
-                class="collapse"
-                aria-labelledby="headingEduTwo"
-                data-parent="#accordionEducation">
-
+            <div
+              id="collapseEduTwo"
+              class="collapse"
+              aria-labelledby="headingEduTwo"
+              data-parent="#accordionEducation"
+            >
               <div class="card-body">
                 <p>Higher Secondary Certificate (HSC)</p>
                 <p>Science Group</p>
@@ -297,13 +351,15 @@
 
         <!-- Bindu Basini Govt. Boys' High School (Oldest) -->
         <div class="col-md-6 order-3 order-md-3">
-          <br>
-          <div class="card eduCard"
-              data-toggle="collapse"
-              data-target="#collapseEduThree"
-              aria-expanded="true"
-              aria-controls="collapseEduThree">
+          <br />
 
+          <div
+            class="card eduCard"
+            data-toggle="collapse"
+            data-target="#collapseEduThree"
+            aria-expanded="true"
+            aria-controls="collapseEduThree"
+          >
             <div class="card-header" id="headingEduThree">
               <h5 class="mb-0">
                 <button class="btn eduTitle">
@@ -312,11 +368,12 @@
               </h5>
             </div>
 
-            <div id="collapseEduThree"
-                class="collapse"
-                aria-labelledby="headingEduThree"
-                data-parent="#accordionEducation">
-
+            <div
+              id="collapseEduThree"
+              class="collapse"
+              aria-labelledby="headingEduThree"
+              data-parent="#accordionEducation"
+            >
               <div class="card-body">
                 <p>Secondary School Certificate (SSC)</p>
                 <p>Science Group</p>
@@ -325,327 +382,324 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-      
 
-        <br>
-        <div class="container p-6">
-        <span id="techSkills"></span>
-    <h4 class="text-center mt-5" id="tech">Technological Skills</h4>
-    <br>
-    <div class="row mt-4">
+    <br />
 
-  <!-- Programming -->
-   <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/c.png" class="skill-icon" alt="C">
-        <div class="skill-name mt-2">C</div>
-        <div class="skill-meta">Programming</div>
+    <!-- ================= SKILLS SECTION ================= -->
+    <div class="container p-6">
+      <span id="techSkills"></span>
+      <h4 class="text-center mt-5" id="tech">Technological Skills</h4>
+      <br />
+
+      <div class="row mt-4">
+        <!-- Programming -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/c.png" class="skill-icon" alt="C" />
+              <div class="skill-name mt-2">C</div>
+              <div class="skill-meta">Programming</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/java.png" class="skill-icon" alt="Java" />
+              <div class="skill-name mt-2">Java</div>
+              <div class="skill-meta">Programming</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/javascript.png" class="skill-icon" alt="JavaScript" />
+              <div class="skill-name mt-2">JavaScript</div>
+              <div class="skill-meta">Programming</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks / DB / Others -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/bootstrap.png" class="skill-icon" alt="Bootstrap" />
+              <div class="skill-name mt-2">Bootstrap</div>
+              <div class="skill-meta">Framework</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/mysql.png" class="skill-icon" alt="MySQL" />
+              <div class="skill-name mt-2">MySQL</div>
+              <div class="skill-meta">Database</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/git.png" class="skill-icon" alt="Git" />
+              <div class="skill-name mt-2">Git</div>
+              <div class="skill-meta">Tool</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QA / Tools -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/Manual-Testing.png" class="skill-icon" alt="Manual Testing" />
+              <div class="skill-name mt-2">Manual Testing</div>
+              <div class="skill-meta">QA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <!-- Light mode image -->
+              <img src="images/JMeter.png" class="skill-icon light-logo" alt="JMeter" />
+              <!-- Dark mode image -->
+              <img
+                src="images/JMeter-Dark.png"
+                class="skill-icon dark-logo"
+                alt="JMeter"
+              />
+
+              <div class="skill-name mt-2">JMeter</div>
+              <div class="skill-meta">Performance</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/postman.png" class="skill-icon" alt="Postman" />
+              <div class="skill-name mt-2">Postman</div>
+              <div class="skill-meta">API</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/Selenium_Logo.png" class="skill-icon" alt="Selenium" />
+              <div class="skill-name mt-2">Selenium</div>
+              <div class="skill-meta">Automation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/TestNG.png" class="skill-icon" alt="TestNG" />
+              <div class="skill-name mt-2">TestNG</div>
+              <div class="skill-meta">Selenium Framework</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <!-- Light mode image -->
+              <img
+                src="images/Cypress-Light.png"
+                class="skill-icon light-logo"
+                alt="Cypress"
+              />
+              <!-- Dark mode image -->
+              <img src="images/Cypress.png" class="skill-icon dark-logo" alt="Cypress" />
+
+              <div class="skill-name mt-2">Cypress</div>
+              <div class="skill-meta">Automation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <!-- Light mode image -->
+              <img
+                src="images/Katalon-Light.png"
+                class="skill-icon light-logo"
+                alt="Katalon Studio"
+              />
+              <!-- Dark mode image -->
+              <img
+                src="images/katalon.png"
+                class="skill-icon dark-logo"
+                alt="Katalon Studio"
+              />
+
+              <div class="skill-name mt-2">Katalon Studio</div>
+              <div class="skill-meta">Automation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card eduCard h-100 skill-card">
+            <div class="card-body text-center">
+              <img src="images/jira-1.png" class="skill-icon" alt="Jira" />
+              <div class="skill-name mt-2">Jira</div>
+              <div class="skill-meta">QA Tool</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/java.png" class="skill-icon" alt="Java">
-        <div class="skill-name mt-2">Java</div>
-        <div class="skill-meta">Programming</div>
-      </div>
-    </div>
-  </div>
+    <br />
 
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/javascript.png" class="skill-icon" alt="JavaScript">
-        <div class="skill-name mt-2">JavaScript</div>
-        <div class="skill-meta">Programming</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Frameworks / DB / Others -->
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/bootstrap.png" class="skill-icon" alt="Bootstrap">
-        <div class="skill-name mt-2">Bootstrap</div>
-        <div class="skill-meta">Framework</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/mysql.png" class="skill-icon" alt="MySQL">
-        <div class="skill-name mt-2">MySQL</div>
-        <div class="skill-meta">Database</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/git.png" class="skill-icon" alt="Git">
-        <div class="skill-name mt-2">Git</div>
-        <div class="skill-meta">Tool</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- QA / Tools -->
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/Manual-Testing.png" class="skill-icon" alt="Manual Testing">
-        <div class="skill-name mt-2">Manual Testing</div>
-        <div class="skill-meta">QA</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <!-- Light mode image -->
-        <img src="images/JMeter.png" class="skill-icon light-logo" alt="JMeter">
-        <!-- Dark mode image -->
-        <img src="images/JMeter-Dark.png" class="skill-icon dark-logo" alt="JMeter">
-        <div class="skill-name mt-2">JMeter</div>
-        <div class="skill-meta">Performance</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/postman.png" class="skill-icon" alt="Postman">
-        <div class="skill-name mt-2">Postman</div>
-        <div class="skill-meta">API</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/Selenium_Logo.png" class="skill-icon" alt="Selenium">
-        <div class="skill-name mt-2">Selenium</div>
-        <div class="skill-meta">Automation</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/TestNG.png" class="skill-icon" alt="TestNG">
-        <div class="skill-name mt-2">TestNG</div>
-        <div class="skill-meta">Selenium Framework</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <!-- Light mode image -->
-        <img src="images/Cypress-Light.png" class="skill-icon light-logo" alt="Cypress">
-        <!-- Dark mode image -->
-        <img src="images/Cypress.png" class="skill-icon dark-logo" alt="Cypress">
-        <div class="skill-name mt-2">Cypress</div>
-        <div class="skill-meta">Automation</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <!-- Light mode image -->
-        <img src="images/Katalon-Light.png" class="skill-icon light-logo" alt="Katalon Studio">
-        <!-- Dark mode image -->
-        <img src="images/katalon.png" class="skill-icon dark-logo" alt="Katalon Studio">
-        <div class="skill-name mt-2">Katalon Studio</div>
-        <div class="skill-meta">Automation</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 col-md-4 col-lg-3 mb-4">
-    <div class="card eduCard h-100 skill-card">
-      <div class="card-body text-center">
-        <img src="images/jira-1.png" class="skill-icon" alt="Jira">
-        <div class="skill-name mt-2">Jira</div>
-        <div class="skill-meta">QA Tool</div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-</div>
-
-    <br>
     <!-- ================= QA TESTING SECTION ================= -->
-<span id="QATestingProject"></span>
+    <span id="QATestingProject"></span>
 
-<div class="container p-6 mt-5">
-  <h4 class="text-center mt-5" id="qaTesting">Software QA Work</h4>
-  <br>
+    <div class="container p-6 mt-5">
+      <h4 class="text-center mt-5" id="qaTesting">Software QA Work</h4>
+      <br />
 
-  <div class="row">
+      <div class="row">
+        <!-- CARD 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="card eduCard h-100 qa-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <button class="btn eduTitle">RUBIMS Website & App</button>
+              <span class="badge badge-info">Manual QA</span>
+            </div>
 
-    <!-- CARD 1 -->
-    <div class="col-md-6 mb-4">
-      <div class="card eduCard h-100 qa-card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <button class="btn eduTitle">RUBIMS Website & App</button>
-          <span class="badge badge-info">Manual QA</span>
+            <div class="card-body">
+              <p>
+                136 Test Cases Executed<br />
+                <strong>109 Passed / 27 Failed</strong><br />
+                Covers authentication, structure inspection, validation, inventory, and
+                mobile app scenarios.
+              </p>
+
+              <div class="d-flex justify-content-between">
+                <button
+                  class="btn btn-sm btn-outline-primary"
+                  data-toggle="modal"
+                  data-target="#qaPreviewModal"
+                >
+                  Preview
+                </button>
+
+                <a href="RuBIMS-Test-Cases.html" class="btn btn-sm btn-outline-secondary">
+                  Details
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="card-body">
-          <p>
-            136 Test Cases Executed<br>
-            <strong>109 Passed / 27 Failed</strong><br>
-            Covers authentication, structure inspection, validation, inventory, and mobile app scenarios.
-          </p>
+        <!-- CARD 2 (Automation) -->
+        <div class="col-md-6 mb-4">
+          <div class="card eduCard h-100 qa-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <button class="btn eduTitle">Automation Practice</button>
+              <span class="badge badge-info">Automation QA</span>
+            </div>
 
-          <div class="d-flex justify-content-between">
-            <button
-              class="btn btn-sm btn-outline-primary"
-              data-toggle="modal"
-              data-target="#qaPreviewModal">
-              Preview
-            </button>
+            <div class="card-body">
+              <p>
+                24 Test Scenarios Automated<br />
+                <strong>24 Passed / 0 Failed</strong><br />
+                Covers login, form handling, navigation, and UI interaction using Selenium
+                WebDriver with Java.
+              </p>
 
-            <a
-              href="RuBIMS-Test-Cases.html"
-              class="btn btn-sm btn-outline-secondary">
-              Details
-            </a>
+              <div class="d-flex justify-content-between">
+                <button
+                  class="btn btn-sm btn-outline-primary"
+                  data-toggle="modal"
+                  data-target="#automationPreviewModal"
+                >
+                  Preview
+                </button>
+
+                <a
+                  href="selenium-automation-practice.html"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  Details
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CARD 2 (Automation) -->
-    <div class="col-md-6 mb-4">
-      <div class="card eduCard h-100 qa-card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <button class="btn eduTitle">Automation Practice</button>
-          <span class="badge badge-info">Automation QA</span>
-        </div>
+    <br />
 
-        <div class="card-body">
-          <p>
-            24 Test Scenarios Automated<br>
-            <strong>24 Passed / 0 Failed</strong><br>
-            Covers login, form handling, navigation, and UI interaction using Selenium WebDriver with Java.
-          </p>
-
-          <div class="d-flex justify-content-between">
-            <button
-              class="btn btn-sm btn-outline-primary"
-              data-toggle="modal"
-              data-target="#automationPreviewModal">
-              Preview
-            </button>
-
-            <a
-              href="selenium-automation-practice.html"
-              class="btn btn-sm btn-outline-secondary">
-              Details
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
-
-
-
-    <!-- <br> -->
-    <!-- <span id="proJects"></span>
-    <h4 class="text-center mt-5" id="project">Projects</h4>
-    <br>
-    <div class="row justify-content-md-center">
-      <div class="col-md-8">
-        <div class="card eduCard" data-toggle="collapse" data-target="#collapse09" aria-expanded="true" aria-controls="collapse09">
-            <div class="card-header" id="heading09">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">FoodBees</button>
-              </h5>
-            </div>
-            <div id="collapse09" class="collapse" aria-labelledby="heading09" data-parent="#accordion">
-              <div class="card-body">
-                <p>This project's main goal is to connect underprivileged people and well-off people in the society in order to reduce hunger and undernutrition.</p>
-              </div>
-            </div>
-          </div>
-      </div> -->
-
-      <!-- <div class="col-md-8 mt-3">
-        <div class="card eduCard" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
-            <div class="card-header" id="heading10">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">Project2</button>
-              </h5>
-            </div>
-            <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
-              <div class="card-body">
-                <p></p>
-              </div>
-            </div>
-          </div>
-      </div> -->
-
-    </div>
-    <br>
+    <!-- ================= CONTACT SECTION ================= -->
     <div class="container p-6">
       <span id="contacts"></span>
       <h4 class="text-center mt-5" id="contact">Contacts</h4>
-      <br>
+      <br />
+
       <div class="row">
         <div class="col-sm-4">
           <div class="card eduCard">
-            <a href="mailto:dibya.dhar8+portfolio@gmail.com" target="_blank">
+            <a href="mailto:dibya.dhar8+portfolio@gmail.com" target="_blank" rel="noopener">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="images/gmail.png">
+                  <img class="img-fluid" src="images/gmail.png" alt="Gmail" />
                 </div>
               </div>
             </a>
           </div>
         </div>
+
         <div class="col-sm-4">
           <div class="card eduCard">
-            <a href="https://www.linkedin.com/in/dibya888/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/dibya888/"
+              target="_blank"
+              rel="noopener"
+            >
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="images/linkedin.png">
+                  <img class="img-fluid" src="images/linkedin.png" alt="LinkedIn" />
                 </div>
               </div>
             </a>
           </div>
         </div>
+
         <div class="col-sm-4">
           <div class="card eduCard">
-            <a href="https://github.com/Dibya888" target="_blank">
+            <a href="https://github.com/Dibya888" target="_blank" rel="noopener">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid light-logo" src="images/github.png" alt="GitHub">
-                  <img class="img-fluid dark-logo" src="images/github-dark.png" alt="GitHub">
+                  <img
+                    class="img-fluid light-logo"
+                    src="images/github.png"
+                    alt="GitHub"
+                  />
+                  <img
+                    class="img-fluid dark-logo"
+                    src="images/github-dark.png"
+                    alt="GitHub"
+                  />
                 </div>
               </div>
             </a>
@@ -654,176 +708,187 @@
       </div>
     </div>
 
-<h6 class="text-center mt-5">All Rights Reserved By &copy <span class="footer">Dibya Jyoti Dhar</span></h6>
+    <h6 class="text-center mt-5">
+      All Rights Reserved By &copy;
+      <span class="footer">Dibya Jyoti Dhar</span>
+    </h6>
 
-  </div>
+    <!-- ================= THEME TOGGLE SCRIPT ================= -->
+    <script>
+      // Theme toggle switch (persists selection in localStorage)
+      const toggle = document.getElementById("themeToggle");
 
-  <script>
-const toggle = document.getElementById("themeToggle");
-
-// Load saved theme
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark-mode");
-    toggle.checked = true;
-}
-
-// Toggle theme
-toggle.addEventListener("change", function(){
-    if(this.checked){
+      // Load saved theme on page load
+      if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-    } else {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-    }
-});
-</script>
+        toggle.checked = true;
+      }
 
-<!-- ================= QA PREVIEW MODAL ================= -->
-<div class="modal fade" id="qaPreviewModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+      // Toggle theme + save preference
+      toggle.addEventListener("change", function () {
+        if (this.checked) {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
 
-      <div class="modal-header">
-        <h5 class="modal-title">Login System – QA Preview</h5>
-        <button class="close" data-dismiss="modal">&times;</button>
-      </div>
+    <!-- ================= QA PREVIEW MODAL ================= -->
+    <div class="modal fade" id="qaPreviewModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login System – QA Preview</h5>
+            <button class="close" data-dismiss="modal">×</button>
+          </div>
 
-      <div class="modal-body">
-        <h6>Key Test Cases Preview</h6>
-        
-        <ul>
-          <li>
-            <strong>Structure Edit Data Not Persisting</strong><br>
-            <em>Issue:</em> Edited structure fields do not reliably save or persist after reload.
-          </li>
-          <li>
-            <strong>Validation Rules Inconsistently Enforced</strong><br>
-            <em>Issue:</em> Invalid inputs (text in numeric fields, future year, blank mandatory fields) are sometimes saved.
-          </li>
-          <li>
-            <strong>Google Maps Showing Device Location (Mobile App)</strong><br>
-            <em>Issue:</em> Map centers on user’s current location instead of structure coordinates.
-          </li>
-        </ul>
+          <div class="modal-body">
+            <h6>Key Test Cases Preview</h6>
 
+            <ul>
+              <li>
+                <strong>Structure Edit Data Not Persisting</strong><br />
+                <em>Issue:</em> Edited structure fields do not reliably save or persist
+                after reload.
+              </li>
 
-        <hr>
+              <li>
+                <strong>Validation Rules Inconsistently Enforced</strong><br />
+                <em>Issue:</em> Invalid inputs (text in numeric fields, future year,
+                blank mandatory fields) are sometimes saved.
+              </li>
 
-        
-        <h6>Key Bug Reports</h6>
-        <ul>
-          <li class="mb-2">
-            <strong>Data Persistence Issue on Structure Edit</strong>
-            <span class="badge badge-danger ml-2">Priority: P1</span>
-            <span class="badge badge-secondary ml-1">Unresolved</span><br>
-            <em>Expected:</em> Edited values persist reliably after Save and page reload.<br>
-            <em>Actual:</em> Values revert or do not persist consistently after reload.
-          </li>
+              <li>
+                <strong>Google Maps Showing Device Location (Mobile App)</strong><br />
+                <em>Issue:</em> Map centers on user’s current location instead of
+                structure coordinates.
+              </li>
+            </ul>
 
-          <li class="mb-2">
-            <strong>Validation Rules Not Enforced Consistently</strong>
-            <span class="badge badge-warning ml-2">Priority: P2</span>
-            <span class="badge badge-secondary ml-1">Unresolved</span><br>
-            <em>Expected:</em> Invalid inputs must always be blocked with clear validation messages.<br>
-            <em>Actual:</em> Some invalid inputs are saved or validation behaves inconsistently.
-          </li>
+            <hr />
 
-          <li class="mb-2">
-            <strong>Google Maps Location Incorrect in Mobile App</strong>
-            <span class="badge badge-warning ml-2">Priority: P2</span>
-            <span class="badge badge-secondary ml-1">Unresolved</span><br>
-            <em>Expected:</em> Map displays structure-specific location from search result.<br>
-            <em>Actual:</em> Map centers on the device’s current location.
-          </li>
-        </ul>
+            <h6>Key Bug Reports</h6>
 
+            <ul>
+              <li class="mb-2">
+                <strong>Data Persistence Issue on Structure Edit</strong>
+                <span class="badge badge-danger ml-2">Priority: P1</span>
+                <span class="badge badge-secondary ml-1">Unresolved</span><br />
 
+                <em>Expected:</em> Edited values persist reliably after Save and page
+                reload.<br />
+                <em>Actual:</em> Values revert or do not persist consistently after
+                reload.
+              </li>
 
-        <hr>
+              <li class="mb-2">
+                <strong>Validation Rules Not Enforced Consistently</strong>
+                <span class="badge badge-warning ml-2">Priority: P2</span>
+                <span class="badge badge-secondary ml-1">Unresolved</span><br />
 
-        <h6>Tools Used</h6>
-        <span class="badge badge-info">Postman</span>
-        <!-- <span class="badge badge-secondary">Selenium</span> -->
-        <span class="badge badge-dark">JIRA</span>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ================= AUTOMATION PREVIEW MODAL ================= -->
-<div class="modal fade" id="automationPreviewModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+                <em>Expected:</em> Invalid inputs must always be blocked with clear
+                validation messages.<br />
+                <em>Actual:</em> Some invalid inputs are saved or validation behaves
+                inconsistently.
+              </li>
 
-      <div class="modal-header">
-        <h5 class="modal-title">Selenium Automation Practice — Preview</h5>
-        <button class="close" data-dismiss="modal">×</button>
-      </div>
+              <li class="mb-2">
+                <strong>Google Maps Location Incorrect in Mobile App</strong>
+                <span class="badge badge-warning ml-2">Priority: P2</span>
+                <span class="badge badge-secondary ml-1">Unresolved</span><br />
 
-      <div class="modal-body">
-        <p class="mb-2">
-          <strong>Project:</strong> Selenium Automation Practice
-        </p>
+                <em>Expected:</em> Map displays structure-specific location from search
+                result.<br />
+                <em>Actual:</em> Map centers on the device’s current location.
+              </li>
+            </ul>
 
-        <p class="mb-2"><strong>Tools:</strong></p>
-        <span class="badge badge-info">Selenium WebDriver</span>
-        <span class="badge badge-dark">Java</span>
-        <span class="badge badge-secondary">TestNG</span>
-        <span class="badge badge-secondary">Maven</span>
+            <hr />
 
-        <hr>
-
-        <h6>Key Features</h6>
-        <ul>
-          <li>Automated login workflow (positive + negative)</li>
-          <li>Form input + submission validation</li>
-          <li>Navigation and UI element interactions (click, type, dropdown)</li>
-          <li>Basic assertions for expected UI behavior</li>
-        </ul>
-
-        <hr>
-
-        <h6>Sample Code</h6>
-        <div class="card eduCard mb-3">
-          <div class="card-body">
-            <pre class="mb-0">
-              <code>
-                // Example snippet
-                driver.findElement(By.id("username")).sendKeys("testuser");
-                driver.findElement(By.id("password")).sendKeys("password");
-                driver.findElement(By.id("login")).click();
-
-                // Basic validation
-                Assert.assertTrue(
-                    driver.getCurrentUrl().contains("dashboard")
-                );
-              </code>
-            </pre>
+            <h6>Tools Used</h6>
+            <span class="badge badge-info">Postman</span>
+            <span class="badge badge-dark">JIRA</span>
           </div>
         </div>
-
-
-        <hr>
-
-        <h6>Execution Result</h6>
-        <ul class="mb-3">
-          <li>✔ Scripts executed successfully</li>
-          <li>✔ Results tracked (Pass/Fail)</li>
-          <li>✔ Basic validation performed via assertions</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="text-muted">GitHub:</span>
-          <a class="btn btn-sm btn-outline-dark" href="https://github.com/dibya888/SeleniumPracticeCode" target="_blank">
-            View Repository
-          </a>
-        </div>
-
       </div>
-
     </div>
-  </div>
-</div>
-</body>
-</html>
 
+    <!-- ================= AUTOMATION PREVIEW MODAL ================= -->
+    <div class="modal fade" id="automationPreviewModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Selenium Automation Practice — Preview</h5>
+            <button class="close" data-dismiss="modal">×</button>
+          </div>
+
+          <div class="modal-body">
+            <p class="mb-2">
+              <strong>Project:</strong> Selenium Automation Practice
+            </p>
+
+            <p class="mb-2"><strong>Tools:</strong></p>
+            <span class="badge badge-info">Selenium WebDriver</span>
+            <span class="badge badge-dark">Java</span>
+            <span class="badge badge-secondary">TestNG</span>
+            <span class="badge badge-secondary">Maven</span>
+
+            <hr />
+
+            <h6>Key Features</h6>
+            <ul>
+              <li>Automated login workflow (positive + negative)</li>
+              <li>Form input + submission validation</li>
+              <li>Navigation and UI element interactions (click, type, dropdown)</li>
+              <li>Basic assertions for expected UI behavior</li>
+            </ul>
+
+            <hr />
+
+            <h6>Sample Code</h6>
+            <div class="card eduCard mb-3">
+              <div class="card-body">
+                <pre class="mb-0"><code>
+// Example snippet
+driver.findElement(By.id("username")).sendKeys("testuser");
+driver.findElement(By.id("password")).sendKeys("password");
+driver.findElement(By.id("login")).click();
+
+// Basic validation
+Assert.assertTrue(
+  driver.getCurrentUrl().contains("dashboard")
+);
+                </code></pre>
+              </div>
+            </div>
+
+            <hr />
+
+            <h6>Execution Result</h6>
+            <ul class="mb-3">
+              <li>✔ Scripts executed successfully</li>
+              <li>✔ Results tracked (Pass/Fail)</li>
+              <li>✔ Basic validation performed via assertions</li>
+            </ul>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">GitHub:</span>
+
+              <a
+                class="btn btn-sm btn-outline-dark"
+                href="https://github.com/dibya888/SeleniumPracticeCode"
+                target="_blank"
+                rel="noopener"
+              >
+                View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

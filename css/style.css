@@ -1,9 +1,11 @@
+/* =====================================================
+   ROOT VARIABLES (LIGHT MODE DEFAULT)
+   ===================================================== */
 :root {
     --primary-color: #168ef0;
     --primary-hover: #0f6fc2;
-    --fixed-color: #0000FF;
+    --fixed-color: #0000ff;
 
-    /* LIGHT MODE (default) */
     --bg-color: #ffffff;
     --card-bg: #f8fafc;
     --text-color: #0f172a;
@@ -12,6 +14,29 @@
     --glass-bg: rgba(255, 255, 255, 0.6);
 }
 
+/* =====================================================
+   GLOBAL RESET / BODY
+   ===================================================== */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-bottom: 50px;
+    transition: all 0.3s ease;
+}
+
+/* DARK MODE VARIABLES */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #e2e8f0;
+    --muted-text: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
 .nav-item {
     padding-right: 10px;
 }
@@ -19,42 +44,22 @@
 .nav-link {
     padding: 5px 20px !important;
     color: var(--text-color) !important;
-    font-family: Monaco;
+    font-family: "Gill Sans MT";
+    /* removed duplicate font-family */
     font-size: large;
-    font-family: Gill Sans MT;
     font-weight: 600;
     position: relative;
     transition: all 0.3s ease;
 }
 
+/* Hover effect (merged duplicate background declaration) */
 .nav-link:hover {
     background: var(--primary-hover);
-    background-color: var(--primary-hover);
     border-radius: 15px;
-    color: white !important;
-    ;
+    color: #ffffff !important;
 }
 
-.glass-navbar {
-    background: var(--glass-bg);
-    /* ✅ dynamic for light/dark */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid var(--border-color);
-    /* ✅ dynamic */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    /* slightly stronger for dark */
-
-    z-index: 1000;
-}
-
-.navbar-brand {
-    color: var(--text-color) !important;
-    font-weight: bold;
-}
-
-/* Glass hover effect */
+/* Underline animation */
 .nav-link::after {
     content: "";
     position: absolute;
@@ -71,6 +76,19 @@
     width: 100%;
 }
 
+/* Glass Navbar */
+.glass-navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
 .basicInfo {
     margin-left: 8%;
     margin-top: 15%;
@@ -88,17 +106,6 @@
     line-height: 28px;
 }
 
-/* .basicInfo a{
-    background: tomato;
-    padding: 10px 18px;
-    text-decoration: none;
-    color: whitesmoke;
-    display: inline-block;
-    margin: 50px 0;
-    border-radius: 5px;
-    margin-bottom: 60%;
-} */
-
 .img-box {
     width: 45%;
     height: 80%;
@@ -113,9 +120,10 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    transition: bottom 1s, left 1s;
+    transition: bottom 0.8s, left 0.8s;
 }
 
+/* Hover animation */
 .img-box:hover .styleImage {
     bottom: 40px;
 }
@@ -124,162 +132,153 @@
     left: 54%;
 }
 
-#experience {
-    margin-top: 40%;
-    padding-top: 65px;
+/* =====================================================
+   SECTION HEADINGS (MERGED COMMON STYLES)
+   ===================================================== */
+#experience,
+#education,
+#tech,
+#contact,
+#qaTesting {
+    padding-top: 50px;
     font-size: 30px;
     font-weight: bold;
-    font-family: 'Gill Sans MT';
+    font-family: "Gill Sans MT";
+}
+
+/* Custom spacing kept separately */
+#experience {
+    margin-top: 40%;
 }
 
 #education {
     margin-top: 5%;
-    padding-top: 65px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans MT';
 }
 
+/* =====================================================
+   CARDS (USED EVERYWHERE)
+   ===================================================== */
 .eduCard {
     background: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease;
 }
 
-.eduCard .eduTitle {
+/* Remove duplicate .eduTitle definitions → merged */
+.eduTitle {
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: var(--primary-color);
-}
-
-.eduCard:hover {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    transition: 300ms;
-}
-
-/* ✅ FIX: Make Experience, Education & QA headers consistent with TechSkill */
-
-.eduCard .card-header {
-    /* background-color: var(--primary-color); */
-    border-bottom: none;
-    border-radius: 10px 10px 0 0;
-}
-
-.eduCard .eduTitle {
     color: var(--text-color);
-    font-weight: bold;
     background: transparent;
     transition: color 0.3s ease;
-
 }
 
-/* Optional hover effect (keeps your previous intent) */
-.eduCard:hover .eduTitle {
-    color: var(--primary-color);
+/* Card hover */
+.eduCard:hover {
+    box-shadow: none;
 }
 
-
-/* Dark mode hover override */
-body.dark-mode .eduCard:hover .eduTitle {
-    color: #ffffff;
-}
-
-
+/* Header hover */
 .eduCard:hover .card-header {
     background-color: var(--primary-color);
 }
 
 .eduCard:hover .eduTitle {
     color: #ffffff !important;
-    transition: 300ms;
 }
 
+/* Dark mode override */
+body.dark-mode .eduCard:hover .eduTitle {
+    color: #ffffff;
+}
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
 .card-body {
     font-size: large;
     text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#tech {
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans MT';
+/* =====================================================
+   BUTTON (CV DOWNLOAD)
+   ===================================================== */
+.cv-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 22px;
+    border-radius: 14px;
+    background: var(--fixed-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Gill Sans MT";
+    font-weight: 700;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    transition: 0.2s ease;
 }
 
-#project {
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans MT';
+.cv-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
-#contact {
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans MT';
+.cv-btn:focus {
+    outline: none;
 }
 
+/* =====================================================
+   SKILLS SECTION
+   ===================================================== */
+.skill-card {
+    border-radius: 14px;
+    transition: 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.skill-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+/* IMPORTANT: avoid using img-fluid height */
 .img-fluid {
     height: 100px;
 }
 
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    padding-bottom: 50px;
-}
-
-body.dark-mode {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #e2e8f0;
-    --muted-text: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-}
-
-.list-group-item {
-    background: var(--card-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-}
-
+/* =====================================================
+   THEME TOGGLE
+   ===================================================== */
 .theme-toggle {
     position: relative;
+}
+
+#themeToggle {
+    display: none;
 }
 
 .toggle-label {
     width: 60px;
     height: 30px;
-    background: var(--card-bg);
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    position: relative;
     cursor: pointer;
     border: 1px solid var(--border-color);
-}
-
-.toggle-label .icon {
-    font-size: 14px;
-    z-index: 1;
-}
-
-.toggle-label .sun {
-    margin-left: 5px;
-}
-
-.toggle-label .moon {
-    margin-right: 5px;
+    background: var(--card-bg);
 }
 
 .toggle-label .ball {
@@ -293,31 +292,13 @@ body.dark-mode {
     transition: transform 0.4s ease;
 }
 
-/* Move ball when checked */
 #themeToggle:checked+.toggle-label .ball {
     transform: translateX(30px);
 }
 
-body,
-.eduCard,
-.list-group-item,
-.glass-navbar {
-    transition: all 0.3s ease;
-}
-
-#themeToggle {
-    display: none;
-}
-
-/* QA Testing section styling (matches other sections) */
-#qaTesting {
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans MT';
-}
-
-/* QA card hover enhancement */
+/* =====================================================
+   QA CARDS
+   ===================================================== */
 .qa-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -327,8 +308,9 @@ body,
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* ================= DARK MODE FIX FOR MODALS ================= */
-
+/* =====================================================
+   MODALS (DARK MODE SUPPORT)
+   ===================================================== */
 .modal-content {
     background-color: var(--card-bg);
     color: var(--text-color);
@@ -340,169 +322,18 @@ body,
     border-color: var(--border-color);
 }
 
-.modal-title {
-    color: var(--text-color);
-}
-
-.modal-body h6 {
-    color: var(--text-color);
-}
-
-.modal-body hr {
-    border-top: 1px solid var(--border-color);
-}
-
-/* ================= CODE BLOCK DARK MODE FIX ================= */
-
-/* Preformatted blocks */
-pre {
-    background: transparent;
-    color: var(--text-color);
-    font-family: Consolas, Monaco, "Courier New", monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    /* wrap long lines */
-    word-break: break-word;
-}
-
-/* Inline and block code */
+/* =====================================================
+   CODE BLOCKS
+   ===================================================== */
+pre,
 code {
     color: var(--text-color);
     font-family: Consolas, Monaco, "Courier New", monospace;
 }
 
-/* Optional: subtle container feel inside cards */
-.eduCard pre {
-    margin-bottom: 0;
-}
-
-.cv-btn {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 12px 22px;
-    border-radius: 14px;
-
-    background: var(--fixed-color);
-    color: #ffffff;
-    text-decoration: none;
-
-    font-family: "Gill Sans MT";
-    font-weight: 700;
-    letter-spacing: 0.2px;
-
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.cv-btn:hover {
-    background: var(--primary-hover);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-}
-
-.cv-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(22, 142, 240, 0.25), 0 10px 22px rgba(0, 0, 0, 0.12);
-}
-
-/* ================= SKILLS CARD GRID ================= */
-
-.skill-card {
-    border-radius: 14px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-}
-
-/* IMPORTANT: don't use .img-fluid for skill icons because you set img-fluid height: 100px globally */
-.skill-icon {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-    display: inline-block;
-}
-
-.skill-name {
-    font-family: "Gill Sans MT";
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--text-color);
-}
-
-.skill-meta {
-    margin-top: 2px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--muted-text);
-}
-
-/* ================= HERO RESPONSIVE VISIBILITY ================= */
-
-/* Desktop hero: visible by default */
-.hero-desktop {
-    display: block;
-}
-
-/* Mobile hero: hidden by default */
-.hero-mobile {
-    display: none;
-}
-
-/* MOBILE OVERRIDE */
-@media (max-width: 767px) {
-
-    /* Hide animated desktop hero */
-    .hero-desktop {
-        display: none;
-    }
-
-    /* Show mobile hero */
-    .hero-mobile {
-        display: block;
-    }
-}
-
-/* Mobile hero image */
-.mobile-profile-pic {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-
-    #experience {
-        margin-top: 32px;
-        /* or 24px, tune to taste */
-        padding-top: 40px;
-    }
-
-    #education {
-        margin-top: 32px;
-        padding-top: 40px;
-    }
-
-    .cv-btn {
-        background: #168ef0;
-        /* example: lighter blue */
-    }
-
-    .cv-btn:hover {
-        background: #0f6fc2;
-        /* optional hover color for mobile */
-    }
-
-}
-
-/* ✅ DEFAULT (LIGHT MODE) */
+/* =====================================================
+   DARK/LIGHT IMAGE TOGGLE
+   ===================================================== */
 .light-logo {
     display: inline-block;
 }
@@ -511,7 +342,6 @@ code {
     display: none;
 }
 
-/* ✅ DARK MODE */
 .dark-mode .light-logo {
     display: none;
 }
@@ -520,254 +350,38 @@ code {
     display: inline-block;
 }
 
-/* ================= CONTACT PANEL (Modern) ================= */
-.contact-subtitle {
-    margin-top: 10px;
-    color: var(--muted-text);
-    font-weight: 600;
+/* =====================================================
+   HERO RESPONSIVE
+   ===================================================== */
+.hero-desktop {
+    display: block;
 }
 
-.contact-panel {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 18px;
-    padding: 18px;
-    border-radius: 18px;
-    background: var(--glass-bg);
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+.hero-mobile {
+    display: none;
 }
 
-.contact-left,
-.contact-right {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 16px;
+/* Mobile layout */
+@media (max-width: 767px) {
+    .hero-desktop {
+        display: none;
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+
+    #experience,
+    #education {
+        margin-top: 32px;
+        padding-top: 40px;
+    }
 }
 
-.contact-left-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.contact-title {
-    margin: 0;
-    font-family: "Gill Sans MT";
-    font-weight: 800;
-    color: var(--text-color);
-}
-
-.availability-pill {
-    font-size: 12px;
-    font-weight: 800;
-    padding: 6px 10px;
-    border-radius: 999px;
-    color: #0b3d1a;
-    background: rgba(34, 197, 94, 0.18);
-    border: 1px solid rgba(34, 197, 94, 0.35);
-}
-
-body.dark-mode .availability-pill {
-    color: #bbf7d0;
-    background: rgba(34, 197, 94, 0.12);
-    border: 1px solid rgba(34, 197, 94, 0.28);
-}
-
-.contact-note {
-    margin-top: 10px;
-    margin-bottom: 14px;
-    color: var(--muted-text);
-    font-weight: 600;
-}
-
-.contact-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact-item {
-    display: grid;
-    grid-template-columns: 48px 1fr auto;
-    gap: 12px;
-    align-items: center;
-    padding: 12px;
-    border-radius: 14px;
-    border: 1px solid var(--border-color);
-    background: rgba(255, 255, 255, 0.35);
-}
-
-body.dark-mode .contact-item {
-    background: rgba(255, 255, 255, 0.04);
-}
-
-.contact-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    color: var(--text-color);
-    background: rgba(22, 142, 240, 0.12);
-    border: 1px solid rgba(22, 142, 240, 0.18);
-    overflow: hidden;
-}
-
-/* GitHub icons inside contact (do NOT use .img-fluid sizing) */
-.contact-gh {
-    width: 26px;
-    height: 26px;
+/* Mobile profile image */
+.mobile-profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
     object-fit: contain;
-}
-
-.contact-label {
-    font-size: 12px;
-    letter-spacing: .2px;
-    font-weight: 800;
-    color: var(--muted-text);
-}
-
-.contact-value {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.contact-value:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.contact-copy,
-.contact-open {
-    border: 1px solid var(--border-color);
-    background: transparent;
-    color: var(--text-color);
-    font-weight: 800;
-    border-radius: 12px;
-    padding: 8px 12px;
-    text-decoration: none;
-}
-
-.contact-copy:hover,
-.contact-open:hover {
-    background: rgba(22, 142, 240, 0.10);
-    border-color: rgba(22, 142, 240, 0.35);
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.contact-quick {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 14px;
-}
-
-.contact-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-weight: 900;
-    text-decoration: none;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    background: transparent;
-}
-
-.contact-btn:hover {
-    text-decoration: none;
-    background: rgba(22, 142, 240, 0.10);
-    border-color: rgba(22, 142, 240, 0.35);
-}
-
-.contact-btn.primary {
-    background: var(--primary-color);
-    border-color: rgba(22, 142, 240, 0.65);
-    color: #fff;
-}
-
-.contact-btn.primary:hover {
-    background: var(--primary-hover);
-    color: #fff;
-}
-
-.contact-btn.full {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contact-footnote {
-    margin-top: 12px;
-    color: var(--muted-text);
-    font-size: 13px;
-    font-weight: 700;
-}
-
-/* Form */
-.contact-form {
-    margin-top: 12px;
-}
-
-.form-row {
-    display: flex;
-    gap: 12px;
-}
-
-.form-col {
-    flex: 1;
-}
-
-.contact-field-label {
-    font-size: 12px;
-    font-weight: 900;
-    color: var(--muted-text);
-    margin-bottom: 6px;
-}
-
-.contact-field {
-    width: 100%;
-    border-radius: 14px;
-    border: 1px solid var(--border-color);
-    padding: 10px 12px;
-    background: var(--bg-color);
-    color: var(--text-color);
-    outline: none;
-}
-
-.contact-field:focus {
-    box-shadow: 0 0 0 4px rgba(22, 142, 240, 0.20);
-    border-color: rgba(22, 142, 240, 0.55);
-}
-
-.contact-textarea {
-    resize: vertical;
-}
-
-.contact-form-hint {
-    margin-top: 8px;
-    color: var(--muted-text);
-    font-size: 12px;
-    font-weight: 700;
-}
-
-@media (max-width: 991px) {
-    .contact-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        flex-direction: column;
-    }
 }
