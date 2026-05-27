@@ -587,23 +587,63 @@
       <br />
 
       <div class="row">
-        <!-- CARD 1 -->
+        <!-- CARD 1 (Manual QA) -->
         <div class="col-md-6 mb-4">
-          <div class="card eduCard h-100 qa-card">
-            <div class="card-header d-flex justify-content-between align-items-center">
-              <button class="btn eduTitle">RUBIMS Website & App</button>
-              <span class="badge badge-info">Manual QA</span>
+          <div class="card eduCard h-100 qa-card manual-qa-card">
+            <div class="card-header manual-qa-header">
+              <div>
+                <button class="btn eduTitle manual-qa-title">
+                  RUBIMS Website & App
+                </button>
+                <p class="manual-qa-subtitle mb-0">
+                  Test Cases • Bug Reports • UAT
+                </p>
+              </div>
+
+              <span class="manual-qa-badge">Manual QA</span>
             </div>
 
-            <div class="card-body">
-              <p>
-                136 Test Cases Executed<br />
-                <strong>109 Passed / 27 Failed</strong><br />
-                Covers authentication, structure inspection, validation, inventory, and
-                mobile app scenarios.
+            <div class="card-body manual-qa-body">
+              <p class="manual-qa-summary">
+                Real project-based QA work covering requirement analysis, functional
+                testing, validation checks, defect reporting, and mobile app verification.
               </p>
 
-              <div class="d-flex justify-content-between">
+              <div class="manual-qa-focus">
+                <div class="manual-focus-item">
+                  <span class="manual-focus-icon">🧪</span>
+                  <div>
+                    <strong>Functional Testing</strong>
+                    <small>Authentication, structure, inventory, and validation flows</small>
+                  </div>
+                </div>
+
+                <div class="manual-focus-item">
+                  <span class="manual-focus-icon">🐞</span>
+                  <div>
+                    <strong>Defect Reporting</strong>
+                    <small>Issue documentation with expected and actual behavior</small>
+                  </div>
+                </div>
+
+                <div class="manual-focus-item">
+                  <span class="manual-focus-icon">📱</span>
+                  <div>
+                    <strong>Web & Mobile QA</strong>
+                    <small>Website and mobile app scenario verification</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="manual-qa-tools mt-3">
+                <span class="qa-tool-badge badge-manual">Manual Testing</span>
+                <span class="qa-tool-badge badge-testcase">Test Cases</span>
+                <span class="qa-tool-badge badge-bug">Bug Report</span>
+                <span class="qa-tool-badge badge-postman">Postman</span>
+                <span class="qa-tool-badge badge-jira">Jira</span>
+              </div>
+
+              <div class="manual-qa-actions mt-4">
                 <button
                   class="btn btn-sm btn-outline-primary"
                   data-toggle="modal"
@@ -620,23 +660,64 @@
           </div>
         </div>
 
-        <!-- CARD 2 (Automation) -->
+        <!-- CARD 2 (Automation QA) -->
         <div class="col-md-6 mb-4">
-          <div class="card eduCard h-100 qa-card">
-            <div class="card-header d-flex justify-content-between align-items-center">
-              <button class="btn eduTitle">Automation Practice</button>
-              <span class="badge badge-info">Automation QA</span>
+          <div class="card eduCard h-100 qa-card automation-lab-card">
+            <div class="card-header automation-lab-header">
+              <div>
+                <button class="btn eduTitle automation-lab-title">
+                  Automation Testing Lab
+                </button>
+                <p class="automation-lab-subtitle mb-0">
+                  Selenium • Cypress • Playwright
+                </p>
+              </div>
+
+              <span class="automation-lab-badge">Automation QA</span>
             </div>
 
-            <div class="card-body">
-              <p>
-                24 Test Scenarios Automated<br />
-                <strong>24 Passed / 0 Failed</strong><br />
-                Covers login, form handling, navigation, and UI interaction using Selenium
-                WebDriver with Java.
+            <div class="card-body automation-lab-body">
+              <p class="automation-lab-summary">
+                Hands-on automation practice focused on browser automation,
+                test configuration, element handling, and modern QA automation tools.
               </p>
 
-              <div class="d-flex justify-content-between">
+              <div class="automation-lab-focus">
+                <div class="automation-focus-item">
+                  <span class="automation-focus-icon">⚙️</span>
+                  <div>
+                    <strong>Framework Practice</strong>
+                    <small>Selenium, TestNG, Maven</small>
+                  </div>
+                </div>
+
+                <div class="automation-focus-item">
+                  <span class="automation-focus-icon">🌐</span>
+                  <div>
+                    <strong>Modern Web Testing</strong>
+                    <small>Cypress and Playwright basics</small>
+                  </div>
+                </div>
+
+                <div class="automation-focus-item">
+                  <span class="automation-focus-icon">📊</span>
+                  <div>
+                    <strong>Execution Evidence</strong>
+                    <small>Reports, configs, and test outputs</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="automation-lab-tools mt-3">
+                <span class="tool-badge badge-selenium">Selenium</span>
+                <span class="tool-badge badge-java">Java</span>
+                <span class="tool-badge badge-testng">TestNG</span>
+                <span class="tool-badge badge-maven">Maven</span>
+                <span class="tool-badge badge-cypress">Cypress</span>
+                <span class="tool-badge badge-playwright">Playwright</span>
+              </div>
+
+              <div class="automation-lab-actions mt-4">
                 <button
                   class="btn btn-sm btn-outline-primary"
                   data-toggle="modal"
@@ -783,155 +864,237 @@
     </script>
 
     <!-- ================= QA PREVIEW MODAL ================= -->
-    <div class="modal fade" id="qaPreviewModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Login System – QA Preview</h5>
-            <button class="close" data-dismiss="modal">×</button>
+    <div class="modal fade qa-work-preview-modal" id="qaPreviewModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content qa-preview-content manual-preview-content">
+          <div class="modal-header qa-preview-header">
+            <div>
+              <h5 class="modal-title">RUBIMS Manual QA — Preview</h5>
+              <p class="qa-preview-subtitle mb-0">
+                Real project-based manual testing, defect reporting, and web/mobile QA work.
+              </p>
+            </div>
+
+            <button class="close qa-preview-close" data-dismiss="modal">×</button>
           </div>
 
-          <div class="modal-body">
-            <h6>Key Test Cases Preview</h6>
+          <div class="modal-body qa-preview-body">
+            <!-- Snapshot -->
+            <div class="qa-preview-section">
+              <h6>Project Snapshot</h6>
 
-            <ul>
-              <li>
-                <strong>Structure Edit Data Not Persisting</strong><br />
-                <em>Issue:</em> Edited structure fields do not reliably save or persist
-                after reload.
-              </li>
+              <div class="qa-preview-chip-wrap">
+                <span class="qa-tool-badge badge-manual">Manual QA</span>
+                <span class="qa-tool-badge badge-testcase">Test Cases</span>
+                <span class="qa-tool-badge badge-bug">Bug Reports</span>
+                <span class="qa-tool-badge badge-postman">Postman</span>
+                <span class="qa-tool-badge badge-jira">Jira</span>
+              </div>
 
-              <li>
-                <strong>Validation Rules Inconsistently Enforced</strong><br />
-                <em>Issue:</em> Invalid inputs (text in numeric fields, future year,
-                blank mandatory fields) are sometimes saved.
-              </li>
+              <p class="mb-0 mt-3">
+                RUBIMS Website & App testing focused on functional validation,
+                structure inspection, data behavior, issue reporting, and mobile app verification.
+              </p>
+            </div>
 
-              <li>
-                <strong>Google Maps Showing Device Location (Mobile App)</strong><br />
-                <em>Issue:</em> Map centers on user’s current location instead of
-                structure coordinates.
-              </li>
-            </ul>
+            <!-- Coverage -->
+            <div class="qa-preview-section">
+              <h6>QA Coverage</h6>
 
-            <hr />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="qa-preview-mini-card">
+                    <span class="qa-preview-icon">🧪</span>
+                    <div>
+                      <strong>Functional Testing</strong>
+                      <small>Authentication, structure, inventory, and validation flows</small>
+                    </div>
+                  </div>
+                </div>
 
-            <h6>Key Bug Reports</h6>
+                <div class="col-md-6 mb-3">
+                  <div class="qa-preview-mini-card">
+                    <span class="qa-preview-icon">✅</span>
+                    <div>
+                      <strong>Validation Checks</strong>
+                      <small>Mandatory fields, input rules, and expected behavior checks</small>
+                    </div>
+                  </div>
+                </div>
 
-            <ul>
-              <li class="mb-2">
-                <strong>Data Persistence Issue on Structure Edit</strong>
-                <span class="badge badge-danger ml-2">Priority: P1</span>
-                <span class="badge badge-secondary ml-1">Unresolved</span><br />
+                <div class="col-md-6 mb-3">
+                  <div class="qa-preview-mini-card">
+                    <span class="qa-preview-icon">🐞</span>
+                    <div>
+                      <strong>Defect Reporting</strong>
+                      <small>Issues documented with expected and actual results</small>
+                    </div>
+                  </div>
+                </div>
 
-                <em>Expected:</em> Edited values persist reliably after Save and page
-                reload.<br />
-                <em>Actual:</em> Values revert or do not persist consistently after
-                reload.
-              </li>
+                <div class="col-md-6 mb-3">
+                  <div class="qa-preview-mini-card">
+                    <span class="qa-preview-icon">📱</span>
+                    <div>
+                      <strong>Web & Mobile QA</strong>
+                      <small>Website and mobile app scenario verification</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <li class="mb-2">
-                <strong>Validation Rules Not Enforced Consistently</strong>
-                <span class="badge badge-warning ml-2">Priority: P2</span>
-                <span class="badge badge-secondary ml-1">Unresolved</span><br />
+            <!-- Sample Findings -->
+            <div class="qa-preview-section">
+              <h6>Sample Findings</h6>
 
-                <em>Expected:</em> Invalid inputs must always be blocked with clear
-                validation messages.<br />
-                <em>Actual:</em> Some invalid inputs are saved or validation behaves
-                inconsistently.
-              </li>
+              <div class="qa-finding-list">
+                <div class="qa-finding-item">
+                  <strong>Data Persistence Issue</strong>
+                  <p>
+                    Edited structure information did not reliably remain saved after reload.
+                  </p>
+                </div>
 
-              <li class="mb-2">
-                <strong>Google Maps Location Incorrect in Mobile App</strong>
-                <span class="badge badge-warning ml-2">Priority: P2</span>
-                <span class="badge badge-secondary ml-1">Unresolved</span><br />
+                <div class="qa-finding-item">
+                  <strong>Validation Inconsistency</strong>
+                  <p>
+                    Some invalid inputs were accepted instead of being blocked with clear validation feedback.
+                  </p>
+                </div>
 
-                <em>Expected:</em> Map displays structure-specific location from search
-                result.<br />
-                <em>Actual:</em> Map centers on the device’s current location.
-              </li>
-            </ul>
+                <div class="qa-finding-item">
+                  <strong>Mobile Map Location Issue</strong>
+                  <p>
+                    The mobile app map behavior did not match the expected structure-specific location flow.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <hr />
+          <div class="modal-footer qa-preview-footer">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
+              Close
+            </button>
 
-            <h6>Tools Used</h6>
-            <span class="badge badge-info">Postman</span>
-            <span class="badge badge-dark">JIRA</span>
+            <a href="RuBIMS-Test-Cases.html" class="btn btn-sm btn-outline-primary">
+              View Details
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- ================= AUTOMATION PREVIEW MODAL ================= -->
-    <div class="modal fade" id="automationPreviewModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Selenium Automation Practice — Preview</h5>
-            <button class="close" data-dismiss="modal">×</button>
+    <div class="modal fade qa-work-preview-modal" id="automationPreviewModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content qa-preview-content automation-preview-content">
+          <div class="modal-header qa-preview-header">
+            <div>
+              <h5 class="modal-title">Automation Testing Lab — Preview</h5>
+              <p class="qa-preview-subtitle mb-0">
+                Selenium, Cypress, and Playwright practice focused on automation foundations.
+              </p>
+            </div>
+
+            <button class="close qa-preview-close" data-dismiss="modal">×</button>
           </div>
 
-          <div class="modal-body">
-            <p class="mb-2">
-              <strong>Project:</strong> Selenium Automation Practice
-            </p>
+          <div class="modal-body qa-preview-body">
+            <!-- Snapshot -->
+            <div class="qa-preview-section">
+              <h6>Lab Snapshot</h6>
 
-            <p class="mb-2"><strong>Tools:</strong></p>
-            <span class="badge badge-info">Selenium WebDriver</span>
-            <span class="badge badge-dark">Java</span>
-            <span class="badge badge-secondary">TestNG</span>
-            <span class="badge badge-secondary">Maven</span>
+              <div class="qa-preview-chip-wrap">
+                <span class="tool-badge badge-selenium">Selenium</span>
+                <span class="tool-badge badge-java">Java</span>
+                <span class="tool-badge badge-testng">TestNG</span>
+                <span class="tool-badge badge-maven">Maven</span>
+                <span class="tool-badge badge-cypress">Cypress</span>
+                <span class="tool-badge badge-playwright">Playwright</span>
+              </div>
 
-            <hr />
+              <p class="mb-0 mt-3">
+                A learning-focused automation lab covering browser automation fundamentals,
+                test configuration, tool structure, execution output, and modern automation practice.
+              </p>
+            </div>
 
-            <h6>Key Features</h6>
-            <ul>
-              <li>Automated login workflow (positive + negative)</li>
-              <li>Form input + submission validation</li>
-              <li>Navigation and UI element interactions (click, type, dropdown)</li>
-              <li>Basic assertions for expected UI behavior</li>
-            </ul>
+            <!-- Practice Tracks -->
+            <div class="qa-preview-section">
+              <h6>Practice Tracks</h6>
 
-            <hr />
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="qa-preview-track-card selenium-track">
+                    <h6>Selenium + Java</h6>
+                    <p>
+                      WebDriver fundamentals, browser control, locator strategies,
+                      window handling, Maven, and TestNG practice.
+                    </p>
+                  </div>
+                </div>
 
-            <h6>Sample Code</h6>
-            <div class="card eduCard mb-3">
-              <div class="card-body">
-                <pre class="mb-0"><code>
-// Example snippet
-driver.findElement(By.id("username")).sendKeys("testuser");
-driver.findElement(By.id("password")).sendKeys("password");
-driver.findElement(By.id("login")).click();
+                <div class="col-md-4 mb-3">
+                  <div class="qa-preview-track-card cypress-track">
+                    <h6>Cypress + JavaScript</h6>
+                    <p>
+                      Cypress project setup, JavaScript-based structure, and global/local
+                      configuration practice.
+                    </p>
+                  </div>
+                </div>
 
-// Basic validation
-Assert.assertTrue(
-  driver.getCurrentUrl().contains("dashboard")
-);
-                </code></pre>
+                <div class="col-md-4 mb-3">
+                  <div class="qa-preview-track-card playwright-track">
+                    <h6>Playwright + JavaScript</h6>
+                    <p>
+                      Test organization, grouping, tagging, skipping behavior,
+                      reports, and result output practice.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <hr />
+            <!-- Evidence -->
+            <div class="qa-preview-section">
+              <h6>Repository Evidence</h6>
 
-            <h6>Execution Result</h6>
-            <ul class="mb-3">
-              <li>✔ Scripts executed successfully</li>
-              <li>✔ Results tracked (Pass/Fail)</li>
-              <li>✔ Basic validation performed via assertions</li>
-            </ul>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="qa-evidence-box">
+                    <strong>Selenium</strong>
+                    <small>pom.xml, testng.xml, test-output</small>
+                  </div>
+                </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">GitHub:</span>
+                <div class="col-md-4 mb-3">
+                  <div class="qa-evidence-box">
+                    <strong>Cypress</strong>
+                    <small>cypress folder, cypress.config.js, package.json</small>
+                  </div>
+                </div>
 
-              <a
-                class="btn btn-sm btn-outline-dark"
-                href="https://github.com/dibya888/SeleniumPracticeCode"
-                target="_blank"
-                rel="noopener"
-              >
-                View Repository
-              </a>
+                <div class="col-md-4 mb-3">
+                  <div class="qa-evidence-box">
+                    <strong>Playwright</strong>
+                    <small>tests, playwright.config.js, playwright-report, test-results</small>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="modal-footer qa-preview-footer">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
+              Close
+            </button>
+
+            <a href="selenium-automation-practice.html" class="btn btn-sm btn-outline-primary">
+              View Details
+            </a>
           </div>
         </div>
       </div>

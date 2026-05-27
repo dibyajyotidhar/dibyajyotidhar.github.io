@@ -1,219 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Selenium Automation Practice – QA Details</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>QA Automation Testing Lab – QA Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap (same as Card 1) -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
 
-  <!-- Your existing CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Existing CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <div class="container mt-5 automation-details-page">
 
-<div class="container mt-5">
+    <!-- Back button -->
+    <div class="mb-4">
+      <a href="index.html#QATestingProject" class="btn btn-outline-primary btn-sm">
+        ← Back to QA Section
+      </a>
+    </div>
 
-  <!-- Back button -->
-  <div class="mb-4">
-    <a href="index.html#QATestingProject" class="btn btn-outline-primary btn-sm">
-      ← Back to QA Section
-    </a>
-  </div>
+    <!-- Main Details Card -->
+    <div class="card eduCard mb-4 automation-main-card">
+      <div class="card-body">
 
-  <!-- ================================================= -->
-  <!-- MAIN DETAILS CARD -->
-  <!-- ================================================= -->
-  <div class="card eduCard mb-4">
-    <div class="card-body">
-
-      <h3 class="mb-3">Selenium Automation Practice</h3>
-
-      <p>
-        <strong>Project Type:</strong> UI Automation<br>
-        <strong>Technology:</strong> Selenium WebDriver (Java)<br>
-        <strong>Total Scenarios:</strong> 24<br>
-        <strong>Execution Result:</strong>
-        <span class="badge badge-success">24 Passed</span>
-        <span class="badge badge-danger">0 Failed</span>
-      </p>
-
-      <hr>
-
-      <!-- ================================================= -->
-      <!-- 1. PROJECT OVERVIEW -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>1. Project Overview</h5>
-          <p>
-            This is a practice automation project developed using Selenium WebDriver with Java.
-            The objective of this project was to understand UI automation workflows,
-            element handling, synchronization, and basic validation using assertions.
-          </p>
-        </div>
-      </div>
-
-      <!-- ================================================= -->
-      <!-- 2. TEST SCENARIOS -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>2. Test Scenarios Covered</h5>
-          <ul class="mb-0">
-            <li>Login functionality (positive and negative cases)</li>
-            <li>Form input handling and submission</li>
-            <li>Page navigation validation</li>
-            <li>Input field validation</li>
-            <li>Button interactions and UI behavior</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- ================================================= -->
-      <!-- 3. CURRENT STRUCTURE -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>3. Current Structure (Learning Phase)</h5>
-          <ul class="mb-0">
-            <li>Java-based Selenium test scripts</li>
-            <li>Direct WebDriver usage</li>
-            <li>No framework pattern implemented yet</li>
-            <li>Basic assertions for validation</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- ================================================= -->
-      <!-- 4. SAMPLE CODE (DARK MODE FRIENDLY) -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-
-          <h5>4. Sample Code Implementation</h5>
-          <p class="text-muted mb-2">
-            Example Selenium login automation snippet:
-          </p>
-
-          <!-- CODE PILL -->
-          <div class="card eduCard">
-            <div class="card-body">
-              <pre class="mb-0" style="background: transparent;">
-                <code style="color: inherit;">
-                // Login test example
-                driver.findElement(By.id("username"))
-                    .sendKeys("testuser");
-
-                driver.findElement(By.id("password"))
-                    .sendKeys("password");
-
-                driver.findElement(By.id("login"))
-                    .click();
-
-                // Basic validation
-                Assert.assertTrue(
-                    driver.getCurrentUrl()
-                        .contains("dashboard")
-                );
-              </code></pre>
-            </div>
+        <!-- Page Header -->
+        <div class="automation-page-header mb-3">
+          <div>
+            <h3 class="mb-2">QA Automation Testing Lab</h3>
+            <p class="automation-subtitle mb-0">
+              A collection of automation practice repositories covering Selenium
+              WebDriver with Java/TestNG, Cypress configuration practice, and
+              Playwright test execution concepts.
+            </p>
           </div>
 
-          <p class="text-muted mt-2 mb-0">
-            Full implementation is available in the GitHub repository.
+          <span class="automation-status-badge">Automation QA</span>
+        </div>
+
+        <hr />
+
+        <!-- Project Summary -->
+        <div class="automation-summary mb-3">
+          <p>
+            <strong>Project Type:</strong> Automation QA Practice<br />
+            <strong>Primary Practice Area:</strong> Selenium WebDriver with Java & TestNG<br />
+            <strong>Additional Practice Areas:</strong> Cypress and Playwright<br />
+            <strong>Focus:</strong> Browser automation fundamentals, element handling,
+            test configuration, execution output, and automation learning progression.
           </p>
 
+          <div class="tool-badge-wrap">
+            <span class="tool-badge badge-selenium">Selenium WebDriver</span>
+            <span class="tool-badge badge-java">Java</span>
+            <span class="tool-badge badge-testng">TestNG</span>
+            <span class="tool-badge badge-maven">Maven</span>
+            <span class="tool-badge badge-cypress">Cypress</span>
+            <span class="tool-badge badge-playwright">Playwright</span>
+            <span class="tool-badge badge-javascript">JavaScript</span>
+          </div>
         </div>
-      </div>
 
-      <!-- ================================================= -->
-      <!-- 5. LIMITATIONS -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>5. Limitations</h5>
-          <ul class="mb-0">
-            <li>Page Object Model (POM) not implemented</li>
-            <li>Assertion coverage is limited in some scenarios</li>
-            <li>No reporting integration (Extent / Allure)</li>
-          </ul>
+        <!-- 1. Automation Overview -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>1. Automation Overview</h5>
+            <p class="mb-0">
+              This page summarizes my automation learning and practice work across
+              three repositories. The Selenium repository is the primary automation
+              practice area, focused on Java, TestNG, Maven, browser control,
+              locator strategies, window handling, and TestNG execution concepts.
+              Cypress and Playwright are included as additional modern automation
+              practice tracks to demonstrate exposure to JavaScript-based automation tools.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- ================================================= -->
-      <!-- 6. FUTURE IMPROVEMENTS -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>6. Future Improvements</h5>
-          <ul class="mb-0">
-            <li>Implement Page Object Model (POM)</li>
-            <li>Add strong TestNG assertions</li>
-            <li>Integrate Extent Reports / Allure</li>
-            <li>Enable cross-browser execution</li>
-            <li>Run automation via CI (GitHub Actions)</li>
-          </ul>
+        <!-- 2. Repository Links -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>2. Repository Links</h5>
+
+            <div class="row mt-3">
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-repo-card">
+                  <div class="card-body">
+                    <h6>SeleniumPracticeCode</h6>
+                    <p>
+                      Java-based Selenium WebDriver and TestNG practice repository.
+                    </p>
+
+                    <div class="tool-badge-wrap mb-3">
+                      <span class="tool-badge badge-selenium">Selenium</span>
+                      <span class="tool-badge badge-java">Java</span>
+                      <span class="tool-badge badge-testng">TestNG</span>
+                    </div>
+
+                    <a
+                      href="https://github.com/dibya888/SeleniumPracticeCode"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn btn-sm repo-btn"
+                    >
+                      View Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-repo-card">
+                  <div class="card-body">
+                    <h6>Cypress-Practice</h6>
+                    <p>
+                      JavaScript-based Cypress practice repository focused on setup
+                      and configuration.
+                    </p>
+
+                    <div class="tool-badge-wrap mb-3">
+                      <span class="tool-badge badge-cypress">Cypress</span>
+                      <span class="tool-badge badge-javascript">JavaScript</span>
+                    </div>
+
+                    <a
+                      href="https://github.com/dibya888/Cypress-Practice"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn btn-sm repo-btn"
+                    >
+                      View Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-repo-card">
+                  <div class="card-body">
+                    <h6>Playwright-JS</h6>
+                    <p>
+                      JavaScript-based Playwright learning repository with tests,
+                      configuration, reports, and result outputs.
+                    </p>
+
+                    <div class="tool-badge-wrap mb-3">
+                      <span class="tool-badge badge-playwright">Playwright</span>
+                      <span class="tool-badge badge-javascript">JavaScript</span>
+                    </div>
+
+                    <a
+                      href="https://github.com/dibya888/Playwright-JS"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn btn-sm repo-btn"
+                    >
+                      View Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
 
-      <!-- ================================================= -->
-      <!-- AUTOMATION TOOLS -->
-      <!-- ================================================= -->
-      <div class="card eduCard mb-3">
-        <div class="card-body">
-          <h5>Automation Tools</h5>
+        <!-- 3. Practice Summary -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>3. Practice Summary</h5>
 
-          <h6 class="mt-3">🟢 Selenium (Complete)</h6>
-          <ul>
-            <li>Java-based UI automation</li>
-            <li>Basic workflow automation</li>
-          </ul>
+            <div class="row text-center mt-3">
+              <div class="col-md-3 col-6 mb-3">
+                <div class="card eduCard h-100 automation-stat-card">
+                  <div class="card-body">
+                    <h4>3</h4>
+                    <p class="mb-0">Automation Repositories</p>
+                  </div>
+                </div>
+              </div>
 
-          <h6 class="mt-3">🟢 Cypress (Complete)</h6>
-          <ul>
-            <li>UI + API testing</li>
-          </ul>
+              <div class="col-md-3 col-6 mb-3">
+                <div class="card eduCard h-100 automation-stat-card">
+                  <div class="card-body">
+                    <h4>Java</h4>
+                    <p class="mb-0">Selenium Practice</p>
+                  </div>
+                </div>
+              </div>
 
-          <h6 class="mt-3">🟢 Playwright (Complete)</h6>
-          <ul>
-            <li>Cross-browser automation</li>
-          </ul>
+              <div class="col-md-3 col-6 mb-3">
+                <div class="card eduCard h-100 automation-stat-card">
+                  <div class="card-body">
+                    <h4>JS</h4>
+                    <p class="mb-0">Cypress Practice</p>
+                  </div>
+                </div>
+              </div>
 
-          <h6 class="mt-3">⚪ Katalon Studio (Planned)</h6>
-          <ul class="mb-0">
-            <li>Codeless + scripting hybrid testing</li>
-          </ul>
+              <div class="col-md-3 col-6 mb-3">
+                <div class="card eduCard h-100 automation-stat-card">
+                  <div class="card-body">
+                    <h4>JS</h4>
+                    <p class="mb-0">Playwright Practice</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="automation-note mb-0">
+              This section presents learning-focused automation practice across
+              multiple tools, with Selenium as the strongest current practice area.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- ================================================= -->
-      <!-- FOOTER ACTION -->
-      <!-- ================================================= -->
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        <a href="https://github.com/dibya888?tab=repositories" class="btn btn-outline-secondary btn-sm">
-          View GitHub Repository
-        </a>
-        <span class="text-muted">Practice Automation Project</span>
-      </div>
+        <!-- 4. What I Practiced -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>4. What I Practiced</h5>
 
+            <div class="row mt-3">
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-practice-card">
+                  <div class="card-body">
+                    <h6>Selenium + Java + TestNG</h6>
+                    <ul class="mb-0">
+                      <li>Browser navigation and management</li>
+                      <li>Current URL, title, and page source handling</li>
+                      <li>Browser size, position, and fullscreen practice</li>
+                      <li>Window handle and tab switching practice</li>
+                      <li>Element locating strategies</li>
+                      <li>TestNG XML and listener practice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-practice-card">
+                  <div class="card-body">
+                    <h6>Cypress + JavaScript</h6>
+                    <ul class="mb-0">
+                      <li>Cypress project setup</li>
+                      <li>JavaScript-based test project structure</li>
+                      <li>Global and local configuration practice</li>
+                      <li>Use of Cypress configuration file</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-practice-card">
+                  <div class="card-body">
+                    <h6>Playwright + JavaScript</h6>
+                    <ul class="mb-0">
+                      <li>Playwright project setup</li>
+                      <li>Test folder organization</li>
+                      <li>Test grouping and tagging practice</li>
+                      <li>Skipping tests or browser-specific execution</li>
+                      <li>Report and test result output practice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. What I Learned -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>5. What I Learned</h5>
+
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <h6>Selenium Learning Outcome</h6>
+                <ul>
+                  <li>
+                    Understood basic WebDriver control for launching, navigating,
+                    and managing browser sessions.
+                  </li>
+                  <li>
+                    Practiced multiple locator strategies including ID, name,
+                    class name, tag, XPath, and CSS selector.
+                  </li>
+                  <li>
+                    Practiced handling browser tabs and window handles.
+                  </li>
+                  <li>
+                    Practiced TestNG-based execution structure using Maven and
+                    TestNG configuration.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Modern Tool Exposure</h6>
+                <ul class="mb-0">
+                  <li>
+                    Learned basic Cypress project setup and configuration flow.
+                  </li>
+                  <li>
+                    Practiced Playwright configuration, grouping, tagging, and
+                    execution result output concepts.
+                  </li>
+                  <li>
+                    Compared how Selenium, Cypress, and Playwright organize
+                    automation practice differently.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6. Tool-wise Breakdown -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>6. Tool-wise Breakdown</h5>
+
+            <div class="row mt-3">
+              <div class="col-md-6 mb-3">
+                <div class="card eduCard h-100 automation-tool-card selenium-card">
+                  <div class="card-body">
+                    <h6>Selenium WebDriver</h6>
+                    <p>
+                      Primary automation practice repository using Java. It includes
+                      Maven/TestNG structure and focuses on WebDriver fundamentals,
+                      locator strategies, browser handling, window/tab handling, and
+                      TestNG listener practice.
+                    </p>
+
+                    <div class="tool-badge-wrap">
+                      <span class="tool-badge badge-primary-practice">Primary Practice</span>
+                      <span class="tool-badge badge-java">Java</span>
+                      <span class="tool-badge badge-testng">TestNG</span>
+                      <span class="tool-badge badge-maven">Maven</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="card eduCard h-100 automation-tool-card cypress-card">
+                  <div class="card-body">
+                    <h6>Cypress</h6>
+                    <p>
+                      JavaScript-based automation practice repository focused on
+                      Cypress setup, project structure, and global/local
+                      configuration practice.
+                    </p>
+
+                    <div class="tool-badge-wrap">
+                      <span class="tool-badge badge-cypress">Cypress</span>
+                      <span class="tool-badge badge-javascript">JavaScript</span>
+                      <span class="tool-badge badge-practice">Configuration Practice</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="card eduCard h-100 automation-tool-card playwright-card">
+                  <div class="card-body">
+                    <h6>Playwright</h6>
+                    <p>
+                      JavaScript-based Playwright learning repository with test
+                      organization, configuration, grouping, tagging, skipping
+                      behavior, report output, and test result output practice.
+                    </p>
+
+                    <div class="tool-badge-wrap">
+                      <span class="tool-badge badge-playwright">Playwright</span>
+                      <span class="tool-badge badge-javascript">JavaScript</span>
+                      <span class="tool-badge badge-practice">Learning Practice</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="card eduCard h-100 automation-tool-card planned-card">
+                  <div class="card-body">
+                    <h6>Katalon Studio</h6>
+                    <p>
+                      Planned future exploration for hybrid codeless and
+                      scripting-based automation testing.
+                    </p>
+
+                    <div class="tool-badge-wrap">
+                      <span class="tool-badge badge-planned">Planned</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 7. Current Scope -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>7. Current Scope</h5>
+
+            <p>
+              These repositories currently represent automation learning and
+              practice work. The main focus is understanding automation concepts,
+              project setup, test execution structure, and tool-specific behavior.
+            </p>
+
+            <div class="row mt-3">
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-scope-card">
+                  <div class="card-body">
+                    <h6>Selenium Scope</h6>
+                    <p class="mb-0">
+                      WebDriver fundamentals, browser actions, locator strategies,
+                      window handling, TestNG execution, Maven setup, and listener
+                      practice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-scope-card">
+                  <div class="card-body">
+                    <h6>Cypress Scope</h6>
+                    <p class="mb-0">
+                      Cypress setup, JavaScript project structure, and configuration
+                      practice using Cypress configuration files.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-scope-card">
+                  <div class="card-body">
+                    <h6>Playwright Scope</h6>
+                    <p class="mb-0">
+                      Playwright setup, test organization, grouping/tagging practice,
+                      skipping behavior, reports, and test result outputs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 8. Execution Evidence -->
+        <div class="card eduCard mb-3 automation-section-card">
+          <div class="card-body">
+            <h5>8. Execution Evidence</h5>
+
+            <div class="row mt-3">
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-evidence-card">
+                  <div class="card-body">
+                    <h6>Selenium</h6>
+                    <ul class="mb-0">
+                      <li>Includes <strong>test-output</strong></li>
+                      <li>Includes <strong>testng.xml</strong></li>
+                      <li>Includes <strong>pom.xml</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-evidence-card">
+                  <div class="card-body">
+                    <h6>Cypress</h6>
+                    <ul class="mb-0">
+                      <li>Includes <strong>cypress</strong> folder</li>
+                      <li>Includes <strong>cypress.config.js</strong></li>
+                      <li>Includes <strong>package.json</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="card eduCard h-100 automation-evidence-card">
+                  <div class="card-body">
+                    <h6>Playwright</h6>
+                    <ul class="mb-0">
+                      <li>Includes <strong>tests</strong> folder</li>
+                      <li>Includes <strong>playwright-report</strong></li>
+                      <li>Includes <strong>test-results</strong></li>
+                      <li>Includes <strong>playwright.config.js</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 9. Key Takeaways -->
+        <div class="card eduCard mb-3 automation-section-card key-takeaway-card">
+          <div class="card-body">
+            <h5>9. Key Takeaways</h5>
+
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <ul>
+                  <li>
+                    Strengthened hands-on understanding of browser automation
+                    using Selenium WebDriver.
+                  </li>
+                  <li>
+                    Practiced Java, TestNG, and Maven-based automation project
+                    structure.
+                  </li>
+                  <li>
+                    Learned locator strategies, browser management, and
+                    window/tab handling concepts.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <ul class="mb-0">
+                  <li>
+                    Explored JavaScript-based automation tools through Cypress
+                    and Playwright.
+                  </li>
+                  <li>
+                    Practiced configuration, grouping, tagging, and execution
+                    output concepts.
+                  </li>
+                  <li>
+                    Built a practical foundation for moving toward maintainable
+                    automation framework design.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Footer Action -->
+        <div class="automation-footer-action mt-3">
+          <a
+            href="https://github.com/dibya888?tab=repositories"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-sm repo-btn"
+          >
+            View GitHub Repositories
+          </a>
+
+          <span class="automation-footer-text">Automation QA Learning Portfolio</span>
+        </div>
+
+      </div>
     </div>
   </div>
 
-</div>
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Bootstrap JS (same as Card 1) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Dark mode sync (identical to Card 1) -->
-<script>
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-  }
-</script>
-
+  <!-- Dark mode sync -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
 </body>
 </html>

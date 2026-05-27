@@ -918,3 +918,828 @@ body.dark-mode .project-back-link:hover {
     color: #60a5fa;
     background: rgba(96, 165, 250, 0.12);
 }
+
+/* =====================================================
+   QA Automation Testing Lab Details Page
+   ===================================================== */
+
+.automation-details-page {
+    padding-top: 20px;
+}
+
+.automation-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.automation-subtitle,
+.automation-note,
+.automation-footer-text {
+    color: #6c757d;
+}
+
+.automation-status-badge {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: #28a745;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.automation-main-card,
+.automation-section-card,
+.automation-repo-card,
+.automation-stat-card,
+.automation-practice-card,
+.automation-tool-card,
+.automation-scope-card,
+.automation-evidence-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.automation-repo-card:hover,
+.automation-stat-card:hover,
+.automation-practice-card:hover,
+.automation-tool-card:hover,
+.automation-scope-card:hover,
+.automation-evidence-card:hover {
+    transform: translateY(-3px);
+}
+
+.automation-stat-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.automation-section-card h5 {
+    font-weight: 700;
+}
+
+.automation-section-card h6 {
+    font-weight: 700;
+}
+
+.automation-footer-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.key-takeaway-card {
+    border-left: 4px solid #28a745;
+}
+
+/* =====================================================
+   Brand Inspired Tool Badges
+   ===================================================== */
+
+.tool-badge-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tool-badge {
+    display: inline-block;
+    padding: 0.38rem 0.68rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.15px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* Selenium brand-inspired green */
+.badge-selenium {
+    background-color: #43b02a;
+    color: #ffffff;
+}
+
+/* Java brand-inspired orange */
+.badge-java {
+    background-color: #e76f00;
+    color: #ffffff;
+}
+
+/* TestNG strong testing red */
+.badge-testng {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+/* Maven brand-inspired purple */
+.badge-maven {
+    background-color: #7b1fa2;
+    color: #ffffff;
+}
+
+/* Cypress dark with green accent */
+.badge-cypress {
+    background-color: #17202c;
+    color: #ffffff;
+    border: 1px solid #31d0aa;
+}
+
+/* Playwright brand-inspired green */
+.badge-playwright {
+    background-color: #2ead33;
+    color: #ffffff;
+}
+
+/* JavaScript brand yellow */
+.badge-javascript {
+    background-color: #f7df1e;
+    color: #222222;
+}
+
+/* General badges */
+.badge-practice {
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+
+.badge-primary-practice {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.badge-planned {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* =====================================================
+   Repository Buttons
+   ===================================================== */
+
+.repo-btn {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.repo-btn:hover,
+.repo-btn:focus {
+    background: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+    text-decoration: none;
+}
+
+/* =====================================================
+   Tool Card Accent Borders
+   ===================================================== */
+
+.selenium-card {
+    border-left: 4px solid #43b02a;
+}
+
+.cypress-card {
+    border-left: 4px solid #31d0aa;
+}
+
+.playwright-card {
+    border-left: 4px solid #2ead33;
+}
+
+.planned-card {
+    border-left: 4px solid #6c757d;
+}
+
+/* =====================================================
+   Dark Mode Support
+   ===================================================== */
+
+body.dark-mode .automation-subtitle,
+body.dark-mode .automation-note,
+body.dark-mode .automation-footer-text {
+    color: #b8c0cc;
+}
+
+body.dark-mode .repo-btn {
+    border-color: #66b2ff;
+    color: #66b2ff;
+    background: transparent;
+}
+
+body.dark-mode .repo-btn:hover,
+body.dark-mode .repo-btn:focus {
+    background: #66b2ff;
+    color: #111111;
+    border-color: #66b2ff;
+}
+
+body.dark-mode .tool-badge {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .badge-javascript {
+    color: #111111;
+}
+
+body.dark-mode .key-takeaway-card {
+    border-left-color: #66d17a;
+}
+
+/* =====================================================
+   Responsive Adjustments
+   ===================================================== */
+
+@media (max-width: 576px) {
+    .automation-page-header {
+        flex-direction: column;
+    }
+
+    .automation-status-badge {
+        align-self: flex-start;
+    }
+
+    .automation-footer-action {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tool-badge {
+        font-size: 0.72rem;
+    }
+}
+
+/* =====================================================
+   Software QA Work - Automation Testing Lab Card
+   ===================================================== */
+
+.automation-lab-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.automation-lab-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,
+            #43b02a,
+            #17202c,
+            #2ead33);
+}
+
+.automation-lab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.automation-lab-title {
+    padding-left: 0;
+    text-align: left;
+}
+
+.automation-lab-subtitle {
+    font-size: 0.82rem;
+    color: #6c757d;
+    margin-top: -2px;
+}
+
+.automation-lab-badge {
+    display: inline-block;
+    padding: 0.4rem 0.72rem;
+    border-radius: 999px;
+    background: #28a745;
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.automation-lab-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.automation-lab-summary {
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+
+.automation-lab-focus {
+    display: grid;
+    gap: 10px;
+}
+
+.automation-focus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.72rem 0.78rem;
+    border-radius: 12px;
+    background: rgba(0, 123, 255, 0.06);
+    border: 1px solid rgba(0, 123, 255, 0.08);
+}
+
+.automation-focus-icon {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.automation-focus-item strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.automation-focus-item small {
+    display: block;
+    color: #6c757d;
+    line-height: 1.35;
+}
+
+.automation-lab-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.automation-lab-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Reusable brand badges if not already added */
+.tool-badge {
+    display: inline-block;
+    padding: 0.34rem 0.62rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+.badge-selenium {
+    background-color: #43b02a;
+}
+
+.badge-java {
+    background-color: #e76f00;
+}
+
+.badge-testng {
+    background-color: #d9534f;
+}
+
+.badge-maven {
+    background-color: #7b1fa2;
+}
+
+.badge-cypress {
+    background-color: #17202c;
+    border: 1px solid #31d0aa;
+}
+
+.badge-playwright {
+    background-color: #2ead33;
+}
+
+/* Dark mode support */
+body.dark-mode .automation-lab-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .automation-lab-subtitle,
+body.dark-mode .automation-focus-item small {
+    color: #b8c0cc;
+}
+
+body.dark-mode .automation-focus-item {
+    background: rgba(102, 178, 255, 0.08);
+    border-color: rgba(102, 178, 255, 0.14);
+}
+
+body.dark-mode .tool-badge {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile polish */
+@media (max-width: 576px) {
+    .automation-lab-header {
+        flex-direction: column;
+    }
+
+    .automation-lab-badge {
+        align-self: flex-start;
+    }
+
+    .automation-lab-actions {
+        gap: 10px;
+    }
+}
+
+/* =====================================================
+   Software QA Work - Manual QA Card
+   Matches Automation Testing Lab Card
+   ===================================================== */
+
+.manual-qa-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.manual-qa-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,
+            #17a2b8,
+            #6f42c1,
+            #fd7e14);
+}
+
+.manual-qa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.manual-qa-title {
+    padding-left: 0;
+    text-align: left;
+}
+
+.manual-qa-subtitle {
+    font-size: 0.82rem;
+    color: #6c757d;
+    margin-top: -2px;
+}
+
+.manual-qa-badge {
+    display: inline-block;
+    padding: 0.4rem 0.72rem;
+    border-radius: 999px;
+    background: #17a2b8;
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.manual-qa-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.manual-qa-summary {
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+
+.manual-qa-focus {
+    display: grid;
+    gap: 10px;
+}
+
+.manual-focus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.72rem 0.78rem;
+    border-radius: 12px;
+    background: rgba(23, 162, 184, 0.07);
+    border: 1px solid rgba(23, 162, 184, 0.1);
+}
+
+.manual-focus-icon {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.manual-focus-item strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.manual-focus-item small {
+    display: block;
+    color: #6c757d;
+    line-height: 1.35;
+}
+
+.manual-qa-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.manual-qa-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Manual QA badges */
+.qa-tool-badge {
+    display: inline-block;
+    padding: 0.34rem 0.62rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+.badge-manual {
+    background-color: #17a2b8;
+}
+
+.badge-testcase {
+    background-color: #6f42c1;
+}
+
+.badge-bug {
+    background-color: #dc3545;
+}
+
+.badge-postman {
+    background-color: #ff6c37;
+}
+
+.badge-jira {
+    background-color: #0052cc;
+}
+
+/* Dark mode support */
+body.dark-mode .manual-qa-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .manual-qa-subtitle,
+body.dark-mode .manual-focus-item small {
+    color: #b8c0cc;
+}
+
+body.dark-mode .manual-focus-item {
+    background: rgba(23, 162, 184, 0.1);
+    border-color: rgba(23, 162, 184, 0.16);
+}
+
+body.dark-mode .qa-tool-badge {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile polish */
+@media (max-width: 576px) {
+    .manual-qa-header {
+        flex-direction: column;
+    }
+
+    .manual-qa-badge {
+        align-self: flex-start;
+    }
+
+    .manual-qa-actions {
+        gap: 10px;
+    }
+}
+
+/* =====================================================
+   Software QA Work - Preview Modals
+   ===================================================== */
+
+.qa-work-preview-modal .modal-dialog {
+    max-width: 860px;
+}
+
+.qa-preview-content {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.qa-preview-header {
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.manual-preview-content .qa-preview-header {
+    border-top: 5px solid #17a2b8;
+}
+
+.automation-preview-content .qa-preview-header {
+    border-top: 5px solid #43b02a;
+}
+
+.qa-preview-subtitle {
+    font-size: 0.88rem;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+.qa-preview-close {
+    outline: none;
+}
+
+.qa-preview-body {
+    padding: 1.25rem;
+}
+
+.qa-preview-section {
+    margin-bottom: 1.4rem;
+}
+
+.qa-preview-section:last-child {
+    margin-bottom: 0;
+}
+
+.qa-preview-section h6 {
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.qa-preview-chip-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.qa-preview-mini-card,
+.qa-evidence-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    height: 100%;
+    padding: 0.85rem;
+    border-radius: 14px;
+    background: rgba(23, 162, 184, 0.07);
+    border: 1px solid rgba(23, 162, 184, 0.12);
+}
+
+.qa-preview-icon {
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.qa-preview-mini-card strong,
+.qa-evidence-box strong {
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 3px;
+}
+
+.qa-preview-mini-card small,
+.qa-evidence-box small {
+    display: block;
+    color: #6c757d;
+    line-height: 1.35;
+}
+
+.qa-finding-list {
+    display: grid;
+    gap: 10px;
+}
+
+.qa-finding-item {
+    padding: 0.85rem;
+    border-radius: 14px;
+    background: rgba(220, 53, 69, 0.06);
+    border: 1px solid rgba(220, 53, 69, 0.12);
+}
+
+.qa-finding-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.qa-finding-item p {
+    margin-bottom: 0;
+    color: #6c757d;
+    line-height: 1.45;
+}
+
+.qa-preview-track-card {
+    height: 100%;
+    padding: 0.9rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.qa-preview-track-card h6 {
+    margin-bottom: 0.45rem;
+}
+
+.qa-preview-track-card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #6c757d;
+}
+
+.selenium-track {
+    border-left: 4px solid #43b02a;
+    background: rgba(67, 176, 42, 0.06);
+}
+
+.cypress-track {
+    border-left: 4px solid #31d0aa;
+    background: rgba(49, 208, 170, 0.06);
+}
+
+.playwright-track {
+    border-left: 4px solid #2ead33;
+    background: rgba(46, 173, 51, 0.06);
+}
+
+.qa-preview-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode support */
+body.dark-mode .qa-preview-content {
+    background: #1f2630;
+    color: #f1f3f5;
+}
+
+body.dark-mode .qa-preview-header,
+body.dark-mode .qa-preview-footer {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .qa-preview-subtitle,
+body.dark-mode .qa-preview-mini-card small,
+body.dark-mode .qa-evidence-box small,
+body.dark-mode .qa-finding-item p,
+body.dark-mode .qa-preview-track-card p {
+    color: #b8c0cc;
+}
+
+body.dark-mode .qa-preview-mini-card,
+body.dark-mode .qa-evidence-box {
+    background: rgba(23, 162, 184, 0.1);
+    border-color: rgba(23, 162, 184, 0.16);
+}
+
+body.dark-mode .qa-finding-item {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: rgba(220, 53, 69, 0.16);
+}
+
+body.dark-mode .qa-preview-track-card {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .selenium-track {
+    background: rgba(67, 176, 42, 0.1);
+}
+
+body.dark-mode .cypress-track {
+    background: rgba(49, 208, 170, 0.1);
+}
+
+body.dark-mode .playwright-track {
+    background: rgba(46, 173, 51, 0.1);
+}
+
+body.dark-mode .qa-preview-close {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/* Mobile polish */
+@media (max-width: 576px) {
+    .qa-preview-body {
+        padding: 1rem;
+    }
+
+    .qa-preview-header {
+        flex-direction: row;
+    }
+
+    .qa-work-preview-modal .modal-dialog {
+        margin: 0.75rem;
+    }
+}
