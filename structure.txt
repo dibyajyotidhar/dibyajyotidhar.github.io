@@ -1,0 +1,50 @@
+Folder PATH listing
+Volume serial number is A247-D835
+C:.
+|   house-rent-management.html
+|   index.html
+|   RuBIMS-Test-Cases.html
+|   selenium-automation-practice.html
+|   structure.txt
+|   
++---css
+|       style.css
+|       
+\---images
+    |   app-icon.png
+    |   app-logo.png
+    |   bdgovtlogo.png
+    |   bootstrap.png
+    |   c.png
+    |   Cypress-Light.png
+    |   Cypress.png
+    |   dibya.png
+    |   git.png
+    |   github-dark.png
+    |   github.png
+    |   gmail.png
+    |   java.png
+    |   javascript.png
+    |   jira-1.png
+    |   JMeter-Dark.png
+    |   JMeter.png
+    |   Katalon-Light.png
+    |   Katalon.png
+    |   linkedin.png
+    |   Manual-Testing.png
+    |   mysql.png
+    |   My_logo.png
+    |   pattern.png
+    |   postman.png
+    |   Selenium_Logo.png
+    |   TestNG.png
+    |   
+    \---rent-project
+            rent-dashboard.png
+            rent-flat.png
+            rent-payment.png
+            rent-repair.png
+            rent-report.png
+            rent-settlement.png
+            rent-tenant.png
+            
