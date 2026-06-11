@@ -1,1103 +1,857 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Dibya Jyoti Dhar</title>
-    <link rel="icon" type="image/png" href="images/My_logo.png" />
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dibya Jyoti Dhar — SQA Engineer</title>
+  <meta name="description" content="Dibya Jyoti Dhar is a Software Quality Assurance Engineer based in Dhaka, Bangladesh, skilled in manual testing, Selenium, Playwright, Cypress, API testing, and QA automation." />
+  <meta name="keywords" content="SQA Engineer, Software Quality Assurance, Manual Testing, Selenium, Playwright, Cypress, API Testing, QA Automation, SDLC, STLC, Agile, Scrum, Bug Reporting, Test Cases, Dhaka, Bangladesh" />
+  <meta name="author" content="Dibya Jyoti Dhar" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dibya Jyoti Dhar — SQA Engineer" />
+  <meta property="og:description" content="Software Quality Assurance Engineer skilled in manual & automation testing. Selenium, Playwright, Cypress, API Testing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dibyajyotidhar.github.io" />
+  <meta property="og:image" content="https://dibyajyotidhar.github.io/images/dibya.png" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dibya Jyoti Dhar — SQA Engineer" />
+  <meta name="twitter:description" content="SQA Engineer | Manual & Automation Testing | Selenium · Playwright · Cypress" />
 
-    <!-- jQuery (required by Bootstrap 4) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="icon" type="image/png" href="images/My_logo.png" />
 
-    <!-- Popper.js (required by Bootstrap tooltips/popovers) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <script>
-      // Auto-apply dark mode based on the user's OS/theme preference
-      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  <!-- ═══════════════════════════════════════
+       SKIP TO CONTENT (Accessibility)
+  ═══════════════════════════════════════ -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-      function applyTheme(e) {
-        document.body.classList.toggle("dark-mode", e.matches);
-      }
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Dibya Jyoti Dhar — Home">
+        <span class="logo-bracket">[</span>DJD<span class="logo-bracket">]</span>
+      </a>
 
-      applyTheme(mq);
-      mq.addEventListener("change", applyTheme);
-    </script>
-  </head>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education"  class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
 
-  <body id="home">
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#techSkills">Skills</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#QATestingProject">QA Work</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contacts">Contacts</a>
-          </li>
-
-          <!-- Theme toggle UI -->
-          <li class="nav-item d-flex align-items-center ml-3">
-            <div class="theme-toggle">
-              <input type="checkbox" id="themeToggle" />
-              <label for="themeToggle" class="toggle-label">
-                <span class="icon sun">☀️</span>
-                <span class="icon moon">🌙</span>
-                <span class="ball"></span>
-              </label>
-            </div>
-          </li>
-        </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+          <i class="fa-solid fa-download"></i> CV
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- ================= HERO (DESKTOP) ================= -->
-    <section class="hero-desktop">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="basicInfo">
-            <h2>Dibya Jyoti Dhar</h2>
-            <h4>Software Quality Assurance Engineer</h4>
-            <a
-              class="cv-btn"
-              href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta"
-              target="_blank"
-              rel="noopener"
-            >
-              Download Latest CV
-            </a>
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <main id="main">
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="status-dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="hero-name reveal-up" style="--delay:0.1s">
+          Dibya Jyoti Dhar
+        </h1>
+
+        <div class="hero-terminal reveal-up" style="--delay:0.2s" aria-label="Software Quality Assurance Engineer">
+          <span class="terminal-prompt">&#62;</span>
+          <span class="typewriter" id="typewriter"></span>
+          <span class="cursor" aria-hidden="true">_</span>
+        </div>
+
+        <p class="hero-tagline reveal-up" style="--delay:0.3s">
+          I catch the bugs before your users do. With 4+ years across IT support and QA engineering, I bring systematic precision to every release — from manual test design to Selenium, Playwright, and Cypress automation.
+        </p>
+
+        <div class="hero-ctas reveal-up" style="--delay:0.4s">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-flask"></i> View QA Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-envelope"></i> Get in Touch
+          </a>
+        </div>
+
+        <div class="hero-stats reveal-up" style="--delay:0.5s" aria-label="Key statistics">
+          <div class="stat-card">
+            <span class="stat-number">4<span class="stat-plus">+</span></span>
+            <span class="stat-label">Years in IT & QA</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Automation Frameworks</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card">
+            <span class="stat-number">5<span class="stat-plus">+</span></span>
+            <span class="stat-label">Projects Tested</span>
           </div>
         </div>
-
-        <div class="col-md-6 img-box clearfix">
-          <img class="img-fluid styleImage" src="images/pattern.png" alt="" />
-          <img
-            class="img-fluid profileImage"
-            src="images/dibya.png"
-            alt="Dibya Jyoti Dhar"
-          />
-        </div>
       </div>
-    </section>
 
-    <!-- ================= HERO (MOBILE) ================= -->
-    <section class="hero-mobile">
-      <div class="container text-center mt-5">
+      <div class="hero-image-wrap reveal-right" style="--delay:0.2s">
+        <div class="hero-image-ring" aria-hidden="true"></div>
+        <div class="hero-image-ring hero-image-ring-2" aria-hidden="true"></div>
         <img
           src="images/dibya.png"
-          alt="Dibya Jyoti Dhar"
-          class="mobile-profile-pic"
+          alt="Dibya Jyoti Dhar — SQA Engineer"
+          class="hero-photo"
+          width="320"
+          height="320"
         />
-
-        <h2 class="mt-3">Dibya Jyoti Dhar</h2>
-
-        <h5 class="text-muted mt-1">Software Quality Assurance Engineer</h5>
-
-        <a
-          class="cv-btn mt-3"
-          href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta"
-          target="_blank"
-          rel="noopener"
-        >
-          Download Latest CV
-        </a>
+        <div class="hero-badge-float hero-badge-float-1" aria-hidden="true">
+          <i class="fa-solid fa-bug-slash"></i>
+          <span>Bug Hunter</span>
+        </div>
+        <div class="hero-badge-float hero-badge-float-2" aria-hidden="true">
+          <i class="fa-solid fa-check-double"></i>
+          <span>Test Automation</span>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ================= EXPERIENCE SECTION ================= -->
-    <div class="container p-6">
-      <h4 class="text-center edu" id="experience">Professional Experience</h4>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
 
-      <div class="row" id="accordionExperience">
-        <!-- Eclectic Limited (Newest) -->
-        <div class="col-md-6 order-1 order-md-1">
-          <br />
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Who I Am</span>
+        <h2 class="section-title" id="about-heading">About Me</h2>
+      </div>
 
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseExpOne"
-            aria-expanded="true"
-            aria-controls="collapseExpOne"
-          >
-            <div class="card-header" id="headingExpOne">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">Eclectic Limited</button>
-              </h5>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <p class="about-lead">
+            I'm a Software Quality Assurance Engineer who believes that quality isn't just a phase — it's a mindset embedded in every step of the development lifecycle.
+          </p>
+          <p>
+            Based in Dhaka, Bangladesh, I hold a B.Sc. in Computer Science & Engineering from North South University. I began my career in IT support, building a strong understanding of systems and user workflows before transitioning into QA engineering — a path that gave me a uniquely holistic view of how software breaks and why it matters.
+          </p>
+          <p>
+            Today I design and execute test strategies across manual and automation domains. I've worked on real-world government and commercial platforms, and I'm actively growing my skills in test automation with Selenium, Playwright, and Cypress. I'm passionate about making software more reliable, one test case at a time.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Uttara, Dhaka, Bangladesh</span>
             </div>
-
-            <div
-              id="collapseExpOne"
-              class="collapse"
-              aria-labelledby="headingExpOne"
-              data-parent="#accordionExperience"
-            >
-              <div class="card-body">
-                <p><strong>Jr. SQA Engineer</strong></p>
-                <p>September 2024 to February 2026</p>
-
-                <ul>
-                  <li>Conducted manual testing, developed and executed test plans.</li>
-                  <li>Tracked defects and collaborated with dev teams.</li>
-                </ul>
-
-                <p><strong>Projects:</strong></p>
-                <ul>
-                  <li>
-                    Rural Bridge Information Management System <strong>(LGED)</strong>
-                  </li>
-                </ul>
-              </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <span>B.Sc. CSE — North South University</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              <span>Open to International Opportunities</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+              <span>Bengali (Native) · English (Professional)</span>
             </div>
           </div>
         </div>
 
-        <!-- Dream71 Bangladesh Limited (2nd newest) -->
-        <div class="col-md-6 order-2 order-md-2">
-          <br />
-
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseExpTwo"
-            aria-expanded="true"
-            aria-controls="collapseExpTwo"
-          >
-            <div class="card-header" id="headingExpTwo">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">Dream71 Bangladesh Limited</button>
-              </h5>
+        <div class="about-cards reveal-right">
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
-
-            <div
-              id="collapseExpTwo"
-              class="collapse"
-              aria-labelledby="headingExpTwo"
-              data-parent="#accordionExperience"
-            >
-              <div class="card-body">
-                <p><strong>Jr. SQA Engineer</strong></p>
-                <p>April 2024 to September 2024</p>
-
-                <ul>
-                  <li>Designed and executed test cases and test plans.</li>
-                  <li>Performed manual, load, and UAT testing.</li>
-                  <li>Prepared QA documentation.</li>
-                </ul>
-
-                <p><strong>SQA Intern</strong></p>
-                <p>January 2024 to March 2024</p>
-
-                <ul>
-                  <li>Prepared SRS documentation.</li>
-                  <li>Conducted functional and UAT testing.</li>
-                </ul>
-              </div>
+            <h3>Manual Testing</h3>
+            <p>Thorough test case design, execution, and defect reporting across functional, regression, UAT, and load testing scenarios.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-robot"></i>
             </div>
+            <h3>Test Automation</h3>
+            <p>Hands-on experience building automation scripts with Selenium + Java + TestNG, and modern frameworks including Cypress and Playwright.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>API Testing</h3>
+            <p>REST API validation using Postman — request chaining, environment variables, and automated collection runs.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- George Design and Construction (Oldest) -->
-        <div class="col-md-6 order-3 order-md-3">
-          <br />
+  <!-- ═══════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════ -->
+  <section class="section section-alt" id="experience" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Career Timeline</span>
+        <h2 class="section-title" id="exp-heading">Professional Experience</h2>
+      </div>
 
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseExpThree"
-            aria-expanded="true"
-            aria-controls="collapseExpThree"
-          >
-            <div class="card-header" id="headingExpThree">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">George Design and Construction</button>
-              </h5>
-            </div>
+      <div class="timeline" role="list">
 
-            <div
-              id="collapseExpThree"
-              class="collapse"
-              aria-labelledby="headingExpThree"
-              data-parent="#accordionExperience"
-            >
-              <div class="card-body">
-                <p><strong>IT Support</strong></p>
-                <p>February 2021 to June 2023</p>
-
-                <ul>
-                  <li>System setup and maintenance.</li>
-                  <li>Network and user account management.</li>
-                  <li>Hardware troubleshooting and staff support.</li>
-                </ul>
+        <!-- Eclectic Limited -->
+        <article class="timeline-item reveal-up" role="listitem">
+          <div class="timeline-marker" aria-hidden="true">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-company">Eclectic Limited</span>
+                <span class="timeline-role">Jr. SQA Engineer</span>
               </div>
+              <div class="timeline-period">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                <time datetime="2024-09">Sep 2024</time> — <time datetime="2026-02">Feb 2026</time>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed and executed comprehensive test plans for the <strong>RuBIMS</strong> (Rural Bridge Information Management System) platform, a large-scale government project under LGED.</li>
+              <li>Identified, documented, and tracked defects through full lifecycle — from discovery to verified resolution — in close collaboration with the development team.</li>
+              <li>Performed functional, regression, and UAT testing across web and mobile application surfaces.</li>
+              <li>Contributed to QA documentation including test reports and sign-off checklists.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Manual Testing</span>
+              <span class="tag">UAT</span>
+              <span class="tag">Regression</span>
+              <span class="tag">Jira</span>
+              <span class="tag">LGED / Govt. Project</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dream71 -->
+        <article class="timeline-item reveal-up" role="listitem" style="--delay:0.1s">
+          <div class="timeline-marker" aria-hidden="true">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-company">Dream71 Bangladesh Limited</span>
+                <span class="timeline-role">Jr. SQA Engineer → SQA Intern</span>
+              </div>
+              <div class="timeline-period">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                <time datetime="2024-01">Jan 2024</time> — <time datetime="2024-09">Sep 2024</time>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Promoted from intern to Jr. SQA Engineer after demonstrating consistent quality and initiative across multiple project cycles.</li>
+              <li>Designed and executed test cases and test plans; performed manual, load, and user acceptance testing across client-facing software products.</li>
+              <li>Prepared SRS documentation and supported requirement analysis as part of the STLC process.</li>
+              <li>Collaborated with cross-functional teams in an Agile environment, participating in sprint planning and retrospective sessions.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Manual Testing</span>
+              <span class="tag">Load Testing</span>
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">SRS Documentation</span>
+              <span class="tag">Test Planning</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- George Design -->
+        <article class="timeline-item reveal-up" role="listitem" style="--delay:0.2s">
+          <div class="timeline-marker" aria-hidden="true">
+            <span class="timeline-dot timeline-dot-muted"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-company">George Design and Construction</span>
+                <span class="timeline-role">IT Support</span>
+              </div>
+              <div class="timeline-period">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                <time datetime="2021-02">Feb 2021</time> — <time datetime="2023-06">Jun 2023</time>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Managed system setup, maintenance, and hardware troubleshooting for office infrastructure.</li>
+              <li>Handled network administration and user account management, ensuring operational continuity.</li>
+              <li>Provided technical support to staff, building a foundation in understanding real-world software and hardware failure modes.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">IT Support</span>
+              <span class="tag">Network Administration</span>
+              <span class="tag">System Maintenance</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section class="section" id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Technical Toolkit</span>
+        <h2 class="section-title" id="skills-heading">Skills & Tools</h2>
+      </div>
+
+      <div class="skills-tabs reveal-up" role="tablist" aria-label="Skill categories">
+        <button class="skills-tab active" role="tab" aria-selected="true" aria-controls="tab-qa" id="btn-qa" data-tab="qa">
+          <i class="fa-solid fa-vial" aria-hidden="true"></i> QA Testing
+        </button>
+        <button class="skills-tab" role="tab" aria-selected="false" aria-controls="tab-auto" id="btn-auto" data-tab="auto">
+          <i class="fa-solid fa-robot" aria-hidden="true"></i> Automation
+        </button>
+        <button class="skills-tab" role="tab" aria-selected="false" aria-controls="tab-lang" id="btn-lang" data-tab="lang">
+          <i class="fa-solid fa-code" aria-hidden="true"></i> Languages
+        </button>
+        <button class="skills-tab" role="tab" aria-selected="false" aria-controls="tab-method" id="btn-method" data-tab="method">
+          <i class="fa-solid fa-sitemap" aria-hidden="true"></i> Methodology
+        </button>
+      </div>
+
+      <!-- QA Testing Tab -->
+      <div class="skills-panel active" id="tab-qa" role="tabpanel" aria-labelledby="btn-qa">
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <div class="skill-icon-wrap">
+              <img src="images/Manual-Testing.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Manual Testing</span>
+            <span class="skill-level skill-level-expert">Expert</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.05s">
+            <div class="skill-icon-wrap">
+              <img src="images/postman.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Postman</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.1s">
+            <div class="skill-icon-wrap">
+              <img src="images/JMeter.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" class="light-only" />
+              <img src="images/JMeter-Dark.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" class="dark-only" />
+            </div>
+            <span class="skill-name">JMeter</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.15s">
+            <div class="skill-icon-wrap">
+              <img src="images/jira-1.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Jira</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.2s">
+            <div class="skill-icon-wrap skill-icon-text">TC</div>
+            <span class="skill-name">Test Case Design</span>
+            <span class="skill-level skill-level-expert">Expert</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.25s">
+            <div class="skill-icon-wrap skill-icon-text">BR</div>
+            <span class="skill-name">Bug Reporting</span>
+            <span class="skill-level skill-level-expert">Expert</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Tab -->
+      <div class="skills-panel" id="tab-auto" role="tabpanel" aria-labelledby="btn-auto" hidden>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <div class="skill-icon-wrap">
+              <img src="images/Selenium_Logo.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Selenium</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.05s">
+            <div class="skill-icon-wrap">
+              <img src="images/Playwright.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Playwright</span>
+            <span class="skill-level skill-level-learning">Growing</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.1s">
+            <div class="skill-icon-wrap">
+              <img src="images/Cypress-Light.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" class="light-only" />
+              <img src="images/Cypress.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" class="dark-only" />
+            </div>
+            <span class="skill-name">Cypress</span>
+            <span class="skill-level skill-level-learning">Growing</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.15s">
+            <div class="skill-icon-wrap">
+              <img src="images/TestNG.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">TestNG</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.2s">
+            <div class="skill-icon-wrap skill-icon-text">MVN</div>
+            <span class="skill-name">Maven</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.25s">
+            <div class="skill-icon-wrap">
+              <img src="images/git.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Git</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages Tab -->
+      <div class="skills-panel" id="tab-lang" role="tabpanel" aria-labelledby="btn-lang" hidden>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <div class="skill-icon-wrap">
+              <img src="images/java.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">Java</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.05s">
+            <div class="skill-icon-wrap">
+              <img src="images/javascript.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.1s">
+            <div class="skill-icon-wrap">
+              <img src="images/mysql.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">SQL / MySQL</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.15s">
+            <div class="skill-icon-wrap">
+              <img src="images/c.png" alt="" width="40" height="40" loading="lazy" aria-hidden="true" />
+            </div>
+            <span class="skill-name">C</span>
+            <span class="skill-level skill-level-proficient">Proficient</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Methodology Tab -->
+      <div class="skills-panel" id="tab-method" role="tabpanel" aria-labelledby="btn-method" hidden>
+        <div class="skills-grid skills-grid-wide">
+          <div class="skill-card skill-card-method reveal-up">
+            <div class="skill-icon-wrap skill-icon-text">AG</div>
+            <div class="skill-method-text">
+              <span class="skill-name">Agile / Scrum</span>
+              <span class="skill-desc">Sprint-based testing, backlog grooming, retrospectives</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-method reveal-up" style="--delay:0.05s">
+            <div class="skill-icon-wrap skill-icon-text">SD</div>
+            <div class="skill-method-text">
+              <span class="skill-name">SDLC / STLC</span>
+              <span class="skill-desc">Full software & testing lifecycle awareness</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-method reveal-up" style="--delay:0.1s">
+            <div class="skill-icon-wrap skill-icon-text">API</div>
+            <div class="skill-method-text">
+              <span class="skill-name">REST API Testing</span>
+              <span class="skill-desc">Endpoint validation, status codes, payload verification</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-method reveal-up" style="--delay:0.15s">
+            <div class="skill-icon-wrap skill-icon-text">RT</div>
+            <div class="skill-method-text">
+              <span class="skill-name">Regression Testing</span>
+              <span class="skill-desc">Suite maintenance and risk-based test prioritization</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-method reveal-up" style="--delay:0.2s">
+            <div class="skill-icon-wrap skill-icon-text">LD</div>
+            <div class="skill-method-text">
+              <span class="skill-name">Load Testing</span>
+              <span class="skill-desc">Performance benchmarking using JMeter</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-method reveal-up" style="--delay:0.25s">
+            <div class="skill-icon-wrap skill-icon-text">UAT</div>
+            <div class="skill-method-text">
+              <span class="skill-name">UAT</span>
+              <span class="skill-desc">User acceptance testing coordination and sign-off</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- ================= EDUCATION SECTION ================= -->
-    <div class="container p-6">
-      <h4 class="text-center edu" id="education">Education</h4>
-
-      <div class="row" id="accordionEducation">
-        <!-- North South University (Newest) -->
-        <div class="col-md-6 order-1 order-md-1">
-          <br />
-
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseEduOne"
-            aria-expanded="true"
-            aria-controls="collapseEduOne"
-          >
-            <div class="card-header" id="headingEduOne">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">North South University, Dhaka</button>
-              </h5>
-            </div>
-
-            <div
-              id="collapseEduOne"
-              class="collapse"
-              aria-labelledby="headingEduOne"
-              data-parent="#accordionEducation"
-            >
-              <div class="card-body">
-                <p>Bachelor of Science in Computer Science and Engineering</p>
-                <p>Department of Electrical and Computer Engineering</p>
-                <p>Year: 2020</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Major General Mahmudul Hasan Adarsha College -->
-        <div class="col-md-6 order-2 order-md-2">
-          <br />
-
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseEduTwo"
-            aria-expanded="true"
-            aria-controls="collapseEduTwo"
-          >
-            <div class="card-header" id="headingEduTwo">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">
-                  M.G. Mahmudul Hasan Adarsha College, Tangail
-                </button>
-              </h5>
-            </div>
-
-            <div
-              id="collapseEduTwo"
-              class="collapse"
-              aria-labelledby="headingEduTwo"
-              data-parent="#accordionEducation"
-            >
-              <div class="card-body">
-                <p>Higher Secondary Certificate (HSC)</p>
-                <p>Science Group</p>
-                <p>Year: 2013</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bindu Basini Govt. Boys' High School (Oldest) -->
-        <div class="col-md-6 order-3 order-md-3">
-          <br />
-
-          <div
-            class="card eduCard"
-            data-toggle="collapse"
-            data-target="#collapseEduThree"
-            aria-expanded="true"
-            aria-controls="collapseEduThree"
-          >
-            <div class="card-header" id="headingEduThree">
-              <h5 class="mb-0">
-                <button class="btn eduTitle">
-                  Bindu Basini Govt. Boys' High School, Tangail
-                </button>
-              </h5>
-            </div>
-
-            <div
-              id="collapseEduThree"
-              class="collapse"
-              aria-labelledby="headingEduThree"
-              data-parent="#accordionEducation"
-            >
-              <div class="card-body">
-                <p>Secondary School Certificate (SSC)</p>
-                <p>Science Group</p>
-                <p>Year: 2011</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section class="section section-alt" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Portfolio</span>
+        <h2 class="section-title" id="projects-heading">QA Work & Projects</h2>
       </div>
-    </div>
 
-    <br />
+      <div class="projects-grid">
 
-    <!-- ================= SKILLS SECTION ================= -->
-    <div class="container p-6">
-      <span id="techSkills"></span>
-      <h4 class="text-center mt-5" id="tech">Technical Skills</h4>
-      <br />
-
-      <div class="row mt-4">
-        <!-- Programming -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/c.png" class="skill-icon" alt="C" />
-              <div class="skill-name mt-2">C</div>
-              <div class="skill-meta">Programming</div>
+        <!-- RUBIMS -->
+        <article class="project-card reveal-up" aria-label="RUBIMS Manual QA Project">
+          <div class="project-card-top">
+            <div class="project-type-badge badge-manual">
+              <i class="fa-solid fa-vial" aria-hidden="true"></i> Manual QA
             </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/java.png" class="skill-icon" alt="Java" />
-              <div class="skill-name mt-2">Java</div>
-              <div class="skill-meta">Programming</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/javascript.png" class="skill-icon" alt="JavaScript" />
-              <div class="skill-name mt-2">JavaScript</div>
-              <div class="skill-meta">Programming</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frameworks / DB / Others -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/bootstrap.png" class="skill-icon" alt="Bootstrap" />
-              <div class="skill-name mt-2">Bootstrap</div>
-              <div class="skill-meta">Framework</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/mysql.png" class="skill-icon" alt="MySQL" />
-              <div class="skill-name mt-2">MySQL</div>
-              <div class="skill-meta">Database</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/git.png" class="skill-icon" alt="Git" />
-              <div class="skill-name mt-2">Git</div>
-              <div class="skill-meta">Tool</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- QA / Tools -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/Manual-Testing.png" class="skill-icon" alt="Manual Testing" />
-              <div class="skill-name mt-2">Manual Testing</div>
-              <div class="skill-meta">QA</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <!-- Light mode image -->
-              <img src="images/JMeter.png" class="skill-icon light-logo" alt="JMeter" />
-              <!-- Dark mode image -->
-              <img
-                src="images/JMeter-Dark.png"
-                class="skill-icon dark-logo"
-                alt="JMeter"
-              />
-
-              <div class="skill-name mt-2">JMeter</div>
-              <div class="skill-meta">Performance</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/postman.png" class="skill-icon" alt="Postman" />
-              <div class="skill-name mt-2">Postman</div>
-              <div class="skill-meta">API</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/Selenium_Logo.png" class="skill-icon" alt="Selenium" />
-              <div class="skill-name mt-2">Selenium</div>
-              <div class="skill-meta">Automation</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/TestNG.png" class="skill-icon" alt="TestNG" />
-              <div class="skill-name mt-2">TestNG</div>
-              <div class="skill-meta">Selenium Framework</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <!-- Light mode image -->
-              <img
-                src="images/Cypress-Light.png"
-                class="skill-icon light-logo"
-                alt="Cypress"
-              />
-              <!-- Dark mode image -->
-              <img src="images/Cypress.png" class="skill-icon dark-logo" alt="Cypress" />
-
-              <div class="skill-name mt-2">Cypress</div>
-              <div class="skill-meta">Automation</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center"> -->
-              <!-- Light mode image -->
-              <!-- <img
-                src="images/Katalon-Light.png"
-                class="skill-icon light-logo"
-                alt="Katalon Studio"
-              /> -->
-              <!-- Dark mode image -->
-              <!-- <img
-                src="images/katalon.png"
-                class="skill-icon dark-logo"
-                alt="Katalon Studio"
-              />
-
-              <div class="skill-name mt-2">Katalon Studio</div>
-              <div class="skill-meta">Automation</div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/Playwright.png" class="skill-icon" alt="Playwright" />
-              <div class="skill-name mt-2">Playwright</div>
-              <div class="skill-meta">Automation</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard h-100 skill-card">
-            <div class="card-body text-center">
-              <img src="images/jira-1.png" class="skill-icon" alt="Jira" />
-              <div class="skill-name mt-2">Jira</div>
-              <div class="skill-meta">QA Tool</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br />
-
-    <!-- ================= QA TESTING SECTION ================= -->
-    <span id="QATestingProject"></span>
-
-    <div class="container p-6 mt-5">
-      <h4 class="text-center mt-5" id="qaTesting">Software QA Work</h4>
-      <br />
-
-      <div class="row">
-        <!-- CARD 1 (Manual QA) -->
-        <div class="col-md-6 mb-4">
-          <div class="card eduCard h-100 qa-card manual-qa-card">
-            <div class="card-header manual-qa-header">
-              <div>
-                <button class="btn eduTitle manual-qa-title">
-                  RUBIMS Website & App
-                </button>
-                <p class="manual-qa-subtitle mb-0">
-                  Test Cases • Bug Reports • UAT
-                </p>
+            <h3 class="project-title">RuBIMS Website &amp; App</h3>
+            <p class="project-subtitle">Rural Bridge Information Management System · LGED, Bangladesh</p>
+            <p class="project-desc">
+              Real-world QA work on a government platform managing rural bridge infrastructure data across Bangladesh. Covered requirement analysis, test case authoring, functional and validation testing, defect reporting, and mobile app verification.
+            </p>
+            <div class="project-coverage">
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Functional Testing</span>
               </div>
-
-              <span class="manual-qa-badge">Manual QA</span>
-            </div>
-
-            <div class="card-body manual-qa-body">
-              <p class="manual-qa-summary">
-                Real project-based QA work covering requirement analysis, functional
-                testing, validation checks, defect reporting, and mobile app verification.
-              </p>
-
-              <div class="manual-qa-focus">
-                <div class="manual-focus-item">
-                  <span class="manual-focus-icon">🧪</span>
-                  <div>
-                    <strong>Functional Testing</strong>
-                    <small>Authentication, structure, inventory, and validation flows</small>
-                  </div>
-                </div>
-
-                <div class="manual-focus-item">
-                  <span class="manual-focus-icon">🐞</span>
-                  <div>
-                    <strong>Defect Reporting</strong>
-                    <small>Issue documentation with expected and actual behavior</small>
-                  </div>
-                </div>
-
-                <div class="manual-focus-item">
-                  <span class="manual-focus-icon">📱</span>
-                  <div>
-                    <strong>Web & Mobile QA</strong>
-                    <small>Website and mobile app scenario verification</small>
-                  </div>
-                </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Validation &amp; Boundary Checks</span>
               </div>
-
-              <div class="manual-qa-tools mt-3">
-                <span class="qa-tool-badge badge-manual">Manual Testing</span>
-                <span class="qa-tool-badge badge-testcase">Test Cases</span>
-                <span class="qa-tool-badge badge-bug">Bug Report</span>
-                <span class="qa-tool-badge badge-postman">Postman</span>
-                <span class="qa-tool-badge badge-jira">Jira</span>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Defect Lifecycle Management</span>
               </div>
-
-              <div class="manual-qa-actions mt-4">
-                <button
-                  class="btn btn-sm btn-outline-primary"
-                  data-toggle="modal"
-                  data-target="#qaPreviewModal"
-                >
-                  Preview
-                </button>
-
-                <a href="RuBIMS-Test-Cases.html" class="btn btn-sm btn-outline-secondary">
-                  Details
-                </a>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Web &amp; Mobile App QA</span>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- CARD 2 (Automation QA) -->
-        <div class="col-md-6 mb-4">
-          <div class="card eduCard h-100 qa-card automation-lab-card">
-            <div class="card-header automation-lab-header">
-              <div>
-                <button class="btn eduTitle automation-lab-title">
-                  Automation Testing Lab
-                </button>
-                <p class="automation-lab-subtitle mb-0">
-                  Selenium • Cypress • Playwright
-                </p>
-              </div>
-
-              <span class="automation-lab-badge">Automation QA</span>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="tag">Manual Testing</span>
+              <span class="tag">Test Cases</span>
+              <span class="tag">Bug Reports</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Jira</span>
             </div>
-
-            <div class="card-body automation-lab-body">
-              <p class="automation-lab-summary">
-                Hands-on automation practice focused on browser automation,
-                test configuration, element handling, and modern QA automation tools.
-              </p>
-
-              <div class="automation-lab-focus">
-                <div class="automation-focus-item">
-                  <span class="automation-focus-icon">⚙️</span>
-                  <div>
-                    <strong>Framework Practice</strong>
-                    <small>Selenium, TestNG, Maven</small>
-                  </div>
-                </div>
-
-                <div class="automation-focus-item">
-                  <span class="automation-focus-icon">🌐</span>
-                  <div>
-                    <strong>Modern Web Testing</strong>
-                    <small>Cypress and Playwright basics</small>
-                  </div>
-                </div>
-
-                <div class="automation-focus-item">
-                  <span class="automation-focus-icon">📊</span>
-                  <div>
-                    <strong>Execution Evidence</strong>
-                    <small>Reports, configs, and test outputs</small>
-                  </div>
-                </div>
-              </div>
-
-              <div class="automation-lab-tools mt-3">
-                <span class="tool-badge badge-selenium">Selenium</span>
-                <span class="tool-badge badge-java">Java</span>
-                <span class="tool-badge badge-testng">TestNG</span>
-                <span class="tool-badge badge-maven">Maven</span>
-                <span class="tool-badge badge-cypress">Cypress</span>
-                <span class="tool-badge badge-playwright">Playwright</span>
-              </div>
-
-              <div class="automation-lab-actions mt-4">
-                <button
-                  class="btn btn-sm btn-outline-primary"
-                  data-toggle="modal"
-                  data-target="#automationPreviewModal"
-                >
-                  Preview
-                </button>
-
-                <a
-                  href="selenium-automation-practice.html"
-                  class="btn btn-sm btn-outline-secondary"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br />
-
-    <!-- ================= PERSONAL PROJECT SECTION ================= -->
-    <div class="container p-6 mt-4" id="personalProjects">
-      <h4 class="text-center mt-5" id="personalProjectHeading">Personal Project</h4>
-      <p class="text-center project-section-subtitle">
-        Full desktop software project built from requirement analysis to Windows installer packaging.
-      </p>
-      <br />
-
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-7 mb-4">
-          <div class="card eduCard h-100 personal-project-card">
-            <div class="card-body text-center">
-              <div class="project-logo-wrap mx-auto mb-3">
-                <img
-                  src="images/app-logo.png"
-                  alt="House Rent Management System Logo"
-                  class="project-logo"
-                />
-              </div>
-
-              <span class="badge badge-primary mb-3">JavaFX Desktop App</span>
-
-              <h5 class="project-card-title">House Rent Management System</h5>
-
-              <p class="project-card-summary">
-                An offline rental property management desktop application for flats,
-                tenants, rent collection, receipts, repairs, reports, backups, audit logs,
-                and move-out settlements.
-              </p>
-
-              <div class="project-tech-list mb-3">
-                <span>JavaFX</span>
-                <span>SQLite</span>
-                <span>Maven</span>
-                <span>PDFBox</span>
-                <span>Apache POI</span>
-              </div>
-
-              <a href="house-rent-management.html" class="btn btn-sm btn-outline-primary project-details-btn">
-                Details
+            <div class="project-actions">
+              <a href="RuBIMS-Test-Cases.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i> View Details
               </a>
             </div>
           </div>
+        </article>
+
+        <!-- Automation Lab -->
+        <article class="project-card reveal-up" style="--delay:0.1s" aria-label="Automation Testing Lab Project">
+          <div class="project-card-top">
+            <div class="project-type-badge badge-auto">
+              <i class="fa-solid fa-robot" aria-hidden="true"></i> Automation QA
+            </div>
+            <h3 class="project-title">Automation Testing Lab</h3>
+            <p class="project-subtitle">Selenium · Cypress · Playwright — Hands-on Practice</p>
+            <p class="project-desc">
+              A self-directed automation practice environment covering browser automation, test configuration, element interaction strategies, and report generation. Built to develop and demonstrate real automation engineering skills beyond manual QA.
+            </p>
+            <div class="project-coverage">
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Selenium + TestNG + Maven</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Cypress Component Tests</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Playwright Scripts</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Execution Evidence &amp; Reports</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="tag">Selenium</span>
+              <span class="tag">Java</span>
+              <span class="tag">TestNG</span>
+              <span class="tag">Maven</span>
+              <span class="tag">Cypress</span>
+              <span class="tag">Playwright</span>
+            </div>
+            <div class="project-actions">
+              <a href="selenium-automation-practice.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i> View Details
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- House Rent Management -->
+        <article class="project-card project-card-wide reveal-up" style="--delay:0.2s" aria-label="House Rent Management System — Personal Project">
+          <div class="project-card-top">
+            <div class="project-type-badge badge-dev">
+              <i class="fa-solid fa-desktop" aria-hidden="true"></i> Personal Project
+            </div>
+            <h3 class="project-title">House Rent Management System</h3>
+            <p class="project-subtitle">JavaFX Desktop Application — Full Development Lifecycle</p>
+            <p class="project-desc">
+              An offline desktop application for rental property management — covering flats, tenants, rent collection, receipt generation, repair tracking, audit logs, and move-out settlements. Built end-to-end from requirement analysis to Windows installer packaging, demonstrating both development and QA thinking.
+            </p>
+            <div class="project-coverage project-coverage-4col">
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Tenant &amp; Rent Management</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>PDF Receipt Generation</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Audit Logs &amp; Backups</span>
+              </div>
+              <div class="coverage-item">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Windows Installer Package</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Maven</span>
+              <span class="tag">PDFBox</span>
+              <span class="tag">Apache POI</span>
+            </div>
+            <div class="project-actions">
+              <a href="house-rent-management.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i> View Details
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EDUCATION
+  ═══════════════════════════════════════ -->
+  <section class="section" id="education" aria-labelledby="edu-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Academic Background</span>
+        <h2 class="section-title" id="edu-heading">Education</h2>
+      </div>
+
+      <div class="edu-list" role="list">
+
+        <article class="edu-card reveal-up" role="listitem">
+          <div class="edu-icon" aria-hidden="true">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-institution">North South University, Dhaka</h3>
+                <p class="edu-degree">B.Sc. in Computer Science &amp; Engineering</p>
+                <p class="edu-dept">Department of Electrical &amp; Computer Engineering</p>
+              </div>
+              <div class="edu-year">
+                <time datetime="2020">2020</time>
+              </div>
+            </div>
+            <div class="edu-tags">
+              <span class="tag">CSE</span>
+              <span class="tag">CGPA: 3.17 / 4.00</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="edu-card reveal-up" style="--delay:0.1s" role="listitem">
+          <div class="edu-icon edu-icon-sm" aria-hidden="true">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-institution">M.G. Mahmudul Hasan Adarsha College, Tangail</h3>
+                <p class="edu-degree">Higher Secondary Certificate (HSC) — Science</p>
+              </div>
+              <div class="edu-year">
+                <time datetime="2013">2013</time>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="edu-card reveal-up" style="--delay:0.2s" role="listitem">
+          <div class="edu-icon edu-icon-sm" aria-hidden="true">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-institution">Bindu Basini Govt. Boys' High School, Tangail</h3>
+                <p class="edu-degree">Secondary School Certificate (SSC) — Science</p>
+              </div>
+              <div class="edu-year">
+                <time datetime="2011">2011</time>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">Let's Connect</span>
+        <h2 class="section-title" id="contact-heading">Get in Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text reveal-up">
+          <p class="contact-lead">
+            I'm actively seeking SQA / QA Engineering opportunities — locally in Bangladesh and internationally.
+          </p>
+          <p>
+            Whether you have a role, a project, or just want to talk testing — reach out. I typically respond within 24 hours.
+          </p>
+          <div class="contact-availability">
+            <span class="status-dot"></span>
+            <strong>Currently available</strong> — open to full-time, contract, and remote roles
+          </div>
+        </div>
+
+        <div class="contact-links reveal-right">
+          <a href="mailto:dibya.dhar8+portfolio@gmail.com" class="contact-card" aria-label="Send email to Dibya">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">dibya.dhar8@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/dibya888/" target="_blank" rel="noopener" class="contact-card" aria-label="Visit LinkedIn profile">
+            <div class="contact-card-icon contact-icon-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">linkedin.com/in/dibya888</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://github.com/Dibya888" target="_blank" rel="noopener" class="contact-card" aria-label="Visit GitHub profile">
+            <div class="contact-card-icon contact-icon-github">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">GitHub</span>
+              <span class="contact-card-value">github.com/Dibya888</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener" class="contact-card" aria-label="Download CV">
+            <div class="contact-card-icon contact-icon-cv">
+              <i class="fa-solid fa-file-arrow-down"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">Resume / CV</span>
+              <span class="contact-card-value">Download latest version</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
+  </section>
+  </main>
 
-    <br>
-
-    <!-- ================= CONTACT SECTION ================= -->
-    <div class="container p-6">
-      <span id="contacts"></span>
-
-      <h4 class="text-center mt-5" id="contact">Contact</h4>
-      <p class="text-center text-muted mb-4">Feel free to connect with me</p>
-
-      <div class="row justify-content-center">
-
-        <!-- EMAIL -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard contact-card">
-            <a href="mailto:dibya.dhar8+portfolio@gmail.com" target="_blank" rel="noopener">
-              <div class="card-body text-center">
-                <img src="images/gmail.png" class="contact-icon" alt="Gmail">
-              </div>
-            </a>
-          </div>
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>DJD<span class="logo-bracket">]</span>
         </div>
-
-        <!-- LINKEDIN -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard contact-card">
-            <a href="https://www.linkedin.com/in/dibya888/" target="_blank" rel="noopener">
-              <div class="card-body text-center">
-                <img src="images/linkedin.png" class="contact-icon" alt="LinkedIn">
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- GITHUB -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card eduCard contact-card">
-            <a href="https://github.com/Dibya888" target="_blank" rel="noopener">
-              <div class="card-body text-center">
-                <img src="images/github.png" class="contact-icon light-logo" alt="GitHub">
-                <img src="images/github-dark.png" class="contact-icon dark-logo" alt="GitHub">
-              </div>
-            </a>
-          </div>
-        </div>
-
+        <p class="footer-copy">
+          &copy; <span id="year"></span> Dibya Jyoti Dhar — SQA Engineer
+        </p>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
-    <h6 class="text-center mt-5">
-      All Rights Reserved By &copy;
-      <span class="footer">Dibya Jyoti Dhar</span>
-    </h6>
+  </footer>
 
-    <!-- ================= THEME TOGGLE SCRIPT ================= -->
-    <script>
-      // Theme toggle switch (persists selection in localStorage)
-      const toggle = document.getElementById("themeToggle");
-
-      // Load saved theme on page load
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        toggle.checked = true;
-      }
-
-      // Toggle theme + save preference
-      toggle.addEventListener("change", function () {
-        if (this.checked) {
-          document.body.classList.add("dark-mode");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.body.classList.remove("dark-mode");
-          localStorage.setItem("theme", "light");
-        }
-      });
-    </script>
-
-    <!-- ================= QA PREVIEW MODAL ================= -->
-    <div class="modal fade qa-work-preview-modal" id="qaPreviewModal" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content qa-preview-content manual-preview-content">
-          <div class="modal-header qa-preview-header">
-            <div>
-              <h5 class="modal-title">RUBIMS Manual QA — Preview</h5>
-              <p class="qa-preview-subtitle mb-0">
-                Real project-based manual testing, defect reporting, and web/mobile QA work.
-              </p>
-            </div>
-
-            <button class="close qa-preview-close" data-dismiss="modal">×</button>
-          </div>
-
-          <div class="modal-body qa-preview-body">
-            <!-- Snapshot -->
-            <div class="qa-preview-section">
-              <h6>Project Snapshot</h6>
-
-              <div class="qa-preview-chip-wrap">
-                <span class="qa-tool-badge badge-manual">Manual QA</span>
-                <span class="qa-tool-badge badge-testcase">Test Cases</span>
-                <span class="qa-tool-badge badge-bug">Bug Reports</span>
-                <span class="qa-tool-badge badge-postman">Postman</span>
-                <span class="qa-tool-badge badge-jira">Jira</span>
-              </div>
-
-              <p class="mb-0 mt-3">
-                RUBIMS Website & App testing focused on functional validation,
-                structure inspection, data behavior, issue reporting, and mobile app verification.
-              </p>
-            </div>
-
-            <!-- Coverage -->
-            <div class="qa-preview-section">
-              <h6>QA Coverage</h6>
-
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <div class="qa-preview-mini-card">
-                    <span class="qa-preview-icon">🧪</span>
-                    <div>
-                      <strong>Functional Testing</strong>
-                      <small>Authentication, structure, inventory, and validation flows</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                  <div class="qa-preview-mini-card">
-                    <span class="qa-preview-icon">✅</span>
-                    <div>
-                      <strong>Validation Checks</strong>
-                      <small>Mandatory fields, input rules, and expected behavior checks</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                  <div class="qa-preview-mini-card">
-                    <span class="qa-preview-icon">🐞</span>
-                    <div>
-                      <strong>Defect Reporting</strong>
-                      <small>Issues documented with expected and actual results</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                  <div class="qa-preview-mini-card">
-                    <span class="qa-preview-icon">📱</span>
-                    <div>
-                      <strong>Web & Mobile QA</strong>
-                      <small>Website and mobile app scenario verification</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sample Findings -->
-            <div class="qa-preview-section">
-              <h6>Sample Findings</h6>
-
-              <div class="qa-finding-list">
-                <div class="qa-finding-item">
-                  <strong>Data Persistence Issue</strong>
-                  <p>
-                    Edited structure information did not reliably remain saved after reload.
-                  </p>
-                </div>
-
-                <div class="qa-finding-item">
-                  <strong>Validation Inconsistency</strong>
-                  <p>
-                    Some invalid inputs were accepted instead of being blocked with clear validation feedback.
-                  </p>
-                </div>
-
-                <div class="qa-finding-item">
-                  <strong>Mobile Map Location Issue</strong>
-                  <p>
-                    The mobile app map behavior did not match the expected structure-specific location flow.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer qa-preview-footer">
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
-              Close
-            </button>
-
-            <a href="RuBIMS-Test-Cases.html" class="btn btn-sm btn-outline-primary">
-              View Details
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ================= AUTOMATION PREVIEW MODAL ================= -->
-    <div class="modal fade qa-work-preview-modal" id="automationPreviewModal" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content qa-preview-content automation-preview-content">
-          <div class="modal-header qa-preview-header">
-            <div>
-              <h5 class="modal-title">Automation Testing Lab — Preview</h5>
-              <p class="qa-preview-subtitle mb-0">
-                Selenium, Cypress, and Playwright practice focused on automation foundations.
-              </p>
-            </div>
-
-            <button class="close qa-preview-close" data-dismiss="modal">×</button>
-          </div>
-
-          <div class="modal-body qa-preview-body">
-            <!-- Snapshot -->
-            <div class="qa-preview-section">
-              <h6>Lab Snapshot</h6>
-
-              <div class="qa-preview-chip-wrap">
-                <span class="tool-badge badge-selenium">Selenium</span>
-                <span class="tool-badge badge-java">Java</span>
-                <span class="tool-badge badge-testng">TestNG</span>
-                <span class="tool-badge badge-maven">Maven</span>
-                <span class="tool-badge badge-cypress">Cypress</span>
-                <span class="tool-badge badge-playwright">Playwright</span>
-              </div>
-
-              <p class="mb-0 mt-3">
-                A learning-focused automation lab covering browser automation fundamentals,
-                test configuration, tool structure, execution output, and modern automation practice.
-              </p>
-            </div>
-
-            <!-- Practice Tracks -->
-            <div class="qa-preview-section">
-              <h6>Practice Tracks</h6>
-
-              <div class="row">
-                <div class="col-md-4 mb-3">
-                  <div class="qa-preview-track-card selenium-track">
-                    <h6>Selenium + Java</h6>
-                    <p>
-                      WebDriver fundamentals, browser control, locator strategies,
-                      window handling, Maven, and TestNG practice.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <div class="qa-preview-track-card cypress-track">
-                    <h6>Cypress + JavaScript</h6>
-                    <p>
-                      Cypress project setup, JavaScript-based structure, and global/local
-                      configuration practice.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <div class="qa-preview-track-card playwright-track">
-                    <h6>Playwright + JavaScript</h6>
-                    <p>
-                      Test organization, grouping, tagging, skipping behavior,
-                      reports, and result output practice.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Evidence -->
-            <div class="qa-preview-section">
-              <h6>Repository Evidence</h6>
-
-              <div class="row">
-                <div class="col-md-4 mb-3">
-                  <div class="qa-evidence-box">
-                    <strong>Selenium</strong>
-                    <small>pom.xml, testng.xml, test-output</small>
-                  </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <div class="qa-evidence-box">
-                    <strong>Cypress</strong>
-                    <small>cypress folder, cypress.config.js, package.json</small>
-                  </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <div class="qa-evidence-box">
-                    <strong>Playwright</strong>
-                    <small>tests, playwright.config.js, playwright-report, test-results</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer qa-preview-footer">
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
-              Close
-            </button>
-
-            <a href="selenium-automation-practice.html" class="btn btn-sm btn-outline-primary">
-              View Details
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>

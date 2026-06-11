@@ -1,773 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>House Rent Management System | Dibya Jyoti Dhar</title>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House Rent Management System — Dibya Jyoti Dhar</title>
+  <meta name="description" content="A full JavaFX desktop application for rental property management — tenant records, rent collection, PDF receipts, repair tracking, and installer packaging." />
+  <link rel="icon" type="image/png" href="images/My_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project.css" />
+</head>
+<body>
 
-    <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-
-    <!-- jQuery / Popper / Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Mermaid for ER and Usage diagrams -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-    <!-- Main Portfolio CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Page-specific safety overrides -->
-    <style>
-      .project-page {
-        padding-top: 95px;
-      }
-
-      .project-hero {
-        border-radius: 24px;
-        padding: 42px;
-        background:
-          radial-gradient(circle at top left, rgba(22, 142, 240, 0.28), transparent 36%),
-          linear-gradient(135deg, var(--card-bg), rgba(22, 142, 240, 0.06));
-        border: 1px solid var(--border-color);
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-      }
-
-      .project-hero h1 {
-        font-size: 42px;
-        font-weight: 900;
-        color: var(--text-color);
-      }
-
-      .project-hero p {
-        color: var(--muted-text);
-        font-size: 17px;
-        line-height: 1.7;
-      }
-
-      .project-hero-logo {
-        width: 120px;
-        height: 120px;
-        object-fit: contain;
-        padding: 18px;
-        border-radius: 28px;
-        background: rgba(22, 142, 240, 0.12);
-        border: 1px solid var(--border-color);
-      }
-
-      .project-page-card {
-        border-radius: 18px;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        color: var(--text-color);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        height: 100%;
-      }
-
-      .project-page-card .card-body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-        line-height: 1.7;
-      }
-
-      .project-page-card h5,
-      .project-page-card h4 {
-        font-weight: 800;
-      }
-
-      .project-tech-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .project-tech-list span {
-        display: inline-flex;
-        align-items: center;
-        padding: 6px 11px;
-        border-radius: 999px;
-        background: rgba(22, 142, 240, 0.1);
-        color: var(--text-color);
-        border: 1px solid var(--border-color);
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .project-back-link {
-        color: var(--primary-color);
-        font-weight: 800;
-        text-decoration: none;
-      }
-
-      .project-back-link:hover {
-        color: var(--primary-hover);
-        text-decoration: none;
-      }
-
-      /* Screenshot Gallery */
-      #screenshots .screenshot-box {
-        width: 100%;
-        height: 100%;
-        padding: 14px;
-        border-radius: 18px;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
-        text-align: center;
-        overflow: hidden;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      #screenshots .screenshot-box:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
-      }
-
-      #screenshots .screenshot-img {
-        display: block;
-        width: 100%;
-        height: 280px;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 14px;
-        cursor: pointer;
-        border: 1px solid var(--border-color);
-        background: rgba(15, 23, 42, 0.04);
-        transition: transform 0.25s ease, filter 0.25s ease;
-      }
-
-      #screenshots .screenshot-img:hover {
-        transform: scale(1.015);
-        filter: brightness(1.05);
-      }
-
-      #screenshots .screenshot-caption {
-        margin: 12px 0 0;
-        color: var(--muted-text);
-        font-size: 14px;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      body.dark-mode #screenshots .screenshot-box {
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      body.dark-mode #screenshots .screenshot-img {
-        background: rgba(255, 255, 255, 0.03);
-        border-color: rgba(255, 255, 255, 0.12);
-      }
-
-      /* Diagram */
-      .diagram-box {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 18px;
-        padding: 18px;
-        overflow-x: auto;
-      }
-
-      body.dark-mode .diagram-box {
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      /* Image Viewer Modal */
-      .image-modal {
-        display: none;
-        position: fixed;
-        z-index: 99999;
-        inset: 0;
-        padding: 32px;
-        background: rgba(0, 0, 0, 0.9);
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .image-modal-content {
-        max-width: 92%;
-        max-height: 82vh;
-        object-fit: contain;
-        border-radius: 14px;
-        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
-        background: #111827;
-      }
-
-      .image-modal-caption {
-        color: #e5e7eb;
-        margin-top: 14px;
-        font-size: 15px;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .image-modal-close {
-        position: fixed;
-        top: 22px;
-        right: 34px;
-        color: #ffffff;
-        font-size: 38px;
-        font-weight: 700;
-        cursor: pointer;
-        z-index: 100000;
-        line-height: 1;
-        transition: color 0.2s ease, transform 0.2s ease;
-      }
-
-      .image-modal-close:hover {
-        color: #60a5fa;
-        transform: scale(1.08);
-      }
-
-      @media (max-width: 767px) {
-        .project-hero {
-          padding: 26px;
-        }
-
-        .project-hero h1 {
-          font-size: 30px;
-        }
-
-        .project-hero-logo {
-          width: 90px;
-          height: 90px;
-          margin-bottom: 18px;
-        }
-
-        #screenshots .screenshot-img {
-          height: 210px;
-        }
-
-        .image-modal {
-          padding: 18px;
-        }
-
-        .image-modal-content {
-          max-width: 96%;
-          max-height: 78vh;
-        }
-
-        .image-modal-close {
-          top: 14px;
-          right: 20px;
-          font-size: 34px;
-        }
-      }
-    </style>
-
-    <script>
-      const mq = window.matchMedia("(prefers-color-scheme: dark)");
-
-      function applyTheme(e) {
-        document.body.classList.toggle("dark-mode", e.matches);
-      }
-
-      applyTheme(mq);
-      mq.addEventListener("change", applyTheme);
-    </script>
-  </head>
-
-  <body>
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-navbar">
-      <a class="navbar-brand project-back-link" href="index.html#personalProjects">
-        ⬅ Back to Portfolio
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Back to portfolio home">
+        <span class="logo-bracket">[</span>DJD<span class="logo-bracket">]</span>
       </a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#overview">Overview</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#screenshots">Screenshots</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#diagrams">Diagrams</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#techStack">Tech Stack</a>
-          </li>
-
-          <li class="nav-item d-flex align-items-center ml-3">
-            <div class="theme-toggle">
-              <input type="checkbox" id="themeToggle" />
-              <label for="themeToggle" class="toggle-label">
-                <span class="icon sun">☀️</span>
-                <span class="icon moon">🌙</span>
-                <span class="ball"></span>
-              </label>
-            </div>
-          </li>
-        </ul>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#about"      class="nav-link">About</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html#skills"     class="nav-link">Skills</a></li>
+        <li><a href="index.html#projects"   class="nav-link">Projects</a></li>
+        <li><a href="index.html#education"  class="nav-link">Education</a></li>
+        <li><a href="index.html#contact"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+          <i class="fa-solid fa-download"></i> CV
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main class="project-page">
+  <main id="main">
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
       <div class="container">
-        <!-- ================= HERO ================= -->
-        <section class="project-hero" id="overview">
-          <div class="row align-items-center">
-            <div class="col-md-2 text-center text-md-left">
-              <img
-                src="images/app-icon.png"
-                class="project-hero-logo"
-                alt="House Rent Management System Logo"
-              />
+        <div class="project-hero-inner">
+          <a href="index.html#projects" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+          </a>
+          <div class="project-hero-badge badge-dev">
+            <i class="fa-solid fa-desktop"></i> Personal Project
+          </div>
+          <h1 class="project-hero-title">House Rent Management System</h1>
+          <p class="project-hero-sub">JavaFX Desktop Application — Built End-to-End for a Real User</p>
+          <p class="project-hero-desc">
+            A complete offline Windows desktop application for rental property management. Built from real-world requirements, covering tenants, flats, monthly rent collection, PDF receipt generation, repair logs, audit trails, and full installer packaging — demonstrating both development depth and QA mindset.
+          </p>
+          <div class="project-meta-row">
+            <div class="project-meta-item">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <span>JavaFX + SQLite</span>
             </div>
-
-            <div class="col-md-10">
-              <span class="badge badge-primary mb-3">Personal Project</span>
-
-              <h1>House Rent Management System</h1>
-
-              <p>
-                A complete offline desktop application for managing flats, tenants,
-                monthly rent generation, payment records, receipts, repairs, reports,
-                backups, audit logs, and tenant move-out settlements.
-              </p>
-
-              <div class="project-tech-list justify-content-md-start">
-                <span>JavaFX</span>
-                <span>SQLite</span>
-                <span>Maven</span>
-                <span>Apache PDFBox</span>
-                <span>Apache POI</span>
-                <span>jpackage Installer</span>
-              </div>
+            <div class="project-meta-item">
+              <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+              <span>Windows Desktop App</span>
+            </div>
+            <div class="project-meta-item">
+              <i class="fa-solid fa-user-gear" aria-hidden="true"></i>
+              <span>Personal Project</span>
+            </div>
+            <div class="project-meta-item">
+              <i class="fa-solid fa-box" aria-hidden="true"></i>
+              <span>Installer Packaged</span>
             </div>
           </div>
-        </section>
-
-        <!-- ================= FEATURES ================= -->
-        <section class="mt-5" id="features">
-          <h4 class="text-center mb-4">Core Modules</h4>
-
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Tenant & Flat Management</h5>
-                  <p>
-                    Manage active tenants, past tenants, flat occupancy, meter numbers,
-                    move-in details, move-out lifecycle, and optional security deposits.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Rent & Receipt Workflow</h5>
-                  <p>
-                    Generate monthly rent, track due/partial/late/paid status, archive
-                    paid records, and print PDF receipts with consistent receipt numbers.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Reports & Accounting Logic</h5>
-                  <p>
-                    Separate rent income, discounts, utilities, security deposits, and
-                    owner-paid repairs for cleaner income, due, repair, and net-profit
-                    reporting.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Repair Tracking</h5>
-                  <p>
-                    Track repair category, cost, paid-by status, completion status,
-                    vendor name, vendor phone, invoice number, and repair notes.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Security & Recovery</h5>
-                  <p>
-                    Includes login, optional save login, logout cleanup, password change,
-                    recovery PIN, emergency recovery keys, backup, restore, and factory reset.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-              <div class="card project-page-card">
-                <div class="card-body">
-                  <h5>Audit Logs</h5>
-                  <p>
-                    Important actions such as login, logout, payment, backup, restore,
-                    reset, tenant changes, repair updates, and receipt actions are recorded.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= SCREENSHOTS ================= -->
-        <section class="mt-5" id="screenshots">
-          <h4 class="text-center mb-4">Screenshots</h4>
-
-          <div class="row">
-            <!-- Screenshot 1 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-dashboard.png"
-                  alt="Dashboard Overview"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Dashboard Overview</p>
-              </div>
-            </div>
-
-            <!-- Screenshot 2 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-tenant.png"
-                  alt="Tenant Management"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Tenant Management</p>
-              </div>
-            </div>
-
-            <!-- Screenshot 3 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-payment.png"
-                  alt="Rent Payment and Receipt Workflow"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Rent Payment & Receipt Workflow</p>
-              </div>
-            </div>
-
-            <!-- Screenshot 4 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-report.png"
-                  alt="Reports and Analytics"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Reports & Analytics</p>
-              </div>
-            </div>
-
-            <!-- Screenshot 5 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-repair.png"
-                  alt="Repair Vendor and Contact Tracking"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Repair Vendor & Contact Tracking</p>
-              </div>
-            </div>
-
-            <!-- Screenshot 6 -->
-            <div class="col-md-6 mb-4">
-              <div class="screenshot-box">
-                <img
-                  src="images/rent-project/rent-settlement.png"
-                  alt="Past Tenant Settlement"
-                  class="screenshot-img"
-                  onclick="openImage(this)"
-                  loading="lazy"
-                />
-                <p class="screenshot-caption">Past Tenant Settlement</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= DIAGRAMS ================= -->
-        <section class="mt-5" id="diagrams">
-          <h4 class="text-center mb-4">ER Diagram</h4>
-
-          <div class="diagram-box mb-5">
-            <pre class="mermaid">
-erDiagram
-    USERS ||--o{ AUDIT_LOGS : creates
-    PROPERTIES ||--o{ FLATS : owns
-    FLATS ||--o{ TENANTS : assigned_to
-    TENANTS ||--o{ RENT_CURRENT : has_due
-    TENANTS ||--o{ RENT_ARCHIVE : has_paid_history
-    FLATS ||--o{ RENT_CURRENT : billed_for
-    FLATS ||--o{ RENT_ARCHIVE : archived_for
-    FLATS ||--o{ REPAIRS : has_repairs
-    TENANTS ||--o{ MOVE_OUT_SETTLEMENTS : has_settlement
-
-    USERS {
-      INTEGER id PK
-      TEXT username
-      TEXT password_hash
-      TEXT password_salt
-      TEXT recovery_pin_hash
-      TEXT recovery_pin_salt
-    }
-
-    PROPERTIES {
-      INTEGER id PK
-      TEXT name
-      TEXT address
-      TEXT phone
-      TEXT logo_path
-    }
-
-    FLATS {
-      INTEGER id PK
-      TEXT flat_no UK
-      TEXT meter_no
-      REAL rent
-      TEXT status
-      INTEGER property_id FK
-    }
-
-    TENANTS {
-      INTEGER id PK
-      TEXT name
-      TEXT phone
-      TEXT email
-      TEXT nid
-      TEXT flat_no FK
-      TEXT status
-      REAL security_deposit
-    }
-
-    RENT_CURRENT {
-      INTEGER id PK
-      INTEGER tenant_id FK
-      TEXT flat_no FK
-      TEXT bill_month
-      REAL house_rent
-      REAL discount
-      REAL total
-      REAL paid_amount
-      TEXT status
-    }
-
-    RENT_ARCHIVE {
-      INTEGER id PK
-      INTEGER tenant_id FK
-      TEXT flat_no FK
-      TEXT bill_month
-      REAL house_rent
-      REAL discount
-      REAL paid_amount
-      TEXT receipt_no
-    }
-
-    REPAIRS {
-      INTEGER id PK
-      TEXT flat_no FK
-      TEXT repair_date
-      TEXT category
-      REAL cost
-      TEXT paid_by
-      TEXT vendor_name
-      TEXT vendor_phone
-      TEXT invoice_no
-    }
-
-    MOVE_OUT_SETTLEMENTS {
-      INTEGER id PK
-      INTEGER tenant_id FK
-      TEXT move_out_date
-      REAL unpaid_due
-      REAL security_deposit
-      REAL refund_amount
-      REAL payable_amount
-      TEXT result
-    }
-            </pre>
-          </div>
-
-          <h4 class="text-center mb-4">Usage Diagram</h4>
-
-          <div class="diagram-box">
-            <pre class="mermaid">
-flowchart TD
-    A[Launch App] --> B[Login]
-    B --> C[Dashboard]
-    C --> D[Manage Flats]
-    C --> E[Manage Tenants]
-    C --> F[Generate Monthly Rent]
-    F --> G[Collect Payment]
-    G --> H[Archive Paid Rent]
-    H --> I[Print Receipt PDF]
-    C --> J[Track Repairs]
-    J --> K[Owner/Tenant Paid Repair Reports]
-    C --> L[Reports]
-    L --> M[PDF / Excel / Print]
-    E --> N[Move Out Tenant]
-    N --> O[Save Settlement Snapshot]
-    O --> P[Past Tenants]
-    P --> Q[Print Settlement PDF]
-    C --> R[Backup / Restore / Factory Reset]
-    C --> S[Audit Logs]
-            </pre>
-          </div>
-        </section>
-
-        <!-- ================= TECH STACK ================= -->
-        <section class="mt-5" id="techStack">
-          <h4 class="text-center mb-4">Technical Highlights</h4>
-
-          <div class="card project-page-card mb-5">
-            <div class="card-body">
-              <div class="project-tech-list justify-content-start">
-                <span>Java</span>
-                <span>JavaFX UI</span>
-                <span>SQLite Local Database</span>
-                <span>Maven Build</span>
-                <span>PDFBox PDF Export</span>
-                <span>Apache POI Excel Export</span>
-                <span>Windows EXE Installer</span>
-                <span>AppData Database Storage</span>
-                <span>Dark Mode Friendly Portfolio Page</span>
-              </div>
-
-              <hr />
-
-              <p class="mb-0">
-                The project demonstrates end-to-end desktop software development:
-                database design, UI workflow, validation, reporting, backup/recovery,
-                auditability, installer packaging, and practical business-rule
-                implementation for rental property operations.
-              </p>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
 
-    <!-- ================= IMAGE VIEWER MODAL ================= -->
-    <div id="imageModal" class="image-modal" onclick="closeImageFromBackdrop(event)">
-      <span class="image-modal-close" onclick="closeImage()">&times;</span>
+    <!-- PROJECT BODY -->
+    <div class="project-body">
+      <div class="container">
+        <div class="project-layout">
 
-      <img
-        class="image-modal-content"
-        id="modalImage"
-        alt="Expanded project screenshot"
-      />
+          <!-- MAIN CONTENT -->
+          <div class="project-main">
 
-      <div id="modalCaption" class="image-modal-caption"></div>
+            <!-- Overview -->
+            <section class="project-section reveal-up" aria-labelledby="hrm-overview-heading">
+              <h2 id="hrm-overview-heading" class="project-section-title">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Project Overview
+              </h2>
+              <p>
+                This project was built to solve a real problem: a family property owner managing multiple flats needed a simple, offline-capable tool to replace their manual spreadsheet-based records. There was no internet requirement, no cloud dependency — just a reliable desktop app that works every time.
+              </p>
+              <p>
+                Building this end-to-end — from requirements gathering through to a packaged Windows installer — gave me direct experience with the full software development lifecycle. As a QA engineer, this project sharpened my understanding of how software is built, which makes me a more effective tester when evaluating requirements, edge cases, and failure modes.
+              </p>
+            </section>
+
+            <!-- Features -->
+            <section class="project-section reveal-up" aria-labelledby="features-heading">
+              <h2 id="features-heading" class="project-section-title">
+                <i class="fa-solid fa-cubes" aria-hidden="true"></i> Features Built
+              </h2>
+              <div class="responsibility-grid">
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-building"></i></div>
+                  <h3>Flat Management</h3>
+                  <p>Add, edit, and deactivate flats. Track flat numbers, floor, type, monthly rent, status (occupied/vacant), and associated amenities.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-users"></i></div>
+                  <h3>Tenant Management</h3>
+                  <p>Full tenant profiles: NID number, contact, emergency contact, move-in date, advance/deposit amounts, and tenancy documents reference.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                  <h3>Rent Collection</h3>
+                  <p>Monthly rent recording with due date, payment date, amount paid, outstanding balance, and payment method (cash/bKash/bank).</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                  <h3>PDF Receipt Generation</h3>
+                  <p>Automated A5/A4 rent receipts generated using Apache PDFBox — formatted, printable, with landlord name, tenant details, and payment breakdown.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-wrench"></i></div>
+                  <h3>Repair &amp; Maintenance Log</h3>
+                  <p>Track repair requests by flat — description, date reported, contractor, cost, status (pending/in-progress/resolved) with photo attachment support.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                  <h3>Move-out Settlement</h3>
+                  <p>Calculate final settlement on tenant departure: outstanding rent, advance deductions, utility dues, and damage charges with PDF summary.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-table"></i></div>
+                  <h3>Excel Export</h3>
+                  <p>Export tenant and payment records to Excel sheets using Apache POI — monthly summaries and full history exports for external record keeping.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                  <h3>Audit Log &amp; Backup</h3>
+                  <p>Every data modification is time-stamped in an audit log. One-click SQLite database backup to a chosen directory with date-stamped filename.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Tech decisions -->
+            <section class="project-section reveal-up" aria-labelledby="tech-heading">
+              <h2 id="tech-heading" class="project-section-title">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i> Technical Decisions
+              </h2>
+              <div class="approach-steps">
+                <div class="approach-step">
+                  <div class="step-number">01</div>
+                  <div class="step-content">
+                    <h3>JavaFX for UI</h3>
+                    <p>Chosen over Swing for its modern FXML-based UI separation, CSS styling capability, and superior look. Scene Builder was used for layout design, keeping UI and logic cleanly separated.</p>
+                  </div>
+                </div>
+                <div class="approach-step">
+                  <div class="step-number">02</div>
+                  <div class="step-content">
+                    <h3>SQLite for Storage</h3>
+                    <p>A single-file embedded database — no server setup, no network dependency. Perfect for a single-user offline desktop app. JDBC connectivity via the SQLite JDBC driver.</p>
+                  </div>
+                </div>
+                <div class="approach-step">
+                  <div class="step-number">03</div>
+                  <div class="step-content">
+                    <h3>Apache PDFBox for Receipts</h3>
+                    <p>PDFBox was chosen over iText due to its open-source Apache 2.0 license. Custom A5 layout built with PDFBox's PDPageContentStream API.</p>
+                  </div>
+                </div>
+                <div class="approach-step">
+                  <div class="step-number">04</div>
+                  <div class="step-content">
+                    <h3>Maven for Build Management</h3>
+                    <p>All dependencies managed via <code>pom.xml</code>. Maven Shade plugin used to produce a fat JAR with all dependencies bundled for distribution.</p>
+                  </div>
+                </div>
+                <div class="approach-step">
+                  <div class="step-number">05</div>
+                  <div class="step-content">
+                    <h3>Inno Setup for Windows Installer</h3>
+                    <p>The final application was packaged into a Windows <code>.exe</code> installer using Inno Setup — includes JRE bundling so the user does not need Java pre-installed.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- QA angle -->
+            <section class="project-section reveal-up" aria-labelledby="qa-angle-heading">
+              <h2 id="qa-angle-heading" class="project-section-title">
+                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i> QA Perspective
+              </h2>
+              <p>
+                Building this application end-to-end gave me direct insight into where software breaks from a developer's point of view — which has made me a significantly sharper manual QA tester:
+              </p>
+              <div class="responsibility-grid" style="margin-top:1.25rem">
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                  <h3>Boundary Awareness</h3>
+                  <p>I know exactly what happens when a rent amount field receives alphabetic input, or when a date picker receives a past date — because I had to handle those edge cases in code.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-database"></i></div>
+                  <h3>Database Integrity</h3>
+                  <p>Designing foreign key relationships and cascade behaviours gave me deep understanding of data consistency bugs — what to look for when testing CRUD-heavy applications.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-file-zipper"></i></div>
+                  <h3>Packaging &amp; Install Testing</h3>
+                  <p>Distributing a packaged installer taught me to think about environment-specific failures — missing runtime dependencies, file permission issues, and first-run configuration errors.</p>
+                </div>
+                <div class="responsibility-card">
+                  <div class="resp-icon"><i class="fa-solid fa-user-check"></i></div>
+                  <h3>Real User Feedback</h3>
+                  <p>The app was used by a real end-user, which produced genuine usability feedback — a practical lesson in the difference between what passes a test and what actually works for a person.</p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="project-sidebar" aria-label="Project summary">
+
+            <div class="sidebar-card reveal-up">
+              <h3 class="sidebar-card-title">Tech Stack</h3>
+              <div class="sidebar-tags">
+                <span class="tag">Java 17</span>
+                <span class="tag">JavaFX</span>
+                <span class="tag">FXML</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">JDBC</span>
+                <span class="tag">Maven</span>
+                <span class="tag">Apache PDFBox</span>
+                <span class="tag">Apache POI</span>
+                <span class="tag">Inno Setup</span>
+                <span class="tag">Scene Builder</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card reveal-up" style="--delay:0.1s">
+              <h3 class="sidebar-card-title">Key Features</h3>
+              <ul class="sidebar-list">
+                <li><i class="fa-solid fa-check"></i> Flat &amp; tenant management</li>
+                <li><i class="fa-solid fa-check"></i> Monthly rent collection</li>
+                <li><i class="fa-solid fa-check"></i> PDF receipt generation</li>
+                <li><i class="fa-solid fa-check"></i> Excel export (Apache POI)</li>
+                <li><i class="fa-solid fa-check"></i> Repair &amp; maintenance log</li>
+                <li><i class="fa-solid fa-check"></i> Move-out settlement</li>
+                <li><i class="fa-solid fa-check"></i> Audit log</li>
+                <li><i class="fa-solid fa-check"></i> Database backup</li>
+                <li><i class="fa-solid fa-check"></i> Windows installer (.exe)</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card reveal-up" style="--delay:0.15s">
+              <h3 class="sidebar-card-title">Type</h3>
+              <ul class="sidebar-list">
+                <li><i class="fa-solid fa-desktop"></i> Desktop (Windows)</li>
+                <li><i class="fa-solid fa-wifi-slash"></i> Fully offline</li>
+                <li><i class="fa-solid fa-user"></i> Single-user</li>
+                <li><i class="fa-solid fa-box"></i> Packaged installer</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card sidebar-card-cta reveal-up" style="--delay:0.2s">
+              <p>Want to learn more about this project or discuss the architecture?</p>
+              <a href="index.html#contact" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-envelope"></i> Contact Me
+              </a>
+            </div>
+
+          </aside>
+        </div>
+      </div>
     </div>
 
-    <!-- ================= SCRIPTS ================= -->
-    <script>
-      const toggle = document.getElementById("themeToggle");
+    <!-- NEXT PROJECT -->
+    <section class="next-project-bar">
+      <div class="container">
+        <div class="next-project-inner">
+          <a href="RuBIMS-Test-Cases.html" class="next-project-link">
+            <span class="next-label">See Also</span>
+            <span class="next-title">RuBIMS Manual QA Project <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        toggle.checked = true;
-      }
+  </main>
 
-      toggle.addEventListener("change", function () {
-        if (this.checked) {
-          document.body.classList.add("dark-mode");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.body.classList.remove("dark-mode");
-          localStorage.setItem("theme", "light");
-        }
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>DJD<span class="logo-bracket">]</span>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Dibya Jyoti Dhar — SQA Engineer</p>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
 
-        location.reload();
-      });
-
-      function openImage(img) {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        const caption = document.getElementById("modalCaption");
-
-        modal.style.display = "flex";
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-        caption.innerText = img.alt;
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeImage() {
-        const modal = document.getElementById("imageModal");
-
-        modal.style.display = "none";
-        document.body.style.overflow = "";
-      }
-
-      function closeImageFromBackdrop(event) {
-        if (event.target.id === "imageModal") {
-          closeImage();
-        }
-      }
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          closeImage();
-        }
-      });
-
-      mermaid.initialize({
-        startOnLoad: true,
-        theme: document.body.classList.contains("dark-mode") ? "dark" : "default",
-        securityLevel: "loose"
-      });
-    </script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>
