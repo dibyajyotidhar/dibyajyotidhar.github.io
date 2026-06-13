@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dibyajyotidhar.github.io/sitemap.xml
