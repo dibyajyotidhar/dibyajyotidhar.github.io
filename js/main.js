@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initBackToTop();
   initYear();
+  initContactForm();
 });
 
 /* ═══════════════════════════════════════════════════════
@@ -395,3 +396,60 @@ function initYear() {
   const el = document.getElementById('year');
   if (el) el.textContent = new Date().getFullYear();
 }
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT FORM — Formspree AJAX submission
+   Append this call inside the DOMContentLoaded listener
+   in js/main.js, after the existing initYear() call:
+
+     initContactForm();
+
+   Then paste the function itself below initYear().
+═══════════════════════════════════════════════════════ */
+
+function initContactForm() {
+  const form      = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('formSubmitBtn');
+  const success   = document.getElementById('formSuccess');
+  const error     = document.getElementById('formError');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Hide previous feedback
+    success.hidden = true;
+    error.hidden   = true;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('is-loading');
+
+    try {
+      const data = new FormData(form);
+      const res  = await fetch(form.action, {
+        method:  'POST',
+        body:    data,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        form.reset();
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        // Formspree returns error details in JSON
+        const json = await res.json().catch(() => ({}));
+        console.error('Formspree error:', json);
+        error.hidden = false;
+      }
+    } catch (err) {
+      console.error('Network error:', err);
+      error.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('is-loading');
+    }
+  });
+}
+

@@ -770,64 +770,164 @@
       </div>
 
       <div class="contact-grid">
-        <div class="contact-text reveal-up">
+
+        <!-- LEFT COLUMN: intro + contact cards -->
+        <div class="contact-left reveal-up">
           <p class="contact-lead">
             I'm actively seeking SQA / QA Engineering opportunities — locally in Bangladesh and internationally.
           </p>
-          <p>
+          <p class="contact-body">
             Whether you have a role, a project, or just want to talk testing — reach out. I typically respond within 24 hours.
           </p>
           <div class="contact-availability">
             <span class="status-dot"></span>
             <strong>Currently available</strong> — open to full-time, contract, and remote roles
           </div>
+
+          <div class="contact-links">
+            <a href="mailto:dibya.work8+portfolio@gmail.com" class="contact-card" aria-label="Send email to Dibya">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">dibya.work8@gmail.com</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/dibya888/" target="_blank" rel="noopener" class="contact-card" aria-label="Visit LinkedIn profile">
+              <div class="contact-card-icon contact-icon-linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">linkedin.com/in/dibya888</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://github.com/Dibya888" target="_blank" rel="noopener" class="contact-card" aria-label="Visit GitHub profile">
+              <div class="contact-card-icon contact-icon-github">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">github.com/Dibya888</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener" class="contact-card" aria-label="Download CV">
+              <div class="contact-card-icon contact-icon-cv">
+                <i class="fa-solid fa-file-arrow-down"></i>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Resume / CV</span>
+                <span class="contact-card-value">Download latest version</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="contact-links reveal-right">
-          <a href="mailto:dibya.work8+portfolio@gmail.com" class="contact-card" aria-label="Send email to Dibya">
-            <div class="contact-card-icon">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="contact-card-text">
-              <span class="contact-card-label">Email</span>
-              <span class="contact-card-value">dibya.work8@gmail.com</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
-          </a>
+        <!-- RIGHT COLUMN: contact form -->
+        <div class="contact-right reveal-right">
+          <div class="contact-form-card">
+            <h3 class="contact-form-heading">Send a Message</h3>
+            <p class="contact-form-subheading">Fill in the form and I'll get back to you as soon as possible.</p>
 
-          <a href="https://www.linkedin.com/in/dibya888/" target="_blank" rel="noopener" class="contact-card" aria-label="Visit LinkedIn profile">
-            <div class="contact-card-icon contact-icon-linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </div>
-            <div class="contact-card-text">
-              <span class="contact-card-label">LinkedIn</span>
-              <span class="contact-card-value">linkedin.com/in/dibya888</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
-          </a>
+            <form
+              action="https://formspree.io/f/xqeowzqv"
+              method="POST"
+              class="contact-form"
+              id="contactForm"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name <span class="form-required" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address <span class="form-required" aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+              </div>
 
-          <a href="https://github.com/Dibya888" target="_blank" rel="noopener" class="contact-card" aria-label="Visit GitHub profile">
-            <div class="contact-card-icon contact-icon-github">
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <div class="contact-card-text">
-              <span class="contact-card-label">GitHub</span>
-              <span class="contact-card-value">github.com/Dibya888</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
-          </a>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="form-required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="e.g. SQA Engineer Opportunity"
+                  required
+                  aria-required="true"
+                />
+              </div>
 
-          <a href="https://drive.google.com/file/d/1PYgVb6CUK4R8PzvfEvYvZ1QxJsNxrwta" target="_blank" rel="noopener" class="contact-card" aria-label="Download CV">
-            <div class="contact-card-icon contact-icon-cv">
-              <i class="fa-solid fa-file-arrow-down"></i>
-            </div>
-            <div class="contact-card-text">
-              <span class="contact-card-label">Resume / CV</span>
-              <span class="contact-card-value">Download latest version</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow" aria-hidden="true"></i>
-          </a>
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="form-required" aria-hidden="true">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about the role, project, or what you'd like to discuss..."
+                  required
+                  rows="5"
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <!-- Formspree honeypot spam filter -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span class="submit-text">Send Message</span>
+                <span class="submit-loading" aria-hidden="true" hidden>
+                  <i class="fa-solid fa-circle-notch fa-spin"></i> Sending…
+                </span>
+              </button>
+
+              <p class="form-privacy">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                Your information will only be used to respond to your message.
+              </p>
+
+              <!-- Success / error feedback -->
+              <div class="form-feedback form-success" id="formSuccess" role="alert" hidden>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span>Message sent! I'll get back to you within 24 hours.</span>
+              </div>
+              <div class="form-feedback form-error" id="formError" role="alert" hidden>
+                <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                <span>Something went wrong. Please try again or email me directly.</span>
+              </div>
+            </form>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
