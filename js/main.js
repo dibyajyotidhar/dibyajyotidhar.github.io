@@ -195,7 +195,7 @@ function initNavbar() {
   if (!navbar) return;
 
   // Sections to track (in order)
-  const sectionIds = ['about', 'experience', 'skills', 'projects', 'education', 'contact'];
+  const sectionIds = ['about', 'experience', 'skills', 'projects', 'education', 'certifications', 'contact'];
   const sections   = sectionIds
     .map(id => document.getElementById(id))
     .filter(Boolean);
