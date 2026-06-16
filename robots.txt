@@ -1,3 +1,9 @@
+User-agent: Googlebot-Image
+Disallow: /images/dibya-alt.png
+
+User-agent: Googlebot
+Disallow: /images/dibya-alt.png
+
 User-agent: *
 Allow: /
 
