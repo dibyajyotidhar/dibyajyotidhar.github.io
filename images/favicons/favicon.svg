@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background: rounded square, brand navy -->
+  <rect width="64" height="64" rx="14" fill="#0A0F1E"/>
+
+  <!-- Monogram "DJ" — bold geometric blocks, no gradients/shadows for max
+       legibility at 16x16. D = cyan (#00D4FF), J = amber (#F59E0B),
+       echoing the Precision Dark brand palette used on the portfolio. -->
+  <g>
+    <!-- D -->
+    <path d="M14 16 H28 C36.5 16 42 22.5 42 32 C42 41.5 36.5 48 28 48 H14 Z
+             M21.5 23 V41 H27.5 C32 41 34.5 37.5 34.5 32 C34.5 26.5 32 23 27.5 23 Z"
+          fill="#00D4FF" fill-rule="evenodd"/>
+    <!-- J -->
+    <path d="M37 16 H44.5 V36.5 C44.5 44 40 49 32.5 49 V42.3 C36 42.3 37 40 37 36.5 Z"
+          fill="#F59E0B"/>
+  </g>
+</svg>
