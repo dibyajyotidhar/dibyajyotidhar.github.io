@@ -410,16 +410,17 @@ function initYear() {
 function initContactForm() {
   const form      = document.getElementById('contactForm');
   const submitBtn = document.getElementById('formSubmitBtn');
-  const success   = document.getElementById('formSuccess');
   const error     = document.getElementById('formError');
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Guard against duplicate submissions while a request is in flight
+    if (submitBtn.disabled) return;
+
     // Hide previous feedback
-    success.hidden = true;
-    error.hidden   = true;
+    error.hidden = true;
 
     // Loading state
     submitBtn.disabled = true;
@@ -435,21 +436,69 @@ function initContactForm() {
 
       if (res.ok) {
         form.reset();
-        success.hidden = false;
-        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        openSuccessModal();
       } else {
         // Formspree returns error details in JSON
         const json = await res.json().catch(() => ({}));
         console.error('Formspree error:', json);
         error.hidden = false;
+        error.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     } catch (err) {
       console.error('Network error:', err);
       error.hidden = false;
+      error.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } finally {
       submitBtn.disabled = false;
       submitBtn.classList.remove('is-loading');
     }
   });
+
+  initSuccessModal(submitBtn);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT FORM — success popup modal
+   Shown after Formspree accepts the submission. Closes via
+   the OK button, a backdrop click, or the Escape key.
+═══════════════════════════════════════════════════════ */
+let openSuccessModal = () => {}; // reassigned by initSuccessModal()
+
+function initSuccessModal(returnFocusEl) {
+  const overlay  = document.getElementById('successModalOverlay');
+  const box      = document.getElementById('successModalBox');
+  const closeBtn = document.getElementById('successModalCloseBtn');
+  if (!overlay || !box || !closeBtn) return;
+
+  function open() {
+    overlay.hidden = false;
+    // Next frame, so the transition from the un-hidden state actually runs
+    requestAnimationFrame(() => overlay.classList.add('is-open'));
+    document.body.style.overflow = 'hidden';
+    box.focus();
+    document.addEventListener('keydown', onKeydown);
+  }
+
+  function close() {
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+    overlay.addEventListener('transitionend', function onEnd() {
+      overlay.hidden = true;
+      overlay.removeEventListener('transitionend', onEnd);
+    }, { once: true });
+    if (returnFocusEl) returnFocusEl.focus();
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') close();
+  }
+
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) close(); // click outside the modal box
+  });
+
+  openSuccessModal = open;
 }
 

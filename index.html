@@ -1191,11 +1191,7 @@
                 Your information will only be used to respond to your message.
               </p>
 
-              <!-- Success / error feedback -->
-              <div class="form-feedback form-success" id="formSuccess" role="alert" hidden>
-                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                <span>Message sent! I'll get back to you within 24 hours.</span>
-              </div>
+              <!-- Error feedback (success is shown via the popup modal below) -->
               <div class="form-feedback form-error" id="formError" role="alert" hidden>
                 <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
                 <span>Something went wrong. Please try again or email me directly.</span>
@@ -1227,6 +1223,32 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SUCCESS MODAL
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="successModalOverlay" hidden>
+    <div
+      class="modal-box"
+      id="successModalBox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="successModalTitle"
+      aria-describedby="successModalDesc"
+      tabindex="-1"
+    >
+      <div class="modal-icon">
+        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      </div>
+      <h3 class="modal-title" id="successModalTitle">Message Sent!</h3>
+      <p class="modal-desc" id="successModalDesc">
+        Thanks for reaching out — I'll get back to you within 24 hours.
+      </p>
+      <button type="button" class="btn btn-primary modal-close-btn" id="successModalCloseBtn">
+        OK
+      </button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
