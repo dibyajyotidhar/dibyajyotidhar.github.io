@@ -73,10 +73,8 @@ function initTypewriter() {
 
   const phrases = [
     'SQA Engineer',
-    'Manual Testing Expert',
-    'Selenium Automation',
-    'Playwright Practitioner',
-    'Cypress Tester',
+    'Manual & API Testing',
+    'Automation Practice: Selenium · Playwright · Cypress',
     'API Testing with Postman',
     'Bug Hunter by Profession',
     'Quality is not an Act — it\'s a Habit',
